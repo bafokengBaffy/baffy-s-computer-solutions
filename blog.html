@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+
+    <!-- Site Metas -->
+    <title>Tech Trends | Baffy's Computer Solutions</title>
+    <meta name="keywords"
+        content="IT trends, tech trends 2023, web development, mobile apps, AI, cybersecurity, cloud computing">
+    <meta name="description" content="Latest technology trends and insights from Baffy's Computer Solutions">
+    <meta name="author" content="Bafokeng Khoali">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .trends-hero {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .trends-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .trends-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .trend-category {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .trend-category:last-child {
+            border-bottom: none;
+        }
+        
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #6e8efb;
+            display: inline-block;
+        }
+        
+        .trend-item {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .trend-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .trend-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .trend-item p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .trend-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        @media (max-width: 991px) {
+            .trends-hero {
+                padding: 80px 0 40px;
+            }
+            
+            .trends-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .trends-hero {
+                padding: 60px 0 30px;
+            }
+            
+            .trends-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Trends Hero Section -->
+    <section class="trends-hero">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">2023 Tech Trends Report</h1>
+            <p class="animate__animated animate__fadeInUp">Discover the most significant technology trends shaping industries this year</p>
+        </div>
+    </section>
+
+    <!-- Trends Content Section -->
+    <section class="trends-content-section">
+        <div class="container">
+            <!-- Web Development Trends -->
+            <div class="trend-category">
+                <h2 class="category-title">Web Development Trends</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Progressive Web Apps (PWAs)</h3>
+                            <p>PWAs continue to gain traction, offering app-like experiences directly in the browser with offline functionality and push notifications.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Serverless Architecture</h3>
+                            <p>More companies adopting serverless computing to reduce infrastructure costs and improve scalability.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Jamstack Architecture</h3>
+                            <p>JavaScript, APIs, and Markup stack becoming standard for high-performance, secure websites.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>WebAssembly (Wasm)</h3>
+                            <p>Enabling near-native performance for web applications by compiling code from multiple languages.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Motion UI Design</h3>
+                            <p>Increased use of animations and micro-interactions to enhance user engagement.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Web3 and Blockchain Integration</h3>
+                            <p>More websites integrating blockchain technologies for authentication and transactions.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Development Trends -->
+            <div class="trend-category">
+                <h2 class="category-title">Mobile Development Trends</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Cross-Platform Frameworks Maturity</h3>
+                            <p>Flutter and React Native reaching new levels of performance and capability.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>5G-Optimized Apps</h3>
+                            <p>Developers creating apps that leverage 5G speeds for richer experiences.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Foldable Device Support</h3>
+                            <p>Apps adapting to new foldable smartphone form factors.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Augmented Reality (AR) Integration</h3>
+                            <p>More apps incorporating AR features for shopping, navigation, and education.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Super Apps</h3>
+                            <p>Single apps combining multiple services (messaging, payments, shopping) gaining popularity.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Privacy-Focused App Development</h3>
+                            <p>Increased emphasis on user data protection and transparency.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI & Machine Learning Trends -->
+            <div class="trend-category">
+                <h2 class="category-title">AI & Machine Learning Trends</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Generative AI Applications</h3>
+                            <p>ChatGPT, DALL-E and other generative models being integrated into business workflows.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>AI-Powered Cybersecurity</h3>
+                            <p>Machine learning algorithms detecting and preventing sophisticated cyber threats.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Edge AI</h3>
+                            <p>AI models running locally on devices rather than in the cloud for faster response times.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>AI-Augmented Development</h3>
+                            <p>Tools like GitHub Copilot assisting developers with code suggestions and automation.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Responsible AI Frameworks</h3>
+                            <p>Increased focus on ethical AI development and bias mitigation.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>AI in Customer Service</h3>
+                            <p>More sophisticated chatbots and virtual assistants handling complex queries.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cybersecurity Trends -->
+            <div class="trend-category">
+                <h2 class="category-title">Cybersecurity Trends</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Zero Trust Architecture</h3>
+                            <p>"Never trust, always verify" approach becoming standard for enterprise security.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Passwordless Authentication</h3>
+                            <p>Biometrics and security keys replacing traditional passwords.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Cloud Security Posture Management</h3>
+                            <p>Tools continuously monitoring cloud environments for misconfigurations.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Ransomware Defense Strategies</h3>
+                            <p>Advanced protection against increasingly sophisticated ransomware attacks.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Supply Chain Security</h3>
+                            <p>Increased focus on securing software supply chains after high-profile breaches.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Quantum-Resistant Cryptography</h3>
+                            <p>Preparing encryption systems for the quantum computing era.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cloud Computing Trends -->
+            <div class="trend-category">
+                <h2 class="category-title">Cloud Computing Trends</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Multi-Cloud Strategies</h3>
+                            <p>Businesses distributing workloads across multiple cloud providers for resilience.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Serverless Containers</h3>
+                            <p>Combining container benefits with serverless simplicity.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Edge Computing Expansion</h3>
+                            <p>Processing data closer to its source for lower latency applications.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>FinOps Practices</h3>
+                            <p>Financial operations discipline to optimize cloud spending.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>AI-Enhanced Cloud Services</h3>
+                            <p>Cloud providers integrating more AI capabilities into their offerings.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Sustainable Cloud Computing</h3>
+                            <p>Focus on reducing energy consumption and carbon footprint of data centers.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Database Trends -->
+            <div class="trend-category">
+                <h2 class="category-title">Database Trends</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Multi-Model Databases</h3>
+                            <p>Databases supporting multiple data models (document, graph, key-value) in one engine.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Time-Series Databases</h3>
+                            <p>Specialized databases for IoT and financial data gaining popularity.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Distributed SQL Databases</h3>
+                            <p>Combining SQL benefits with horizontal scalability of NoSQL systems.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Database as a Service (DBaaS)</h3>
+                            <p>More companies opting for managed database services in the cloud.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>In-Memory Databases</h3>
+                            <p>Faster performance for real-time analytics and transactional systems.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Blockchain Databases</h3>
+                            <p>Immutable ledger technologies being integrated with traditional databases.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emerging Technologies -->
+            <div class="trend-category">
+                <h2 class="category-title">Emerging Technologies</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Quantum Computing Progress</h3>
+                            <p>Practical applications beginning to emerge from quantum research.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Emerging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Metaverse Development Tools</h3>
+                            <p>New frameworks and platforms for building metaverse experiences.</p>
+                            <div class="trend-meta">
+                                <span>June 2023</span>
+                                <span>Emerging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Digital Twins</h3>
+                            <p>Virtual replicas of physical systems used for simulation and analysis.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Emerging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Neuromorphic Computing</h3>
+                            <p>Brain-inspired computing architectures showing promise for AI workloads.</p>
+                            <div class="trend-meta">
+                                <span>May 2023</span>
+                                <span>Emerging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Biometric Authentication</h3>
+                            <p>Advanced facial recognition and behavioral biometrics for security.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Emerging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="trend-item">
+                            <h3>Autonomous Systems</h3>
+                            <p>Self-managing IT infrastructure and robotic process automation.</p>
+                            <div class="trend-meta">
+                                <span>April 2023</span>
+                                <span>Emerging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google AdSense Banner (Bottom) -->
+    <section class="ad-section">
+        <div class="container text-center py-3">
+            <!-- AdSense Display Ad -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- Live Chat Widget -->
+    <div class="live-chat-widget">
+        <div class="chat-header">
+            <h4>Need Help?</h4>
+            <p>Chat with us now</p>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages">
+                <div class="chat-message bot">
+                    <p>Hello! I'm Baffy's AI assistant. How can I help you today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message...">
+                <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <p>Or connect with us directly:</p>
+            <div class="chat-options">
+                <a href="https://wa.me/message/2QFRU4XGJUGHI1" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="tel:+26658855222" class="call-btn">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="chat-toggle">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                        </div>
+                        <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
+                            Professional, reliable, and tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>App Development</li>
+                            <li>Network Solutions</li>
+                            <li>Cloud Services</li>
+                            <li>IT Consulting</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get updates on my latest projects and services.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your Email">
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="scripts.js"></script>
+    
+    <!-- Live Chat Script -->
+    <script>
+        $(document).ready(function() {
+            // Toggle chat widget
+            $('.chat-toggle').click(function() {
+                $('.live-chat-widget').toggleClass('active');
+            });
+            
+            $('.close-chat').click(function() {
+                $('.live-chat-widget').removeClass('active');
+            });
+            
+            // Simple chatbot functionality
+            $('.send-btn').click(function() {
+                const userMessage = $('.chat-input input').val().trim();
+                if (userMessage) {
+                    // Add user message
+                    $('.chat-messages').append(`
+                        <div class="chat-message user">
+                            <p>${userMessage}</p>
+                        </div>
+                    `);
+                    
+                    // Clear input
+                    $('.chat-input input').val('');
+                    
+                    // Scroll to bottom
+                    $('.chat-body').scrollTop($('.chat-body')[0].scrollHeight);
+                    
+                    // Simulate bot response after delay
+                    setTimeout(function() {
+                        const responses = [
+                            "I can help you with that. Would you like to schedule a consultation?",
+                            "That's a great question! Our team specializes in that area.",
+                            "For immediate assistance, you can call us at +266 6321-0786.",
+                            "I'll connect you with one of our experts. Can you share more details?",
+                            "Thanks for your message! How can we assist you today?"
+                        ];
+                        
+                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                        
+                        $('.chat-messages').append(`
+                            <div class="chat-message bot">
+                                <p>${randomResponse}</p>
+                            </div>
+                        `);
+                        
+                        // Scroll to bottom
+                        $('.chat-body').scrollTop($('.chat-body')[0].scrollHeight);
+                    }, 1000);
+                }
+            });
+            
+            // Send message on Enter key
+            $('.chat-input input').keypress(function(e) {
+                if (e.which === 13) {
+                    $('.send-btn').click();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
