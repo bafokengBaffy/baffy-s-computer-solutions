@@ -1,0 +1,389 @@
+<!--portfolio.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+
+    <!-- Site Metas -->
+    <title>Portfolio | Baffy's Computer Solutions</title>
+    <meta name="keywords"
+        content="IT services, web development, network solutions, IT consulting, software development">
+    <meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
+    <meta name="author" content="Bafokeng Khoali">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="page-top">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>My Portfolio</h1>
+                    <p>Explore my recent projects and see the quality of my work</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web_dev">Web Development</button>
+                <button class="filter-btn" data-filter="app_dev">App Development</button>
+                <button class="filter-btn" data-filter="network">Network Solutions</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-category="web_dev">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                            alt="E-commerce Platform">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>E-commerce Platform</h3>
+                                <p>Custom e-commerce solution with payment integration</p>
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="portfolio-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>E-commerce Platform</h3>
+                        <p class="category">Web Development</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-category="app_dev">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1934&q=80"
+                            alt="Mobile Banking App">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Mobile Banking App</h3>
+                                <p>Secure banking application with biometric authentication</p>
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="portfolio-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Mobile Banking App</h3>
+                        <p class="category">App Development</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-category="network">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                            alt="Corporate Network">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Corporate Network</h3>
+                                <p>Secure enterprise network infrastructure</p>
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="portfolio-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Corporate Network</h3>
+                        <p class="category">Network Solutions</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item" data-category="web_dev">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                            alt="Business Dashboard">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Business Analytics Dashboard</h3>
+                                <p>Real-time data visualization for business intelligence</p>
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="portfolio-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Business Analytics Dashboard</h3>
+                        <p class="category">Web Development</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item" data-category="app_dev">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Fitness App">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Fitness Tracking App</h3>
+                                <p>Health and fitness monitoring with AI recommendations</p>
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="portfolio-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Fitness Tracking App</h3>
+                        <p class="category">App Development</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item" data-category="network">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                            alt="Cloud Migration">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Cloud Migration</h3>
+                                <p>Enterprise cloud infrastructure migration</p>
+                                <div class="portfolio-buttons">
+                                    <a href="#" class="portfolio-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Cloud Migration</h3>
+                        <p class="category">Network Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What my clients say about my work</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>"Baffy delivered our e-commerce platform ahead of schedule and under budget. The site has
+                                helped us increase online sales by 150% in the first quarter."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                            <div class="author-info">
+                                <h4>Thabo Mokoena</h4>
+                                <p>CEO, Mokoena Enterprises</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>"The mobile banking app developed by Baffy has transformed our customer experience.
+                                The biometric authentication system is flawless and our customers love it."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                            <div class="author-info">
+                                <h4>Matseliso Letsie</h4>
+                                <p>CIO, Lesotho Commercial Bank</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>"Our corporate network has never been more secure or efficient since Baffy redesigned
+                                our infrastructure. His attention to detail is remarkable."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
+                            <div class="author-info">
+                                <h4>Lebohang Mohale</h4>
+                                <p>IT Director, Mohale Holdings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                        </div>
+                        <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
+                            Professional, reliable, and tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>App Development</li>
+                            <li>Network Solutions</li>
+                            <li>Cloud Services</li>
+                            <li>IT Consulting</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get updates on my latest projects and services.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your Email">
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
