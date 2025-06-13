@@ -3403,17 +3403,126 @@ select.form-control:focus::-ms-value {
 }
 
 /* Header & Navigation */
+/* Header & Navigation */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: var(--z-index-1000);
-  transition: var(--transition-slow);
-  backdrop-filter: blur(10px);
-  background: rgba(26, 26, 46, 0.9);
+  transition: all 0.3s ease;
+  background: rgba(26, 26, 46, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 0;
+}
+
+.header.scrolled {
+  background: rgba(26, 26, 46, 0.85); /* Slightly more opaque when scrolled */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+}
+
+.navbar-brand img {
+  height: 50px;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+.header.scrolled .navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+  position: relative;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-500);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link.active::before {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:hover {
+  color: var(--accent-500);
+}
+
+/* Mobile Menu */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    backdrop-filter: blur(15px);
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: var(--z-index-999);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-collapse.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    display: block;
+  }
 }
 
 .header.scrolled {
