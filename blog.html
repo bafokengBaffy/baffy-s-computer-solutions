@@ -42,56 +42,141 @@
     <link rel="stylesheet" href="styles.css">
     
     <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1200px;
+        }
+        
+            /* Trends Hero Section */
         .trends-hero {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%);
             color: white;
-            padding: 100px 0 60px;
+            padding: 150px 0 80px;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trends-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .trends-hero .container {
+            position: relative;
+            z-index: 1;
         }
         
         .trends-hero h1 {
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .trends-hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Trends Content Section */
+        .trends-content-section {
+            padding: 60px 0;
         }
         
         .trend-category {
-            margin-bottom: 50px;
-            padding-bottom: 30px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
             border-bottom: 1px solid #eee;
         }
         
         .trend-category:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
         
         .category-title {
             font-size: 2rem;
             margin-bottom: 30px;
             padding-bottom: 15px;
-            border-bottom: 2px solid #6e8efb;
+            border-bottom: 3px solid #6e8efb;
             display: inline-block;
+            color: #333;
+            position: relative;
+        }
+        
+        .category-title::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #4a6cf7;
         }
         
         .trend-item {
             background: white;
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 25px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .trend-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .trend-img {
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .trend-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .trend-item:hover .trend-img img {
+            transform: scale(1.05);
         }
         
         .trend-item h3 {
@@ -102,7 +187,8 @@
         
         .trend-item p {
             color: #666;
-            margin-bottom: 0;
+            margin-bottom: 15px;
+            flex-grow: 1;
         }
         
         .trend-meta {
@@ -113,27 +199,374 @@
             color: #888;
         }
         
+        .trend-tag {
+            background-color: #e9f0ff;
+            color: #4a6cf7;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Ad Section */
+        .ad-section {
+            background-color: #f1f5ff;
+            padding: 20px 0;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        
+        /* Live Chat Widget */
+        .live-chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .live-chat-widget.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+        }
+        
+        .chat-header h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .chat-header p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .close-chat {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+        .chat-body {
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .chat-message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .chat-message.bot {
+            background: #f1f5ff;
+            color: #333;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .chat-message.user {
+            background: #6e8efb;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 10px 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+        }
+        
+        .send-btn {
+            background: #6e8efb;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .send-btn:hover {
+            background: #4a6cf7;
+        }
+        
+        .chat-footer {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .chat-footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .chat-options {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .whatsapp-btn, .call-btn {
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .call-btn {
+            background: #4a6cf7;
+            color: white;
+        }
+        
+        .whatsapp-btn i, .call-btn i {
+            margin-right: 5px;
+        }
+        
+        .chat-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(106, 142, 251, 0.5);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .chat-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #2d3748;
+            color: #fff;
+            padding: 60px 0 0;
+        }
+        
+        .footer-about img {
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .footer p {
+            color: #a0aec0;
+        }
+        
+        .footer-links h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #a0aec0;
+        }
+        
+        .footer-links a:hover {
+            color: #6e8efb;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            outline: none;
+        }
+        
+        .newsletter-btn {
+            background: #6e8efb;
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #4a5568;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        .copyright p {
+            margin: 0;
+            text-align: center;
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #6e8efb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #4a6cf7;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1199px) {
+            .trends-hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
         @media (max-width: 991px) {
             .trends-hero {
-                padding: 80px 0 40px;
+                padding: 120px 0 60px;
             }
             
             .trends-hero h1 {
                 font-size: 2.5rem;
             }
+            
+            .category-title {
+                font-size: 1.8rem;
+            }
+            
+            .live-chat-widget {
+                width: 300px;
+            }
         }
         
         @media (max-width: 767px) {
             .trends-hero {
-                padding: 60px 0 30px;
+                padding: 100px 0 50px;
             }
             
+            .trends-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .trends-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .category-title {
+                font-size: 1.6rem;
+            }
+            
+            .trend-img {
+                height: 150px;
+            }
+            
+            .live-chat-widget {
+                width: 280px;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 575px) {
             .trends-hero h1 {
                 font-size: 2rem;
             }
             
-            .category-title {
-                font-size: 1.7rem;
+            .trends-hero p {
+                font-size: 1rem;
+            }
+            
+            .trend-item {
+                padding: 20px;
+            }
+            
+            .chat-toggle {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -202,61 +635,79 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Progressive Web Apps">
+                            </div>
                             <h3>Progressive Web Apps (PWAs)</h3>
                             <p>PWAs continue to gain traction, offering app-like experiences directly in the browser with offline functionality and push notifications.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Web</span>
+                                <span class="trend-tag">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Serverless Architecture">
+                            </div>
                             <h3>Serverless Architecture</h3>
                             <p>More companies adopting serverless computing to reduce infrastructure costs and improve scalability.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Web</span>
+                                <span class="trend-tag">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Jamstack Architecture">
+                            </div>
                             <h3>Jamstack Architecture</h3>
                             <p>JavaScript, APIs, and Markup stack becoming standard for high-performance, secure websites.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Web</span>
+                                <span class="trend-tag">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="WebAssembly">
+                            </div>
                             <h3>WebAssembly (Wasm)</h3>
                             <p>Enabling near-native performance for web applications by compiling code from multiple languages.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Web</span>
+                                <span class="trend-tag">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Motion UI Design">
+                            </div>
                             <h3>Motion UI Design</h3>
                             <p>Increased use of animations and micro-interactions to enhance user engagement.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Web</span>
+                                <span class="trend-tag">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="block.jpg" alt="Web3 and Blockchain">
+                            </div>
                             <h3>Web3 and Blockchain Integration</h3>
                             <p>More websites integrating blockchain technologies for authentication and transactions.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Web</span>
+                                <span class="trend-tag">Web</span>
                             </div>
                         </div>
                     </div>
@@ -269,61 +720,79 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cross-Platform Frameworks">
+                            </div>
                             <h3>Cross-Platform Frameworks Maturity</h3>
                             <p>Flutter and React Native reaching new levels of performance and capability.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Mobile</span>
+                                <span class="trend-tag">Mobile</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="five.jpg" alt="5G-Optimized Apps">
+                            </div>
                             <h3>5G-Optimized Apps</h3>
                             <p>Developers creating apps that leverage 5G speeds for richer experiences.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Mobile</span>
+                                <span class="trend-tag">Mobile</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1367&q=80" alt="Foldable Device Support">
+                            </div>
                             <h3>Foldable Device Support</h3>
                             <p>Apps adapting to new foldable smartphone form factors.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Mobile</span>
+                                <span class="trend-tag">Mobile</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Augmented Reality">
+                            </div>
                             <h3>Augmented Reality (AR) Integration</h3>
                             <p>More apps incorporating AR features for shopping, navigation, and education.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Mobile</span>
+                                <span class="trend-tag">Mobile</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Super Apps">
+                            </div>
                             <h3>Super Apps</h3>
                             <p>Single apps combining multiple services (messaging, payments, shopping) gaining popularity.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Mobile</span>
+                                <span class="trend-tag">Mobile</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Privacy-Focused Apps">
+                            </div>
                             <h3>Privacy-Focused App Development</h3>
                             <p>Increased emphasis on user data protection and transparency.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Mobile</span>
+                                <span class="trend-tag">Mobile</span>
                             </div>
                         </div>
                     </div>
@@ -336,64 +805,98 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="gen.webp" alt="Generative AI">
+                            </div>
                             <h3>Generative AI Applications</h3>
                             <p>ChatGPT, DALL-E and other generative models being integrated into business workflows.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>AI</span>
+                                <span class="trend-tag">AI</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="cyber.jpg" alt="AI Cybersecurity">
+                            </div>
                             <h3>AI-Powered Cybersecurity</h3>
                             <p>Machine learning algorithms detecting and preventing sophisticated cyber threats.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>AI</span>
+                                <span class="trend-tag">AI</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Edge AI">
+                            </div>
                             <h3>Edge AI</h3>
                             <p>AI models running locally on devices rather than in the cloud for faster response times.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>AI</span>
+                                <span class="trend-tag">AI</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="AI-Augmented Development">
+                            </div>
                             <h3>AI-Augmented Development</h3>
                             <p>Tools like GitHub Copilot assisting developers with code suggestions and automation.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>AI</span>
+                                <span class="trend-tag">AI</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Responsible AI">
+                            </div>
                             <h3>Responsible AI Frameworks</h3>
                             <p>Increased focus on ethical AI development and bias mitigation.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>AI</span>
+                                <span class="trend-tag">AI</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AI Customer Service">
+                            </div>
                             <h3>AI in Customer Service</h3>
                             <p>More sophisticated chatbots and virtual assistants handling complex queries.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>AI</span>
+                                <span class="trend-tag">AI</span>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Google AdSense Banner (Middle) -->
+            <div class="ad-section">
+                <div class="container text-center py-3">
+                    <!-- AdSense Display Ad -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                        data-ad-slot="XXXXXXXXXX"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
             
@@ -403,61 +906,79 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Zero Trust Architecture">
+                            </div>
                             <h3>Zero Trust Architecture</h3>
                             <p>"Never trust, always verify" approach becoming standard for enterprise security.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Security</span>
+                                <span class="trend-tag">Security</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Passwordless Authentication">
+                            </div>
                             <h3>Passwordless Authentication</h3>
                             <p>Biometrics and security keys replacing traditional passwords.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Security</span>
+                                <span class="trend-tag">Security</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cloud Security">
+                            </div>
                             <h3>Cloud Security Posture Management</h3>
                             <p>Tools continuously monitoring cloud environments for misconfigurations.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Security</span>
+                                <span class="trend-tag">Security</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1463&q=80" alt="Ransomware Defense">
+                            </div>
                             <h3>Ransomware Defense Strategies</h3>
                             <p>Advanced protection against increasingly sophisticated ransomware attacks.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Security</span>
+                                <span class="trend-tag">Security</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Supply Chain Security">
+                            </div>
                             <h3>Supply Chain Security</h3>
                             <p>Increased focus on securing software supply chains after high-profile breaches.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Security</span>
+                                <span class="trend-tag">Security</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quantum-Resistant Cryptography">
+                            </div>
                             <h3>Quantum-Resistant Cryptography</h3>
                             <p>Preparing encryption systems for the quantum computing era.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Security</span>
+                                <span class="trend-tag">Security</span>
                             </div>
                         </div>
                     </div>
@@ -470,61 +991,79 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Multi-Cloud Strategies">
+                            </div>
                             <h3>Multi-Cloud Strategies</h3>
                             <p>Businesses distributing workloads across multiple cloud providers for resilience.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Cloud</span>
+                                <span class="trend-tag">Cloud</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Serverless Containers">
+                            </div>
                             <h3>Serverless Containers</h3>
                             <p>Combining container benefits with serverless simplicity.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Cloud</span>
+                                <span class="trend-tag">Cloud</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Edge Computing">
+                            </div>
                             <h3>Edge Computing Expansion</h3>
                             <p>Processing data closer to its source for lower latency applications.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Cloud</span>
+                                <span class="trend-tag">Cloud</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="FinOps Practices">
+                            </div>
                             <h3>FinOps Practices</h3>
                             <p>Financial operations discipline to optimize cloud spending.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Cloud</span>
+                                <span class="trend-tag">Cloud</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="AI-Enhanced Cloud Services">
+                            </div>
                             <h3>AI-Enhanced Cloud Services</h3>
                             <p>Cloud providers integrating more AI capabilities into their offerings.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Cloud</span>
+                                <span class="trend-tag">Cloud</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Sustainable Cloud Computing">
+                            </div>
                             <h3>Sustainable Cloud Computing</h3>
                             <p>Focus on reducing energy consumption and carbon footprint of data centers.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Cloud</span>
+                                <span class="trend-tag">Cloud</span>
                             </div>
                         </div>
                     </div>
@@ -537,61 +1076,79 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Multi-Model Databases">
+                            </div>
                             <h3>Multi-Model Databases</h3>
                             <p>Databases supporting multiple data models (document, graph, key-value) in one engine.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Database</span>
+                                <span class="trend-tag">Database</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Time-Series Databases">
+                            </div>
                             <h3>Time-Series Databases</h3>
                             <p>Specialized databases for IoT and financial data gaining popularity.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Database</span>
+                                <span class="trend-tag">Database</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Distributed SQL Databases">
+                            </div>
                             <h3>Distributed SQL Databases</h3>
                             <p>Combining SQL benefits with horizontal scalability of NoSQL systems.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Database</span>
+                                <span class="trend-tag">Database</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Database as a Service">
+                            </div>
                             <h3>Database as a Service (DBaaS)</h3>
                             <p>More companies opting for managed database services in the cloud.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Database</span>
+                                <span class="trend-tag">Database</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="dabase.webp" alt="In-Memory Databases">
+                            </div>
                             <h3>In-Memory Databases</h3>
                             <p>Faster performance for real-time analytics and transactional systems.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Database</span>
+                                <span class="trend-tag">Database</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="Blockchain Databases">
+                            </div>
                             <h3>Blockchain Databases</h3>
                             <p>Immutable ledger technologies being integrated with traditional databases.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Database</span>
+                                <span class="trend-tag">Database</span>
                             </div>
                         </div>
                     </div>
@@ -604,61 +1161,79 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quantum Computing">
+                            </div>
                             <h3>Quantum Computing Progress</h3>
                             <p>Practical applications beginning to emerge from quantum research.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Emerging</span>
+                                <span class="trend-tag">Emerging</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="meta.png" alt="Metaverse Development">
+                            </div>
                             <h3>Metaverse Development Tools</h3>
                             <p>New frameworks and platforms for building metaverse experiences.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
-                                <span>Emerging</span>
+                                <span class="trend-tag">Emerging</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="Digital Twins">
+                            </div>
                             <h3>Digital Twins</h3>
                             <p>Virtual replicas of physical systems used for simulation and analysis.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Emerging</span>
+                                <span class="trend-tag">Emerging</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Neuromorphic Computing">
+                            </div>
                             <h3>Neuromorphic Computing</h3>
                             <p>Brain-inspired computing architectures showing promise for AI workloads.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
-                                <span>Emerging</span>
+                                <span class="trend-tag">Emerging</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Biometric Authentication">
+                            </div>
                             <h3>Biometric Authentication</h3>
                             <p>Advanced facial recognition and behavioral biometrics for security.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Emerging</span>
+                                <span class="trend-tag">Emerging</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
+                            <div class="trend-img">
+                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Autonomous Systems">
+                            </div>
                             <h3>Autonomous Systems</h3>
                             <p>Self-managing IT infrastructure and robotic process automation.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
-                                <span>Emerging</span>
+                                <span class="trend-tag">Emerging</span>
                             </div>
                         </div>
                     </div>
@@ -847,6 +1422,30 @@
                     $('.send-btn').click();
                 }
             });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('.back-to-top').addClass('active');
+                } else {
+                    $('.back-to-top').removeClass('active');
+                }
+            });
+            
+            $('.back-to-top').click(function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop: 0}, '300');
+            });
+            
+            // Preloader
+            $(window).on('load', function() {
+                $('#preloader').fadeOut('slow', function() {
+                    $(this).remove();
+                });
+            });
+            
+            // Initialize animations
+            new WOW().init();
         });
     </script>
 </body>

@@ -1,46 +1,313 @@
-<!--about.html-->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<!-- Basic -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
-	<!-- Site Metas -->
-	<title>About | Baffy's Computer Solutions</title>
-	<meta name="keywords"
-		content="IT services, web development, network solutions, IT consulting, software development">
-	<meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
-	<meta name="author" content="Bafokeng Khoali">
+    <!-- Site Metas -->
+    <title>About | Baffy's Computer Solutions</title>
+    <meta name="keywords"
+        content="IT services, web development, network solutions, IT consulting, software development">
+    <meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
+    <meta name="author" content="Bafokeng Khoali">
 
-	<!-- Site Icons -->
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
-		rel="stylesheet">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Page Header */
+        .page-header {
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .about-content p {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        /* Skills */
+        .skills-container {
+            margin-top: 30px;
+        }
+        
+        .skills-container h4 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        
+        .skill-item {
+            margin-bottom: 20px;
+        }
+        
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .skill-percent {
+            color: #6e8efb;
+            font-weight: 600;
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background: #edf2f7;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #6e8efb, #a777e3);
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+        
+        /* Education Section */
+        .education {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #6e8efb, #a777e3);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #718096;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .education-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .education-item h3 {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .institution {
+            color: #6e8efb;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .date {
+            color: #718096;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .education-item p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        
+        /* Resume Button */
+        .resume-btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .resume-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .resume-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(110, 142, 251, 0.4);
+            color: white;
+        }
+        
+        .resume-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 991px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 80px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .about-img {
+                margin-bottom: 30px;
+            }
+            
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top">
-	<!-- Preloader -->
-	<div id="preloader">
-		<div class="loader"></div>
-	</div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
 
-	 <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
@@ -57,7 +324,7 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link " href="about.html">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="portfolio.html">Portfolio</a>
@@ -69,7 +336,7 @@
                             <a class="nav-link" href="pricing.html">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="blog.html">Blog</a>
+                            <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -80,213 +347,369 @@
         </div>
     </header>
 
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>About BCS and founder</h1>
+                    <p>Get to know the professional behind the solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- Page Header -->
-	<section class="page-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1>About Me</h1>
-					<p>Get to know the professional behind the solutions</p>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<!-- About Section -->
-	<section id="about" class="about section">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<div class="about-img wow animate__animated animate__fadeInLeft">
-						<img src="baffy.jpg" alt="Bafokeng Khoali" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="about-content wow animate__animated animate__fadeInRight">
-						<h2>Bafokeng Khoali</h2>
-						<h3 class="text-gradient">Aspiring Developer | Tech Enthusiast</h3>
-						<p>From a young age, I found myself fixing computers for family and friends—long before I even
-							realized I was stepping into the shoes of an IT technician. That early curiosity grew into a
-							deep love for technology, and today I hold a Diploma in ICT and a Bachelor of Science in
-							Information Technology.</p>
+ <!-- About Company Section -->
+    <section class="company section">
+        <div class="container">
+            <div class="section-title">
+                <p>Delivering professional IT services with excellence and innovation</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="company-card">
+                        <div class="company-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Our Company</h3>
+                        <p>Founded in <span class="company-highlight">2018</span> by <span class="company-highlight">Bafokeng Khoali</span>, Baffy's Computer Solutions has grown to become a trusted provider of comprehensive IT services in <span class="company-highlight">Maseru, Lesotho</span>. We specialize in delivering tailored technology solutions to businesses and individuals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="company-card">
+                        <div class="company-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the leading provider of innovative and reliable IT solutions in Lesotho, empowering businesses and individuals through technology. We aim to bridge the digital divide by making advanced technology accessible and understandable to all our clients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="company-card">
+                        <div class="company-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To deliver exceptional IT services that drive business growth and efficiency. We are committed to providing customized solutions, outstanding customer service, and continuous innovation to meet the evolving technological needs of our clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-						<p>I'm passionate about development and databases, always exploring new tools and techniques to
-							bring ideas to life. I thrive on learning—especially through freelancing, where real-world
-							problems have sharpened my skills and expanded my creativity.</p>
 
-						<p>I'm driven by innovation and excited about solving challenges through technology. Whether I'm
-							building a website, designing a database, or helping someone get their system back up and
-							running, I bring energy, commitment, and a desire to keep growing in this fast-paced
-							industry.</p>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img wow animate__animated animate__fadeInLeft">
+                        <img src="baffy.jpg" alt="Bafokeng Khoali" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content wow animate__animated animate__fadeInRight">
+                        <h2>Bafokeng Khoali</h2>
+                        <h3 class="text-gradient">Aspiring Developer | Tech Enthusiast</h3>
+                        <p>From a young age, I found myself fixing computers for family and friends—long before I even
+                            realized I was stepping into the shoes of an IT technician. That early curiosity grew into a
+                            deep love for technology, and today I hold a Diploma in ICT and a Bachelor of Science in
+                            Information Technology.</p>
 
-						<div class="skills-container">
-							<h4>Technical Skills</h4>
-							<div class="skill-item">
-								<div class="skill-info">
-									<span class="skill-name">Web Development</span>
-									<span class="skill-percent">85%</span>
-								</div>
-								<div class="skill-bar">
-									<div class="skill-progress" data-width="85"></div>
-								</div>
-							</div>
+                        <p>I'm passionate about development and databases, always exploring new tools and techniques to
+                            bring ideas to life. I thrive on learning—especially through freelancing, where real-world
+                            problems have sharpened my skills and expanded my creativity.</p>
 
-							<div class="skill-item">
-								<div class="skill-info">
-									<span class="skill-name">Database Management</span>
-									<span class="skill-percent">90%</span>
-								</div>
-								<div class="skill-bar">
-									<div class="skill-progress" data-width="90"></div>
-								</div>
-							</div>
+                        <p>I'm driven by innovation and excited about solving challenges through technology. Whether I'm
+                            building a website, designing a database, or helping someone get their system back up and
+                            running, I bring energy, commitment, and a desire to keep growing in this fast-paced
+                            industry.</p>
 
-							<div class="skill-item">
-								<div class="skill-info">
-									<span class="skill-name">Computer Support</span>
-									<span class="skill-percent">95%</span>
-								</div>
-								<div class="skill-bar">
-									<div class="skill-progress" data-width="95"></div>
-								</div>
-							</div>
+                        <div class="skills-container">
+                            <h4>Technical Skills</h4>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Web Development</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
 
-							<div class="skill-item">
-								<div class="skill-info">
-									<span class="skill-name">Network Solutions</span>
-									<span class="skill-percent">70%</span>
-								</div>
-								<div class="skill-bar">
-									<div class="skill-progress" data-width="70"></div>
-								</div>
-							</div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Database Management</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
 
-							<div class="skill-item">
-								<div class="skill-info">
-									<span class="skill-name">Cloud Services</span>
-									<span class="skill-percent">65%</span>
-								</div>
-								<div class="skill-bar">
-									<div class="skill-progress" data-width="65"></div>
-								</div>
-							</div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Computer Support</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
 
-							<div class="skill-item">
-								<div class="skill-info">
-									<span class="skill-name">Self-Learning & Research</span>
-									<span class="skill-percent">90%</span>
-								</div>
-								<div class="skill-bar">
-									<div class="skill-progress" data-width="90"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Network Solutions</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
 
-	<!-- Education Section -->
-	<section class="education section">
-		<div class="container">
-			<div class="section-title">
-				<h2>Education & Qualifications</h2>
-				<p>My academic background and professional certifications</p>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="education-item">
-						<h3>Bachelor of Science in Information Technology</h3>
-						<p class="institution">LImkokwing University of Creative Technology</p>
-						<p class="date">2021 - 2025</p>
-						<p>Specialized in computer architecture, software development and database systems, with coursework in web
-							technologies,
-							network security, and artificial intelligence.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="education-item">
-						<h3>Diploma in Information and Communication Technology</h3>
-						<p class="institution">Institute of Development Management</p>
-						<p class="date">2018 - 2020</p>
-						<p>Comprehensive training in computer systems, networking, programming fundamentals,
-							and IT support services.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Cloud Services</span>
+                                    <span class="skill-percent">65%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="65"></div>
+                                </div>
+                            </div>
 
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="footer-about">
-						<div class="footer-logo">
-							<img src="bcs.jpg" alt="Baffy's Computer Solutions">
-						</div>
-						<p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
-							Professional, reliable, and tailored to your needs.</p>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6">
-					<div class="footer-links">
-						<h3>Quick Links</h3>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="pricing.html">Pricing</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-links">
-						<h3>Services</h3>
-						<ul>
-							<li>Web Development</li>
-							<li>App Development</li>
-							<li>Network Solutions</li>
-							<li>Cloud Services</li>
-							<li>IT Consulting</li>
-							<li>Database Management</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="footer-newsletter">
-						<h3>Newsletter</h3>
-						<p>Subscribe to get updates on my latest projects and services.</p>
-						<form class="newsletter-form">
-							<input type="email" class="newsletter-input" placeholder="Your Email">
-							<button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="copyright">
-					<p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Self-Learning & Research</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- Back to Top Button -->
-	<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Education Section -->
+    <section class="education section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education & Qualifications</h2>
+                <p>My academic background and professional certifications</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="education-item">
+                        <h3>Bachelor of Science in Information Technology</h3>
+                        <p class="institution">Limkokwing University of Creative Technology</p>
+                        <p class="date">2021 - 2025</p>
+                        <p>Specialized in computer architecture, software development and database systems, with coursework in web
+                            technologies, network security, and artificial intelligence.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="education-item">
+                        <h3>Diploma in Information and Communication Technology</h3>
+                        <p class="institution">Institute of Development Management</p>
+                        <p class="date">2018 - 2020</p>
+                        <p>Comprehensive training in computer systems, networking, programming fundamentals,
+                            and IT support services.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resume Button -->
+            <div class="resume-btn-container">
+                <a href="https://bafokengbaffy.github.io/resume/" class="resume-btn" target="_blank">
+                    <i class="fas fa-file-alt"></i> View My Resume
+                </a>
+            </div>
+        </div>
+    </section>
 
-	<!-- ALL JS FILES -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script src="scripts.js"></script>
+
+ <!-- Tutor Section -->
+    <section class="tutor section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Programming Tutoring Services</h2>
+                <p>Comprehensive instruction in various programming languages and technologies</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="tutor-card">
+                        <div class="tutor-img">
+                            <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Python Programming">
+                        </div>
+                        <div class="tutor-content">
+                            <span class="language-level">Beginner to Advanced</span>
+                            <h3>Python Programming</h3>
+                            <p>Learn Python from basics to advanced concepts including data structures, algorithms, web development with Django/Flask, and data science.</p>
+                            <a href="https://www.w3schools.com/python/" class="tutor-btn" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="tutor-card">
+                        <div class="tutor-img">
+                            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Java Programming">
+                        </div>
+                        <div class="tutor-content">
+                            <span class="language-level">Beginner to Intermediate</span>
+                            <h3>Java Programming</h3>
+                            <p>Master Java fundamentals, object-oriented programming, data structures, and application development for desktop and enterprise solutions.</p>
+                            <a href="https://www.w3schools.com/java/" class="tutor-btn" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="tutor-card">
+                        <div class="tutor-img">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Web Development">
+                        </div>
+                        <div class="tutor-content">
+                            <span class="language-level">Full Stack</span>
+                            <h3>Web Development</h3>
+                            <p>Comprehensive web development training covering HTML, CSS, JavaScript, React, Node.js, and full stack application development.</p>
+                            <a href="https://www.w3schools.com/whatis/" class="tutor-btn" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="tutor-card">
+                        <div class="tutor-img">
+                            <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Database Systems">
+                        </div>
+                        <div class="tutor-content">
+                            <span class="language-level">SQL & NoSQL</span>
+                            <h3>Database Systems</h3>
+                            <p>Learn both SQL (MySQL, PostgreSQL) and NoSQL (MongoDB) database systems, including design, implementation, and optimization.</p>
+                            <a href="https://www.w3schools.com/sql/" class="tutor-btn" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="tutor-card">
+                        <div class="tutor-img">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mobile Development">
+                        </div>
+                        <div class="tutor-content">
+                            <span class="language-level">Cross-Platform</span>
+                            <h3>Mobile Development</h3>
+                            <p>Build cross-platform mobile applications using Flutter and Dart, covering UI design, state management, and API integration.</p>
+                            <a href="https://www.w3schools.com/whatis/whatis_flutter.asp" class="tutor-btn" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="tutor-card">
+                        <div class="tutor-img">
+                            <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="PHP & JSP">
+                        </div>
+                        <div class="tutor-content">
+                            <span class="language-level">Server-Side</span>
+                            <h3>PHP & JSP</h3>
+                            <p>Learn server-side scripting with PHP and Java Server Pages (JSP) for dynamic web application development and database integration.</p>
+                            <a href="https://www.w3schools.com/php/" class="tutor-btn" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resume Button -->
+            <div class="resume-btn-container">
+                <a href="https://bafokengbaffy.github.io/resume/" class="resume-btn" target="_blank">
+                    <i class="fas fa-file-alt"></i> View My Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                        </div>
+                        <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
+                            Professional, reliable, and tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>App Development</li>
+                            <li>Network Solutions</li>
+                            <li>Cloud Services</li>
+                            <li>IT Consulting</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get updates on my latest projects and services.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your Email">
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ALL JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="scripts.js"></script>
+    
+    <script>
+        // Animate skill bars on scroll
+        $(document).ready(function() {
+            $('.skill-progress').each(function() {
+                $(this).css('width', $(this).data('width') + '%');
+            });
+            
+            // Initialize WOW.js
+            new WOW().init();
+        });
+    </script>
 </body>
 
 </html>

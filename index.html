@@ -40,6 +40,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Simple Animation Keyframes -->
+    <style>
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            1%, 3%, 5%, 7%, 9% { transform: rotate(-1deg); }
+            2%, 4%, 6%, 8% { transform: rotate(1deg); }
+        }
+    </style>	
 </head>
 
 <body id="page-top">
@@ -77,7 +97,7 @@
                             <a class="nav-link" href="pricing.html">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="blog.html">Blog</a>
+                            <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -88,32 +108,109 @@
         </div>
     </header>
 
+<!-- Hero Section with Centered Video Background -->
+<section id="home" class="hero" style="
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+">
+    <!-- Video Background -->
+    <div class="video-background" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    ">
+        <video autoplay muted loop id="heroVideo" style="
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        ">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-programmer-working-on-a-desktop-computer-3732-large.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="video-overlay" style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        "></div>
+    </div>
 
-    <!-- Hero Section with Video Background -->
-    <section id="home" class="hero">
-        <div class="video-background">
-            <video autoplay muted loop id="heroVideo">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-programmer-working-on-a-desktop-computer-3732-large.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <div class="video-overlay"></div>
-        </div>
-        <div sty class="container">
-            <div class="hero-content">
-                <h1 class="animate__animated animate__fadeInDown">BAFFY'S COMPUTER SOLUTIONS</h1>
-                <p style="color: white;" class="animate__animated animate__fadeInUp">Web and mobile Development | Database Administration |
-                    Machine Learning</p>
-                <div class="typing-text animate__animated animate__fadeIn">
-                    <span>Providing innovative solutions for <b class="is-visible">Web & mobile Development</b></span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary animate-shake">Get In Touch</a>
-                    <a href="portfolio.html" class="btn btn-secondary animate-shake">View Portfolio</a>
-                </div>
+    <!-- Centered Content Container -->
+    <div class="container" style="
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+    ">
+        <div class="hero-content" style="
+            color: white;
+            margin: 0 auto;
+            max-width: 800px;
+        ">
+            <h1 class="animate__animated animate__fadeInDown" style="
+                font-size: 3.5rem;
+                margin-bottom: 1rem;
+                text-shadow: 2px 2px 4px white;
+            ">BAFFY'S COMPUTER SOLUTIONS</h1>
+            
+            <p class="animate__animated animate__fadeInUp" style="
+                color: white;
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            ">Web and mobile Development | Database Administration | Machine Learning</p>
+            
+            <div class="typing-text animate__animated animate__fadeIn" style="
+                font-size: 1.2rem;
+                margin-bottom: 2.5rem;
+                min-height: 30px;
+            ">
+                <span>Providing innovative solutions for <b class="is-visible" style="
+                    color: #4e9af1;
+                    font-weight: 600;
+                ">Web & mobile Development</b></span>
+            </div>
+            
+            <div class="hero-buttons" style="
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            ">
+                <a href="contact.html" class="btn btn-primary animate-shake" style="
+                    background-color: #4e9af1;
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    border: 2px solid #4e9af1;
+                ">Get In Touch</a>
+                
+                <a href="portfolio.html" class="btn btn-secondary animate-shake" style="
+                    background-color: transparent;
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    border: 2px solid white;
+                ">View Portfolio</a>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Google AdSense Banner (Top) -->
     <section class="ad-section">
         <div class="container text-center py-3">
@@ -328,83 +425,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What our clients say about our services</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p>"Baffy's Computer Solutions delivered our e-commerce platform ahead of schedule. Their attention to detail and technical expertise was impressive."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="img-fluid">
-                            <div class="author-info">
-                                <h4>Thabo Mokoena</h4>
-                                <p>CEO, Mokoena Enterprises</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p>"The mobile app developed by Baffy has transformed our customer engagement. Highly recommend their services!"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="img-fluid">
-                            <div class="author-info">
-                                <h4>Matseliso Letsie</h4>
-                                <p>Director, TechSolutions Ltd</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <p>"Reliable IT support and excellent network solutions. They've been our trusted partner for 3 years now."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client" class="img-fluid">
-                            <div class="author-info">
-                                <h4>Lebohang Mohale</h4>
-                                <p>IT Manager, Mohale Holdings</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Google AdSense Banner (Bottom) -->
     <section class="ad-section">
@@ -433,7 +453,7 @@
                 <div class="col-md-4">
                     <div class="pricing-preview-card">
                         <h3>Basic Website</h3>
-                        <h4>LSL 9,250 - 18,500</h4>
+                        <h4>LSL 3,500 - 10,500</h4>
                         <ul>
                             <li>5 pages</li>
                             <li>Mobile responsive</li>
@@ -445,7 +465,7 @@
                     <div class="pricing-preview-card popular">
                         <div class="popular-badge">Most Popular</div>
                         <h3>Business Website</h3>
-                        <h4>LSL 185,000 - 370,000</h4>
+                        <h4>LSL 10,000 - 30,000</h4>
                         <ul>
                             <li>Up to 15 pages</li>
                             <li>CMS integration</li>
@@ -456,7 +476,7 @@
                 <div class="col-md-4">
                     <div class="pricing-preview-card">
                         <h3>E-commerce</h3>
-                        <h4>LSL 555,000 - 2,775,000</h4>
+                        <h4>LSL 30,000 - 100,000</h4>
                         <ul>
                             <li>Product catalog</li>
                             <li>Payment gateways</li>
@@ -474,7 +494,7 @@
     <!-- FAQ Section -->
     <section id="faq" class="faq section bg-light">
         <div class="container">
-            <div class="section-title">
+            <div style="text-align:center;" class="section-title">
                 <h2>Frequently Asked Questions</h2>
                 <p>Common questions about our services</p>
             </div>
@@ -548,92 +568,17 @@
         </div>
     </section>
 
-    <!-- Contact Section Preview -->
-    <section id="contact-preview" class="contact section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Have a project in mind? Let's discuss how I can help you achieve your goals</p>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-preview-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Maseru, Lesotho</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>baffkay20@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+266 6321-0786</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="contact-preview-form">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    	<!-- Call to Action -->
+		<section class="cta-section">
+			<div class="container">
+				<div style="text-align:center;" class="cta-content">
+					<h2 style="text-align:center;">Ready to Start Your Project?</h2>
+					<p style="text-align:center;">Contact me today to discuss your IT needs and get a free consultation.</p>
+					<a style="text-align:center;" href="contact.html" class="btn btn-primary">Get In Touch</a>
+				</div>
+			</div>
+		</section>
 
-    <!-- Live Chat Widget -->
-    <div class="live-chat-widget">
-        <div class="chat-header">
-            <h4>Need Help?</h4>
-            <p>Chat with us now</p>
-            <button class="close-chat"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="chat-body">
-            <div class="chat-messages">
-                <div class="chat-message bot">
-                    <p>Hello! I'm Baffy's AI assistant. How can I help you today?</p>
-                </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Type your message...">
-                <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
-            </div>
-        </div>
-        <div class="chat-footer">
-            <p>Or connect with us directly:</p>
-            <div class="chat-options">
-                <a href="https://wa.me/message/2QFRU4XGJUGHI1" class="whatsapp-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="tel:+26658855222" class="call-btn">
-                    <i class="fas fa-phone"></i> Call Now
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="chat-toggle">
-        <i class="fas fa-comments"></i>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -693,9 +638,7 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-
+ 
     <!-- ALL JS FILES -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -707,66 +650,160 @@
     <script src="scripts.js"></script>
     
     <!-- Live Chat Script -->
-    <script>
-        $(document).ready(function() {
-            // Toggle chat widget
-            $('.chat-toggle').click(function() {
-                $('.live-chat-widget').toggleClass('active');
-            });
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle chat widget
+    const chatToggle = document.getElementById('chatToggle');
+    const liveChatWidget = document.getElementById('liveChatWidget');
+    const closeChat = document.getElementById('closeChat');
+    
+    chatToggle.addEventListener('click', function() {
+        liveChatWidget.style.transform = 'translateY(0)';
+        liveChatWidget.style.opacity = '1';
+    });
+    
+    closeChat.addEventListener('click', function() {
+        liveChatWidget.style.transform = 'translateY(100%)';
+        liveChatWidget.style.opacity = '0';
+    });
+    
+    // Chat functionality
+    const chatMessages = document.querySelector('.chat-messages');
+    const chatInput = document.getElementById('chatInput');
+    const sendChatBtn = document.getElementById('sendChatBtn');
+    
+    function addMessage(message, isBot = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${isBot ? 'bot' : 'user'}`;
+        messageDiv.style = isBot ? 
+            'background: #f1f5ff; color: #333; align-self: flex-start; padding: 10px 15px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%;' : 
+            'background: #6e8efb; color: white; align-self: flex-end; padding: 10px 15px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%;';
+        
+        const messageP = document.createElement('p');
+        messageP.style = 'margin: 0; font-size: 0.9rem; line-height: 1.4;';
+        messageP.textContent = message;
+        
+        messageDiv.appendChild(messageP);
+        chatMessages.appendChild(messageDiv);
+        chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
+    }
+    
+    function getAIResponse(userMessage) {
+        // This would be replaced with actual API calls in production
+        const responses = {
+            'hello': 'Hi there! How can I assist you today?',
+            'hi': 'Hello! What can I help you with?',
+            'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
+            'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
+            'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
+            'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
+            'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
+        };
+        
+        const lowerMsg = userMessage.toLowerCase();
+        if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+            return responses['pricing'];
+        } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
+            return responses['services'];
+        } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
+            return responses['contact'];
+        } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
+            return responses['hello'];
+        } else if (lowerMsg.includes('help')) {
+            return responses['help'];
+        } else {
+            return responses['default'];
+        }
+    }
+    
+    function handleSendMessage() {
+        const message = chatInput.value.trim();
+        if (message) {
+            addMessage(message, false);
+            chatInput.value = '';
             
-            $('.close-chat').click(function() {
-                $('.live-chat-widget').removeClass('active');
-            });
+            // Simulate API call delay
+            setTimeout(() => {
+                const response = getAIResponse(message);
+                addMessage(response, true);
+            }, 1000);
+        }
+    }
+    
+    sendChatBtn.addEventListener('click', handleSendMessage);
+    chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            handleSendMessage();
+        }
+    });
+    
+    // AI Assistant Panel functionality
+    const aiConversation = document.querySelector('.ai-conversation');
+    const aiInput = document.querySelector('.ai-input');
+    const aiSendBtn = document.querySelector('.ai-send-btn');
+    const quickQuestions = document.querySelectorAll('.quick-question');
+    
+    function addAIMessage(message, isBot = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `ai-message ${isBot ? 'ai-response' : 'ai-question'}`;
+        messageDiv.style = isBot ? 
+            'background: #edf2f7; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%;' : 
+            'background: #4a6cf7; color: white; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%; margin-left: auto;';
+        
+        const messageP = document.createElement('p');
+        messageP.style = 'margin: 0; color: ' + (isBot ? '#2d3748' : 'white') + ';';
+        messageP.textContent = message;
+        
+        messageDiv.appendChild(messageP);
+        aiConversation.appendChild(messageDiv);
+        aiConversation.scrollTop = aiConversation.scrollHeight;
+    }
+    
+    function handleAISendMessage() {
+        const message = aiInput.value.trim();
+        if (message) {
+            addAIMessage(message, false);
+            aiInput.value = '';
             
-            // Simple chatbot functionality
-            $('.send-btn').click(function() {
-                const userMessage = $('.chat-input input').val().trim();
-                if (userMessage) {
-                    // Add user message
-                    $('.chat-messages').append(`
-                        <div class="chat-message user">
-                            <p>${userMessage}</p>
-                        </div>
-                    `);
-                    
-                    // Clear input
-                    $('.chat-input input').val('');
-                    
-                    // Scroll to bottom
-                    $('.chat-body').scrollTop($('.chat-body')[0].scrollHeight);
-                    
-                    // Simulate bot response after delay
-                    setTimeout(function() {
-                        const responses = [
-                            "I can help you with that. Would you like to schedule a consultation?",
-                            "That's a great question! Our team specializes in that area.",
-                            "For immediate assistance, you can call us at +266 6321-0786.",
-                            "I'll connect you with one of our experts. Can you share more details?",
-                            "Thanks for your message! How can we assist you today?"
-                        ];
-                        
-                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                        
-                        $('.chat-messages').append(`
-                            <div class="chat-message bot">
-                                <p>${randomResponse}</p>
-                            </div>
-                        `);
-                        
-                        // Scroll to bottom
-                        $('.chat-body').scrollTop($('.chat-body')[0].scrollHeight);
-                    }, 1000);
-                }
-            });
+            // Simulate more advanced API response
+            setTimeout(() => {
+                const response = getAIResponse(message);
+                addAIMessage(response, true);
+            }, 800);
+        }
+    }
+    
+    aiSendBtn.addEventListener('click', handleAISendMessage);
+    aiInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            handleAISendMessage();
+        }
+    });
+    
+    quickQuestions.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const question = this.textContent;
+            addAIMessage(question, false);
             
-            // Send message on Enter key
-            $('.chat-input input').keypress(function(e) {
-                if (e.which === 13) {
-                    $('.send-btn').click();
-                }
-            });
+            setTimeout(() => {
+                const response = getAIResponse(question);
+                addAIMessage(response, true);
+            }, 800);
         });
-    </script>
+    });
+    
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    }
+});
+</script>
+    
 </body>
 
 </html>
