@@ -1,58 +1,67 @@
-	<!--contact.hmtl-->
+<!DOCTYPE html>
+<html lang="en">
 
-	<!DOCTYPE html>
-	<html lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
-	<head>
-		<!-- Basic -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <!-- Site Metas -->
+    <title>Contact | Baffy's Computer Solutions</title>
+    <meta name="keywords"
+        content="IT services, web development, network solutions, IT consulting, software development">
+    <meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
+    <meta name="author" content="Bafokeng Khoali">
 
-		<!-- Site Metas -->
-		<title>Contact | Baffy's Computer Solutions</title>
-		<meta name="keywords"
-			content="IT services, web development, network solutions, IT consulting, software development">
-		<meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
-		<meta name="author" content="Bafokeng Khoali">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-		<!-- Site Icons -->
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		<!-- Google Fonts -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
-			rel="stylesheet">
-		<!-- Animate.css -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="styles.css">
-	</head>
+<body id="page-top">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
 
-	<body id="page-top">
-		<!-- Preloader -->
-		<div id="preloader">
-			<div class="loader"></div>
-		</div>
-
-		 <!-- Header -->
-    <header class="header">
+    <!-- Header -->
+    <header class="header" style="background-color:black; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
+                <!-- Logo (Rounded) -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid #4e9af1;
+                ">
                 </a>
+
+                <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto" style="font-weight: 500; font-size: 1rem;">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -69,7 +78,7 @@
                             <a class="nav-link" href="pricing.html">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="blog.html">Blog</a>
+                            <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -80,381 +89,471 @@
         </div>
     </header>
 
-		<!-- Page Header -->
-		<section class="page-header">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1>Get In Touch</h1>
-						<p>Have a project in mind? Let's discuss how I can help you achieve your goals</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-	<!-- Animated Contact Section with AI Assistant -->
-<section id="contact" style="background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%); padding: 100px 0; font-family: 'Poppins', sans-serif; overflow: hidden;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <!-- Section Header with Animation -->
-        <div style="text-align: center; margin-bottom: 60px; animation: fadeInUp 0.8s ease;">
-            <h2 style="font-size: 2.8rem; color: #2d3748; margin-bottom: 15px; font-weight: 800; background: linear-gradient(90deg, #4a6cf7, #6e8efb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Let's Build Something Amazing</h2>
-            <p style="color: #4a5568; font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">Get instant answers from our AI or connect directly with our team</p>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-            <!-- AI Assistant Card with Floating Animation -->
-            <div style="flex: 1; min-width: 300px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(74, 108, 247, 0.1); transform: translateY(0); transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeInLeft 0.8s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(74, 108, 247, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(74, 108, 247, 0.1)'">
-                <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                        <i class="fas fa-robot" style="color: white; font-size: 1.5rem;"></i>
-                    </div>
-                    <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0;">AI Assistant</h3>
-                </div>
-                
-                <!-- AI Conversation -->
-                <div id="aiChat" style="height: 250px; overflow-y: auto; margin-bottom: 20px; padding: 15px; background: #f7fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <div style="background: #edf2f7; padding: 12px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 85%; animation: fadeIn 0.5s ease;">
-                        <p style="margin: 0; color: #2d3748; line-height: 1.5;">Hello! I'm Baffy's AI assistant. Ask me about services, pricing, or availability.</p>
-                    </div>
-                </div>
-                
-                <!-- Input Area -->
-                <div style="display: flex; margin-bottom: 20px;">
-                    <input type="text" id="aiInput" placeholder="Ask me anything..." style="flex: 1; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px 0 0 12px; outline: none; font-size: 1rem; transition: border 0.3s ease;" onfocus="this.style.borderColor='#4a6cf7'">
-                    <button id="aiSendBtn" style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; padding: 0 25px; border-radius: 0 12px 12px 0; cursor: pointer; font-size: 1rem; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
-                
-                <!-- Quick Questions -->
-                <div style="margin-top: 25px;">
-                    <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 12px; font-weight: 500;">Quick questions:</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <button onclick="askAI('What services do you offer?')" style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Services</button>
-                        <button onclick="askAI('What are your pricing options?')" style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Pricing</button>
-                        <button onclick="askAI('How long do projects take?')" style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Timeline</button>
-                        <button onclick="askAI('What technologies do you use?')" style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Technologies</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Form Card with Floating Animation -->
-            <div style="flex: 1; min-width: 300px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(74, 108, 247, 0.1); transform: translateY(0); transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeInRight 0.8s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(74, 108, 247, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(74, 108, 247, 0.1)'">
-                <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                        <i class="fas fa-envelope" style="color: white; font-size: 1.5rem;"></i>
-                    </div>
-                    <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0;">Contact Form</h3>
-                </div>
-                
-                <form id="contactForm" style="margin-bottom: 20px;">
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Your Name</label>
-                        <input type="text" style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;" onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'" onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Email Address</label>
-                        <input type="email" style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;" onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'" onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Subject</label>
-                        <input type="text" style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;" onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'" onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required>
-                    </div>
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Your Message</label>
-                        <textarea rows="4" style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; resize: vertical; transition: all 0.3s ease;" onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'" onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required></textarea>
-                    </div>
-                    <button type="submit" style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; padding: 16px; border-radius: 12px; cursor: pointer; font-size: 1rem; font-weight: 600; width: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px rgba(74, 108, 247, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Send Message</button>
-                </form>
-                
-                <!-- Alternative Contact -->
-                <div style="border-top: 1px solid #e2e8f0; padding-top: 25px;">
-                    <h4 style="color: #2d3748; margin-bottom: 18px; font-size: 1.2rem;">Direct Contact</h4>
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 45px; height: 45px; background: #edf2f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='rotate(10deg) scale(1.1)'" onmouseout="this.style.transform='rotate(0) scale(1)'">
-                            <i class="fas fa-phone-alt" style="color: #4a6cf7; font-size: 1.1rem;"></i>
-                        </div>
-                        <div>
-                            <p style="margin: 0 0 3px 0; color: #4a5568; font-weight: 500;">Call us 24/7</p>
-                            <a href="tel:+26663210786" style="color: #4a6cf7; text-decoration: none; font-weight: 600; font-size: 1.1rem;">+266 6321 0786</a>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: center;">
-                        <div style="width: 45px; height: 45px; background: #edf2f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='rotate(10deg) scale(1.1)'" onmouseout="this.style.transform='rotate(0) scale(1)'">
-                            <i class="fas fa-envelope" style="color: #4a6cf7; font-size: 1.1rem;"></i>
-                        </div>
-                        <div>
-                            <p style="margin: 0 0 3px 0; color: #4a5568; font-weight: 500;">Email us at</p>
-                            <a href="mailto:baffkay20@gmail.com" style="color: #4a6cf7; text-decoration: none; font-weight: 600; font-size: 1.1rem;">baffkay20@gmail.com</a>
-                        </div>
-                    </div>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Get In Touch</h1>
+                    <p>Have a project in mind? Let's discuss how I can help you achieve your goals</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Floating Chat Toggle Button -->
-<div id="chatToggle" style="position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 8px 25px rgba(106, 142, 251, 0.6); z-index: 999; transition: all 0.3s ease; animation: pulse 2s infinite;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 10px 30px rgba(106, 142, 251, 0.8)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 25px rgba(106, 142, 251, 0.6)'">
-    <i class="fas fa-comment-dots"></i>
-</div>
+    <!-- Animated Contact Section with AI Assistant -->
+    <section id="contact"
+        style="background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%); padding: 100px 0; font-family: 'Poppins', sans-serif; overflow: hidden;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <!-- Section Header with Animation -->
+            <div style="text-align: center; margin-bottom: 60px; animation: fadeInUp 0.8s ease;">
+                <h2
+                    style="font-size: 2.8rem; color: #2d3748; margin-bottom: 15px; font-weight: 800; background: linear-gradient(90deg, #4a6cf7, #6e8efb); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    Let's Build Something Amazing</h2>
+                <p style="color: #4a5568; font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">Get
+                    instant answers from our AI or connect directly with our team</p>
+            </div>
 
-<!-- Live Chat Widget -->
-<div id="liveChat" style="position: fixed; bottom: 120px; right: 30px; width: 380px; max-width: 90%; background: white; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); visibility: hidden;">
-    <div style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; padding: 20px; border-radius: 18px 18px 0 0; position: relative;">
-        <h4 style="margin: 0; font-size: 1.3rem;">AI Support Assistant</h4>
-        <p style="margin: 5px 0 0; font-size: 0.95rem; opacity: 0.9;">We're online and ready to help</p>
-        <button id="closeChat" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.2); border: none; width: 30px; height: 30px; border-radius: 50%; color: white; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
-            <i class="fas fa-times"></i>
-        </button>
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                <!-- AI Assistant Card with Floating Animation -->
+                <div style="flex: 1; min-width: 300px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(74, 108, 247, 0.1); transform: translateY(0); transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeInLeft 0.8s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(74, 108, 247, 0.15)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(74, 108, 247, 0.1)'">
+                    <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                        <div
+                            style="width: 50px; height: 50px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-robot" style="color: white; font-size: 1.5rem;"></i>
+                        </div>
+                        <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0;">AI Assistant</h3>
+                    </div>
+
+                    <!-- AI Conversation -->
+                    <div id="aiChat"
+                        style="height: 250px; overflow-y: auto; margin-bottom: 20px; padding: 15px; background: #f7fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
+                        <div
+                            style="background: #edf2f7; padding: 12px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 85%; animation: fadeIn 0.5s ease;">
+                            <p style="margin: 0; color: #2d3748; line-height: 1.5;">Hello! I'm Baffy's AI assistant. Ask
+                                me about services, pricing, or availability.</p>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div style="display: flex; margin-bottom: 20px;">
+                        <input type="text" id="aiInput" placeholder="Ask me anything..."
+                            style="flex: 1; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px 0 0 12px; outline: none; font-size: 1rem; transition: border 0.3s ease;"
+                            onfocus="this.style.borderColor='#4a6cf7'">
+                        <button id="aiSendBtn"
+                            style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; padding: 0 25px; border-radius: 0 12px 12px 0; cursor: pointer; font-size: 1rem; transition: transform 0.2s ease;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                    <!-- Quick Questions -->
+                    <div style="margin-top: 25px;">
+                        <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 12px; font-weight: 500;">Quick
+                            questions:</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <button onclick="askAI('What services do you offer?')"
+                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
+                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Services</button>
+                            <button onclick="askAI('What are your pricing options?')"
+                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
+                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Pricing</button>
+                            <button onclick="askAI('How long do projects take?')"
+                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
+                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Timeline</button>
+                            <button onclick="askAI('What technologies do you use?')"
+                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
+                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Technologies</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card with Floating Animation -->
+                <div style="flex: 1; min-width: 300px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(74, 108, 247, 0.1); transform: translateY(0); transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeInRight 0.8s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(74, 108, 247, 0.15)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(74, 108, 247, 0.1)'">
+                    <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                        <div
+                            style="width: 50px; height: 50px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-envelope" style="color: white; font-size: 1.5rem;"></i>
+                        </div>
+                        <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0;">Contact Form</h3>
+                    </div>
+
+                    <form id="contactForm" action="https://formsubmit.co/baffkay20@gmail.com" method="POST"
+                        style="margin-bottom: 20px;">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Your
+                                Name</label>
+                            <input type="text" name="name"
+                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;"
+                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
+                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Email
+                                Address</label>
+                            <input type="email" name="email"
+                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;"
+                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
+                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Phone
+                                Number</label>
+                            <input type="text" name="phone"
+                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;"
+                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
+                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Your
+                                Message</label>
+                            <textarea rows="4" name="message"
+                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"
+                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
+                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'"
+                                required></textarea>
+                        </div>
+                        <button type="submit"
+                            style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; padding: 16px; border-radius: 12px; cursor: pointer; font-size: 1rem; font-weight: 600; width: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px rgba(74, 108, 247, 0.3)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Send
+                            Message</button>
+                    </form>
+
+                    <!-- Alternative Contact -->
+                    <div style="border-top: 1px solid #e2e8f0; padding-top: 25px;">
+                        <h4 style="color: #2d3748; margin-bottom: 18px; font-size: 1.2rem;">Direct Contact</h4>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <div style="width: 45px; height: 45px; background: #edf2f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; transition: transform 0.3s ease;"
+                                onmouseover="this.style.transform='rotate(10deg) scale(1.1)'"
+                                onmouseout="this.style.transform='rotate(0) scale(1)'">
+                                <i class="fas fa-phone-alt" style="color: #4a6cf7; font-size: 1.1rem;"></i>
+                            </div>
+                            <div>
+                                <p style="margin: 0 0 3px 0; color: #4a5568; font-weight: 500;">Call us 24/7</p>
+                                <a href="tel:+26663210786"
+                                    style="color: #4a6cf7; text-decoration: none; font-weight: 600; font-size: 1.1rem;">+266
+                                    6321 0786</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div style="width: 45px; height: 45px; background: #edf2f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; transition: transform 0.3s ease;"
+                                onmouseover="this.style.transform='rotate(10deg) scale(1.1)'"
+                                onmouseout="this.style.transform='rotate(0) scale(1)'">
+                                <i class="fas fa-envelope" style="color: #4a6cf7; font-size: 1.1rem;"></i>
+                            </div>
+                            <div>
+                                <p style="margin: 0 0 3px 0; color: #4a5568; font-weight: 500;">Email us at</p>
+                                <a href="mailto:baffkay20@gmail.com"
+                                    style="color: #4a6cf7; text-decoration: none; font-weight: 600; font-size: 1.1rem;">baffkay20@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chat Toggle Button -->
+    <div id="chatToggle"
+        style="position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 8px 25px rgba(106, 142, 251, 0.6); z-index: 999; transition: all 0.3s ease; animation: pulse 2s infinite;"
+        onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 10px 30px rgba(106, 142, 251, 0.8)'"
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 25px rgba(106, 142, 251, 0.6)'">
+        <i class="fas fa-comment-dots"></i>
     </div>
-    <div style="padding: 20px; height: 350px; overflow-y: auto;">
-        <div id="chatMessages" style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="background: #f1f5ff; color: #333; align-self: flex-start; padding: 12px 16px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%; animation: fadeIn 0.5s ease;">
-                <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">Hello! I'm Baffy's AI assistant. How can I help you today?</p>
+
+    <!-- Live Chat Widget -->
+    <div id="liveChat"
+        style="position: fixed; bottom: 120px; right: 30px; width: 380px; max-width: 90%; background: white; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); visibility: hidden;">
+        <div
+            style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; padding: 20px; border-radius: 18px 18px 0 0; position: relative;">
+            <h4 style="margin: 0; font-size: 1.3rem;">AI Support Assistant</h4>
+            <p style="margin: 5px 0 0; font-size: 0.95rem; opacity: 0.9;">We're online and ready to help</p>
+            <button id="closeChat"
+                style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.2); border: none; width: 30px; height: 30px; border-radius: 50%; color: white; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;"
+                onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+                onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div style="padding: 20px; height: 350px; overflow-y: auto;">
+            <div id="chatMessages" style="display: flex; flex-direction: column; gap: 12px;">
+                <div
+                    style="background: #f1f5ff; color: #333; align-self: flex-start; padding: 12px 16px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%; animation: fadeIn 0.5s ease;">
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">Hello! I'm Baffy's AI assistant. How can
+                        I help you today?</p>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; padding: 15px 20px; border-top: 1px solid #eee;">
+            <input type="text" id="chatInput" placeholder="Type your message..."
+                style="flex: 1; padding: 12px 16px; border: 1px solid #ddd; border-radius: 30px; outline: none; font-size: 0.95rem; transition: all 0.3s ease;"
+                onfocus="this.style.borderColor='#4a6cf7'">
+            <button id="sendChatBtn"
+                style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; margin-left: 10px; cursor: pointer; transition: all 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        <div style="padding: 15px 20px 20px; border-top: 1px solid #eee; text-align: center;">
+            <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">Prefer human help?</p>
+            <div style="display: flex; gap: 12px; justify-content: center;">
+                <a href="https://wa.me/message/2QFRU4XGJUGHI1" target="_blank"
+                    style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 30px; font-size: 0.95rem; font-weight: 500; background: #25D366; color: white; text-decoration: none; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(37, 211, 102, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> WhatsApp
+                </a>
+                <a href="tel:+26663210786"
+                    style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 30px; font-size: 0.95rem; font-weight: 500; background: #4a6cf7; color: white; text-decoration: none; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(74, 108, 247, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <i class="fas fa-phone" style="margin-right: 8px; font-size: 1.1rem;"></i> Call Now
+                </a>
             </div>
         </div>
     </div>
-    <div style="display: flex; padding: 15px 20px; border-top: 1px solid #eee;">
-        <input type="text" id="chatInput" placeholder="Type your message..." style="flex: 1; padding: 12px 16px; border: 1px solid #ddd; border-radius: 30px; outline: none; font-size: 0.95rem; transition: all 0.3s ease;" onfocus="this.style.borderColor='#4a6cf7'">
-        <button id="sendChatBtn" style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; margin-left: 10px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            <i class="fas fa-paper-plane"></i>
-        </button>
-    </div>
-    <div style="padding: 15px 20px 20px; border-top: 1px solid #eee; text-align: center;">
-        <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">Prefer human help?</p>
-        <div style="display: flex; gap: 12px; justify-content: center;">
-            <a href="https://wa.me/message/2QFRU4XGJUGHI1" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 30px; font-size: 0.95rem; font-weight: 500; background: #25D366; color: white; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(37, 211, 102, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> WhatsApp
-            </a>
-            <a href="tel:+26663210786" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 30px; font-size: 0.95rem; font-weight: 500; background: #4a6cf7; color: white; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(74, 108, 247, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                <i class="fas fa-phone" style="margin-right: 8px; font-size: 1.1rem;"></i> Call Now
-            </a>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                        <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
+                            Professional, reliable, and tailored to your needs.</p>
+                        <div class="social-links mt-4">
+                            <a href="https://wa.me/message/2QFRU4XGJUGHI1" class="me-3" target="_blank"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="https://github.com/bafokengBaffy" class="me-3" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">App Development</a></li>
+                            <li><a href="#">Network Solutions</a></li>
+                            <li><a href="#">Cloud Services</a></li>
+                            <li><a href="#">IT Consulting</a></li>
+                            <li><a href="#">Database Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get updates on my latest projects and services.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your Email" required>
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-	
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="footer-about">
-							<div class="footer-logo">
-								<img src="bcs.jpg" alt="Baffy's Computer Solutions">
-							</div>
-							<p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
-								Professional, reliable, and tailored to your needs.</p>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-6">
-						<div class="footer-links">
-							<h3>Quick Links</h3>
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="footer-links">
-							<h3>Services</h3>
-							<ul>
-								<li>Web Development</li>
-								<li>App Development</li>
-								<li>Network Solutions</li>
-								<li>Cloud Services</li>
-								<li>IT Consulting</li>
-								<li>Database Management</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="footer-newsletter">
-							<h3>Newsletter</h3>
-							<p>Subscribe to get updates on my latest projects and services.</p>
-							<form class="newsletter-form">
-								<input type="email" class="newsletter-input" placeholder="Your Email">
-								<button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<div class="copyright">
-						<p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
-					</div>
-				</div>
-			</div>
-		</footer>
+    </footer>
 
 
-		<!-- ALL JS FILES -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-		<script src="scripts.js"></script>
 
-		 <!-- Live Chat Script -->
-   <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Toggle chat widget
-    const chatToggle = document.getElementById('chatToggle');
-    const liveChatWidget = document.getElementById('liveChatWidget');
-    const closeChat = document.getElementById('closeChat');
-    
-    chatToggle.addEventListener('click', function() {
-        liveChatWidget.style.transform = 'translateY(0)';
-        liveChatWidget.style.opacity = '1';
-    });
-    
-    closeChat.addEventListener('click', function() {
-        liveChatWidget.style.transform = 'translateY(100%)';
-        liveChatWidget.style.opacity = '0';
-    });
-    
-    // Chat functionality
-    const chatMessages = document.querySelector('.chat-messages');
-    const chatInput = document.getElementById('chatInput');
-    const sendChatBtn = document.getElementById('sendChatBtn');
-    
-    function addMessage(message, isBot = false) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `chat-message ${isBot ? 'bot' : 'user'}`;
-        messageDiv.style = isBot ? 
-            'background: #f1f5ff; color: #333; align-self: flex-start; padding: 10px 15px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%;' : 
-            'background: #6e8efb; color: white; align-self: flex-end; padding: 10px 15px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%;';
-        
-        const messageP = document.createElement('p');
-        messageP.style = 'margin: 0; font-size: 0.9rem; line-height: 1.4;';
-        messageP.textContent = message;
-        
-        messageDiv.appendChild(messageP);
-        chatMessages.appendChild(messageDiv);
-        chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
-    }
-    
-    function getAIResponse(userMessage) {
-        // This would be replaced with actual API calls in production
-        const responses = {
-            'hello': 'Hi there! How can I assist you today?',
-            'hi': 'Hello! What can I help you with?',
-            'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
-            'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
-            'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
-            'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
-            'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
-        };
-        
-        const lowerMsg = userMessage.toLowerCase();
-        if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
-            return responses['pricing'];
-        } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
-            return responses['services'];
-        } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
-            return responses['contact'];
-        } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
-            return responses['hello'];
-        } else if (lowerMsg.includes('help')) {
-            return responses['help'];
-        } else {
-            return responses['default'];
-        }
-    }
-    
-    function handleSendMessage() {
-        const message = chatInput.value.trim();
-        if (message) {
-            addMessage(message, false);
-            chatInput.value = '';
-            
-            // Simulate API call delay
-            setTimeout(() => {
-                const response = getAIResponse(message);
-                addMessage(response, true);
-            }, 1000);
-        }
-    }
-    
-    sendChatBtn.addEventListener('click', handleSendMessage);
-    chatInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            handleSendMessage();
-        }
-    });
-    
-    // AI Assistant Panel functionality
-    const aiConversation = document.querySelector('.ai-conversation');
-    const aiInput = document.querySelector('.ai-input');
-    const aiSendBtn = document.querySelector('.ai-send-btn');
-    const quickQuestions = document.querySelectorAll('.quick-question');
-    
-    function addAIMessage(message, isBot = false) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `ai-message ${isBot ? 'ai-response' : 'ai-question'}`;
-        messageDiv.style = isBot ? 
-            'background: #edf2f7; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%;' : 
-            'background: #4a6cf7; color: white; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%; margin-left: auto;';
-        
-        const messageP = document.createElement('p');
-        messageP.style = 'margin: 0; color: ' + (isBot ? '#2d3748' : 'white') + ';';
-        messageP.textContent = message;
-        
-        messageDiv.appendChild(messageP);
-        aiConversation.appendChild(messageDiv);
-        aiConversation.scrollTop = aiConversation.scrollHeight;
-    }
-    
-    function handleAISendMessage() {
-        const message = aiInput.value.trim();
-        if (message) {
-            addAIMessage(message, false);
-            aiInput.value = '';
-            
-            // Simulate more advanced API response
-            setTimeout(() => {
-                const response = getAIResponse(message);
-                addAIMessage(response, true);
-            }, 800);
-        }
-    }
-    
-    aiSendBtn.addEventListener('click', handleAISendMessage);
-    aiInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            handleAISendMessage();
-        }
-    });
-    
-    quickQuestions.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const question = this.textContent;
-            addAIMessage(question, false);
-            
-            setTimeout(() => {
-                const response = getAIResponse(question);
-                addAIMessage(response, true);
-            }, 800);
+
+    <!-- ALL JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="scripts.js"></script>
+
+    <!-- Live Chat Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle chat widget
+            const chatToggle = document.getElementById('chatToggle');
+            const liveChat = document.getElementById('liveChat');
+            const closeChat = document.getElementById('closeChat');
+
+            chatToggle.addEventListener('click', function () {
+                if (liveChat.style.visibility === 'visible') {
+                    liveChat.style.transform = 'translateY(20px)';
+                    liveChat.style.opacity = '0';
+                    liveChat.style.visibility = 'hidden';
+                } else {
+                    liveChat.style.transform = 'translateY(0)';
+                    liveChat.style.opacity = '1';
+                    liveChat.style.visibility = 'visible';
+                }
+            });
+
+            closeChat.addEventListener('click', function () {
+                liveChat.style.transform = 'translateY(20px)';
+                liveChat.style.opacity = '0';
+                liveChat.style.visibility = 'hidden';
+            });
+
+            // Chat functionality
+            const chatMessages = document.getElementById('chatMessages');
+            const chatInput = document.getElementById('chatInput');
+            const sendChatBtn = document.getElementById('sendChatBtn');
+
+            function addChatMessage(message, isBot = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.style = isBot ?
+                    'background: #f1f5ff; color: #333; align-self: flex-start; padding: 12px 16px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%; animation: fadeIn 0.5s ease;' :
+                    'background: #6e8efb; color: white; align-self: flex-end; padding: 12px 16px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%; animation: fadeIn 0.5s ease;';
+
+                const messageP = document.createElement('p');
+                messageP.style = 'margin: 0; font-size: 0.95rem; line-height: 1.5;';
+                messageP.textContent = message;
+
+                messageDiv.appendChild(messageP);
+                chatMessages.appendChild(messageDiv);
+                chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
+            }
+
+            function getAIResponse(userMessage) {
+                const responses = {
+                    'hello': 'Hi there! How can I assist you today?',
+                    'hi': 'Hello! What can I help you with?',
+                    'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
+                    'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
+                    'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
+                    'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
+                    'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
+                };
+
+                const lowerMsg = userMessage.toLowerCase();
+                if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+                    return responses['pricing'];
+                } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
+                    return responses['services'];
+                } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
+                    return responses['contact'];
+                } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
+                    return responses['hello'];
+                } else if (lowerMsg.includes('help')) {
+                    return responses['help'];
+                } else {
+                    return responses['default'];
+                }
+            }
+
+            function handleSendChatMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    addChatMessage(message, false);
+                    chatInput.value = '';
+
+                    setTimeout(() => {
+                        const response = getAIResponse(message);
+                        addChatMessage(response, true);
+                    }, 1000);
+                }
+            }
+
+            sendChatBtn.addEventListener('click', handleSendChatMessage);
+            chatInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    handleSendChatMessage();
+                }
+            });
+
+            // AI Assistant Panel functionality
+            const aiChat = document.getElementById('aiChat');
+            const aiInput = document.getElementById('aiInput');
+            const aiSendBtn = document.getElementById('aiSendBtn');
+
+            function addAIMessage(message, isBot = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.style = isBot ?
+                    'background: #edf2f7; padding: 12px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 85%; animation: fadeIn 0.5s ease;' :
+                    'background: #4a6cf7; color: white; padding: 12px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 85%; margin-left: auto; animation: fadeIn 0.5s ease;';
+
+                const messageP = document.createElement('p');
+                messageP.style = 'margin: 0; line-height: 1.5;';
+                messageP.textContent = message;
+
+                messageDiv.appendChild(messageP);
+                aiChat.appendChild(messageDiv);
+                aiChat.scrollTop = aiChat.scrollHeight;
+            }
+
+            function askAI(question) {
+                aiInput.value = question;
+                handleAISendMessage();
+            }
+
+            function handleAISendMessage() {
+                const message = aiInput.value.trim();
+                if (message) {
+                    addAIMessage(message, false);
+                    aiInput.value = '';
+
+                    setTimeout(() => {
+                        const response = getAIResponse(message);
+                        addAIMessage(response, true);
+                    }, 800);
+                }
+            }
+
+            aiSendBtn.addEventListener('click', handleAISendMessage);
+            aiInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    handleAISendMessage();
+                }
+            });
+
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    // FormSubmit will handle the submission
+                    // You can add additional client-side validation here if needed
+                });
+            }
         });
-    });
-    
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    }
-});
-</script>
-	</body>
+    </script>
+</body>
 
-	</html>
+</html>

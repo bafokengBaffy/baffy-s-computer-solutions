@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <style>
         /* General Styles */
         body {
@@ -49,22 +49,27 @@
             color: #333;
             line-height: 1.6;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Raleway', sans-serif;
             font-weight: 700;
         }
-        
+
         a {
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
+
         .container {
             max-width: 1200px;
         }
-        
-            /* Trends Hero Section */
+
+        /* Trends Hero Section */
         .trends-hero {
             background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%);
             color: white;
@@ -74,7 +79,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .trends-hero::before {
             content: "";
             position: absolute;
@@ -86,43 +91,43 @@
             opacity: 0.1;
             z-index: 0;
         }
-        
+
         .trends-hero .container {
             position: relative;
             z-index: 1;
         }
-        
+
         .trends-hero h1 {
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .trends-hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 30px;
             opacity: 0.9;
         }
-        
+
         /* Trends Content Section */
         .trends-content-section {
             padding: 60px 0;
         }
-        
+
         .trend-category {
             margin-bottom: 60px;
             padding-bottom: 40px;
             border-bottom: 1px solid #eee;
         }
-        
+
         .trend-category:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
-        
+
         .category-title {
             font-size: 2rem;
             margin-bottom: 30px;
@@ -132,7 +137,7 @@
             color: #333;
             position: relative;
         }
-        
+
         .category-title::after {
             content: "";
             position: absolute;
@@ -142,24 +147,24 @@
             height: 3px;
             background-color: #4a6cf7;
         }
-        
+
         .trend-item {
             background: white;
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             height: 100%;
             display: flex;
             flex-direction: column;
         }
-        
+
         .trend-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .trend-img {
             height: 180px;
             border-radius: 8px;
@@ -167,30 +172,30 @@
             margin-bottom: 20px;
             position: relative;
         }
-        
+
         .trend-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .trend-item:hover .trend-img img {
             transform: scale(1.05);
         }
-        
+
         .trend-item h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
             color: #333;
         }
-        
+
         .trend-item p {
             color: #666;
             margin-bottom: 15px;
             flex-grow: 1;
         }
-        
+
         .trend-meta {
             display: flex;
             justify-content: space-between;
@@ -198,7 +203,7 @@
             font-size: 0.9rem;
             color: #888;
         }
-        
+
         .trend-tag {
             background-color: #e9f0ff;
             color: #4a6cf7;
@@ -207,7 +212,7 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
-        
+
         /* Ad Section */
         .ad-section {
             background-color: #f1f5ff;
@@ -215,7 +220,7 @@
             margin: 40px 0;
             border-radius: 8px;
         }
-        
+
         /* Live Chat Widget */
         .live-chat-widget {
             position: fixed;
@@ -224,18 +229,18 @@
             width: 350px;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
             z-index: 1000;
             transform: translateY(100%);
             opacity: 0;
             transition: all 0.3s ease;
         }
-        
+
         .live-chat-widget.active {
             transform: translateY(0);
             opacity: 1;
         }
-        
+
         .chat-header {
             background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%);
             color: white;
@@ -243,18 +248,18 @@
             border-radius: 10px 10px 0 0;
             position: relative;
         }
-        
+
         .chat-header h4 {
             margin: 0;
             font-size: 1.2rem;
         }
-        
+
         .chat-header p {
             margin: 5px 0 0;
             font-size: 0.9rem;
             opacity: 0.9;
         }
-        
+
         .close-chat {
             position: absolute;
             top: 10px;
@@ -265,19 +270,19 @@
             font-size: 1rem;
             cursor: pointer;
         }
-        
+
         .chat-body {
             padding: 15px;
             height: 300px;
             overflow-y: auto;
         }
-        
+
         .chat-messages {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .chat-message {
             max-width: 80%;
             padding: 10px 15px;
@@ -285,27 +290,27 @@
             font-size: 0.9rem;
             line-height: 1.4;
         }
-        
+
         .chat-message.bot {
             background: #f1f5ff;
             color: #333;
             align-self: flex-start;
             border-bottom-left-radius: 5px;
         }
-        
+
         .chat-message.user {
             background: #6e8efb;
             color: white;
             align-self: flex-end;
             border-bottom-right-radius: 5px;
         }
-        
+
         .chat-input {
             display: flex;
             padding: 10px 15px;
             border-top: 1px solid #eee;
         }
-        
+
         .chat-input input {
             flex: 1;
             padding: 10px 15px;
@@ -313,7 +318,7 @@
             border-radius: 30px;
             outline: none;
         }
-        
+
         .send-btn {
             background: #6e8efb;
             color: white;
@@ -325,30 +330,31 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .send-btn:hover {
             background: #4a6cf7;
         }
-        
+
         .chat-footer {
             padding: 15px;
             border-top: 1px solid #eee;
             text-align: center;
         }
-        
+
         .chat-footer p {
             margin-bottom: 10px;
             font-size: 0.9rem;
             color: #666;
         }
-        
+
         .chat-options {
             display: flex;
             gap: 10px;
             justify-content: center;
         }
-        
-        .whatsapp-btn, .call-btn {
+
+        .whatsapp-btn,
+        .call-btn {
             display: flex;
             align-items: center;
             padding: 8px 15px;
@@ -356,21 +362,22 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        
+
         .whatsapp-btn {
             background: #25D366;
             color: white;
         }
-        
+
         .call-btn {
             background: #4a6cf7;
             color: white;
         }
-        
-        .whatsapp-btn i, .call-btn i {
+
+        .whatsapp-btn i,
+        .call-btn i {
             margin-right: 5px;
         }
-        
+
         .chat-toggle {
             position: fixed;
             bottom: 20px;
@@ -389,55 +396,55 @@
             z-index: 999;
             transition: all 0.3s ease;
         }
-        
+
         .chat-toggle:hover {
             transform: scale(1.1);
         }
-        
+
         /* Footer Styles */
         .footer {
             background-color: #2d3748;
             color: #fff;
             padding: 60px 0 0;
         }
-        
+
         .footer-about img {
             height: 50px;
             margin-bottom: 20px;
         }
-        
+
         .footer p {
             color: #a0aec0;
         }
-        
+
         .footer-links h3 {
             color: #fff;
             margin-bottom: 20px;
             font-size: 1.2rem;
         }
-        
+
         .footer-links ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .footer-links li {
             margin-bottom: 10px;
         }
-        
+
         .footer-links a {
             color: #a0aec0;
         }
-        
+
         .footer-links a:hover {
             color: #6e8efb;
         }
-        
+
         .newsletter-form {
             display: flex;
             margin-top: 15px;
         }
-        
+
         .newsletter-input {
             flex: 1;
             padding: 10px 15px;
@@ -445,7 +452,7 @@
             border-radius: 30px 0 0 30px;
             outline: none;
         }
-        
+
         .newsletter-btn {
             background: #6e8efb;
             color: white;
@@ -454,20 +461,20 @@
             border-radius: 0 30px 30px 0;
             cursor: pointer;
         }
-        
+
         .footer-bottom {
             border-top: 1px solid #4a5568;
             padding: 20px 0;
             margin-top: 40px;
         }
-        
+
         .copyright p {
             margin: 0;
             text-align: center;
             color: #a0aec0;
             font-size: 0.9rem;
         }
-        
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
@@ -487,82 +494,82 @@
             transition: all 0.3s ease;
             z-index: 999;
         }
-        
+
         .back-to-top.active {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .back-to-top:hover {
             background: #4a6cf7;
         }
-        
+
         /* Responsive Styles */
         @media (max-width: 1199px) {
             .trends-hero h1 {
                 font-size: 2.8rem;
             }
         }
-        
+
         @media (max-width: 991px) {
             .trends-hero {
                 padding: 120px 0 60px;
             }
-            
+
             .trends-hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .category-title {
                 font-size: 1.8rem;
             }
-            
+
             .live-chat-widget {
                 width: 300px;
             }
         }
-        
+
         @media (max-width: 767px) {
             .trends-hero {
                 padding: 100px 0 50px;
             }
-            
+
             .trends-hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .trends-hero p {
                 font-size: 1.1rem;
             }
-            
+
             .category-title {
                 font-size: 1.6rem;
             }
-            
+
             .trend-img {
                 height: 150px;
             }
-            
+
             .live-chat-widget {
                 width: 280px;
                 right: 10px;
                 bottom: 10px;
             }
         }
-        
+
         @media (max-width: 575px) {
             .trends-hero h1 {
                 font-size: 2rem;
             }
-            
+
             .trends-hero p {
                 font-size: 1rem;
             }
-            
+
             .trend-item {
                 padding: 20px;
             }
-            
+
             .chat-toggle {
                 width: 50px;
                 height: 50px;
@@ -579,18 +586,30 @@
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <!-- Header -->
+    <header class="header" style="background-color:black; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
+                <!-- Logo (Rounded) -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid #4e9af1;
+                ">
                 </a>
+
+                <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto" style="font-weight: 500; font-size: 1rem;">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -607,7 +626,7 @@
                             <a class="nav-link" href="pricing.html">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="blog.html">Blog</a>
+                            <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -618,11 +637,13 @@
         </div>
     </header>
 
+
     <!-- Trends Hero Section -->
     <section class="trends-hero">
         <div class="container">
             <h1 class="animate__animated animate__fadeInDown">2023 Tech Trends Report</h1>
-            <p class="animate__animated animate__fadeInUp">Discover the most significant technology trends shaping industries this year</p>
+            <p class="animate__animated animate__fadeInUp">Discover the most significant technology trends shaping
+                industries this year</p>
         </div>
     </section>
 
@@ -636,10 +657,12 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Progressive Web Apps">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                    alt="Progressive Web Apps">
                             </div>
                             <h3>Progressive Web Apps (PWAs)</h3>
-                            <p>PWAs continue to gain traction, offering app-like experiences directly in the browser with offline functionality and push notifications.</p>
+                            <p>PWAs continue to gain traction, offering app-like experiences directly in the browser
+                                with offline functionality and push notifications.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
                                 <span class="trend-tag">Web</span>
@@ -649,10 +672,12 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Serverless Architecture">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Serverless Architecture">
                             </div>
                             <h3>Serverless Architecture</h3>
-                            <p>More companies adopting serverless computing to reduce infrastructure costs and improve scalability.</p>
+                            <p>More companies adopting serverless computing to reduce infrastructure costs and improve
+                                scalability.</p>
                             <div class="trend-meta">
                                 <span>June 2023</span>
                                 <span class="trend-tag">Web</span>
@@ -662,10 +687,12 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Jamstack Architecture">
+                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
+                                    alt="Jamstack Architecture">
                             </div>
                             <h3>Jamstack Architecture</h3>
-                            <p>JavaScript, APIs, and Markup stack becoming standard for high-performance, secure websites.</p>
+                            <p>JavaScript, APIs, and Markup stack becoming standard for high-performance, secure
+                                websites.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
                                 <span class="trend-tag">Web</span>
@@ -675,10 +702,12 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="WebAssembly">
+                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                    alt="WebAssembly">
                             </div>
                             <h3>WebAssembly (Wasm)</h3>
-                            <p>Enabling near-native performance for web applications by compiling code from multiple languages.</p>
+                            <p>Enabling near-native performance for web applications by compiling code from multiple
+                                languages.</p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
                                 <span class="trend-tag">Web</span>
@@ -688,7 +717,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Motion UI Design">
+                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                                    alt="Motion UI Design">
                             </div>
                             <h3>Motion UI Design</h3>
                             <p>Increased use of animations and micro-interactions to enhance user engagement.</p>
@@ -704,7 +734,8 @@
                                 <img src="block.jpg" alt="Web3 and Blockchain">
                             </div>
                             <h3>Web3 and Blockchain Integration</h3>
-                            <p>More websites integrating blockchain technologies for authentication and transactions.</p>
+                            <p>More websites integrating blockchain technologies for authentication and transactions.
+                            </p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
                                 <span class="trend-tag">Web</span>
@@ -713,7 +744,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mobile Development Trends -->
             <div class="trend-category">
                 <h2 class="category-title">Mobile Development Trends</h2>
@@ -721,7 +752,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cross-Platform Frameworks">
+                                <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Cross-Platform Frameworks">
                             </div>
                             <h3>Cross-Platform Frameworks Maturity</h3>
                             <p>Flutter and React Native reaching new levels of performance and capability.</p>
@@ -747,7 +779,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1367&q=80" alt="Foldable Device Support">
+                                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1367&q=80"
+                                    alt="Foldable Device Support">
                             </div>
                             <h3>Foldable Device Support</h3>
                             <p>Apps adapting to new foldable smartphone form factors.</p>
@@ -760,7 +793,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Augmented Reality">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Augmented Reality">
                             </div>
                             <h3>Augmented Reality (AR) Integration</h3>
                             <p>More apps incorporating AR features for shopping, navigation, and education.</p>
@@ -773,10 +807,12 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Super Apps">
+                                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                    alt="Super Apps">
                             </div>
                             <h3>Super Apps</h3>
-                            <p>Single apps combining multiple services (messaging, payments, shopping) gaining popularity.</p>
+                            <p>Single apps combining multiple services (messaging, payments, shopping) gaining
+                                popularity.</p>
                             <div class="trend-meta">
                                 <span>April 2023</span>
                                 <span class="trend-tag">Mobile</span>
@@ -786,7 +822,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Privacy-Focused Apps">
+                                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Privacy-Focused Apps">
                             </div>
                             <h3>Privacy-Focused App Development</h3>
                             <p>Increased emphasis on user data protection and transparency.</p>
@@ -798,7 +835,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- AI & Machine Learning Trends -->
             <div class="trend-category">
                 <h2 class="category-title">AI & Machine Learning Trends</h2>
@@ -832,10 +869,12 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Edge AI">
+                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Edge AI">
                             </div>
                             <h3>Edge AI</h3>
-                            <p>AI models running locally on devices rather than in the cloud for faster response times.</p>
+                            <p>AI models running locally on devices rather than in the cloud for faster response times.
+                            </p>
                             <div class="trend-meta">
                                 <span>May 2023</span>
                                 <span class="trend-tag">AI</span>
@@ -845,7 +884,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="AI-Augmented Development">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+                                    alt="AI-Augmented Development">
                             </div>
                             <h3>AI-Augmented Development</h3>
                             <p>Tools like GitHub Copilot assisting developers with code suggestions and automation.</p>
@@ -858,7 +898,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Responsible AI">
+                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                                    alt="Responsible AI">
                             </div>
                             <h3>Responsible AI Frameworks</h3>
                             <p>Increased focus on ethical AI development and bias mitigation.</p>
@@ -871,7 +912,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AI Customer Service">
+                                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="AI Customer Service">
                             </div>
                             <h3>AI in Customer Service</h3>
                             <p>More sophisticated chatbots and virtual assistants handling complex queries.</p>
@@ -883,23 +925,19 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Google AdSense Banner (Middle) -->
             <div class="ad-section">
                 <div class="container text-center py-3">
                     <!-- AdSense Display Ad -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                        data-ad-slot="XXXXXXXXXX"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                        data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
             </div>
-            
+
             <!-- Cybersecurity Trends -->
             <div class="trend-category">
                 <h2 class="category-title">Cybersecurity Trends</h2>
@@ -907,7 +945,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Zero Trust Architecture">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Zero Trust Architecture">
                             </div>
                             <h3>Zero Trust Architecture</h3>
                             <p>"Never trust, always verify" approach becoming standard for enterprise security.</p>
@@ -920,7 +959,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Passwordless Authentication">
+                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Passwordless Authentication">
                             </div>
                             <h3>Passwordless Authentication</h3>
                             <p>Biometrics and security keys replacing traditional passwords.</p>
@@ -933,7 +973,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cloud Security">
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Cloud Security">
                             </div>
                             <h3>Cloud Security Posture Management</h3>
                             <p>Tools continuously monitoring cloud environments for misconfigurations.</p>
@@ -946,7 +987,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1463&q=80" alt="Ransomware Defense">
+                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1463&q=80"
+                                    alt="Ransomware Defense">
                             </div>
                             <h3>Ransomware Defense Strategies</h3>
                             <p>Advanced protection against increasingly sophisticated ransomware attacks.</p>
@@ -959,7 +1001,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Supply Chain Security">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Supply Chain Security">
                             </div>
                             <h3>Supply Chain Security</h3>
                             <p>Increased focus on securing software supply chains after high-profile breaches.</p>
@@ -972,7 +1015,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quantum-Resistant Cryptography">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Quantum-Resistant Cryptography">
                             </div>
                             <h3>Quantum-Resistant Cryptography</h3>
                             <p>Preparing encryption systems for the quantum computing era.</p>
@@ -984,7 +1028,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Cloud Computing Trends -->
             <div class="trend-category">
                 <h2 class="category-title">Cloud Computing Trends</h2>
@@ -992,7 +1036,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Multi-Cloud Strategies">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80"
+                                    alt="Multi-Cloud Strategies">
                             </div>
                             <h3>Multi-Cloud Strategies</h3>
                             <p>Businesses distributing workloads across multiple cloud providers for resilience.</p>
@@ -1005,7 +1050,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Serverless Containers">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Serverless Containers">
                             </div>
                             <h3>Serverless Containers</h3>
                             <p>Combining container benefits with serverless simplicity.</p>
@@ -1018,7 +1064,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Edge Computing">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Edge Computing">
                             </div>
                             <h3>Edge Computing Expansion</h3>
                             <p>Processing data closer to its source for lower latency applications.</p>
@@ -1031,7 +1078,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="FinOps Practices">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="FinOps Practices">
                             </div>
                             <h3>FinOps Practices</h3>
                             <p>Financial operations discipline to optimize cloud spending.</p>
@@ -1044,7 +1092,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="AI-Enhanced Cloud Services">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+                                    alt="AI-Enhanced Cloud Services">
                             </div>
                             <h3>AI-Enhanced Cloud Services</h3>
                             <p>Cloud providers integrating more AI capabilities into their offerings.</p>
@@ -1057,7 +1106,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Sustainable Cloud Computing">
+                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                                    alt="Sustainable Cloud Computing">
                             </div>
                             <h3>Sustainable Cloud Computing</h3>
                             <p>Focus on reducing energy consumption and carbon footprint of data centers.</p>
@@ -1069,7 +1119,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Database Trends -->
             <div class="trend-category">
                 <h2 class="category-title">Database Trends</h2>
@@ -1077,7 +1127,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Multi-Model Databases">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Multi-Model Databases">
                             </div>
                             <h3>Multi-Model Databases</h3>
                             <p>Databases supporting multiple data models (document, graph, key-value) in one engine.</p>
@@ -1090,7 +1141,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Time-Series Databases">
+                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                    alt="Time-Series Databases">
                             </div>
                             <h3>Time-Series Databases</h3>
                             <p>Specialized databases for IoT and financial data gaining popularity.</p>
@@ -1103,7 +1155,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Distributed SQL Databases">
+                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
+                                    alt="Distributed SQL Databases">
                             </div>
                             <h3>Distributed SQL Databases</h3>
                             <p>Combining SQL benefits with horizontal scalability of NoSQL systems.</p>
@@ -1116,7 +1169,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Database as a Service">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                    alt="Database as a Service">
                             </div>
                             <h3>Database as a Service (DBaaS)</h3>
                             <p>More companies opting for managed database services in the cloud.</p>
@@ -1142,7 +1196,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="Blockchain Databases">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+                                    alt="Blockchain Databases">
                             </div>
                             <h3>Blockchain Databases</h3>
                             <p>Immutable ledger technologies being integrated with traditional databases.</p>
@@ -1154,7 +1209,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Emerging Technologies -->
             <div class="trend-category">
                 <h2 class="category-title">Emerging Technologies</h2>
@@ -1162,7 +1217,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quantum Computing">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Quantum Computing">
                             </div>
                             <h3>Quantum Computing Progress</h3>
                             <p>Practical applications beginning to emerge from quantum research.</p>
@@ -1188,7 +1244,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="Digital Twins">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+                                    alt="Digital Twins">
                             </div>
                             <h3>Digital Twins</h3>
                             <p>Virtual replicas of physical systems used for simulation and analysis.</p>
@@ -1201,7 +1258,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Neuromorphic Computing">
+                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                                    alt="Neuromorphic Computing">
                             </div>
                             <h3>Neuromorphic Computing</h3>
                             <p>Brain-inspired computing architectures showing promise for AI workloads.</p>
@@ -1214,7 +1272,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Biometric Authentication">
+                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Biometric Authentication">
                             </div>
                             <h3>Biometric Authentication</h3>
                             <p>Advanced facial recognition and behavioral biometrics for security.</p>
@@ -1227,7 +1286,8 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="trend-item">
                             <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Autonomous Systems">
+                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Autonomous Systems">
                             </div>
                             <h3>Autonomous Systems</h3>
                             <p>Self-managing IT infrastructure and robotic process automation.</p>
@@ -1246,12 +1306,8 @@
     <section class="ad-section">
         <div class="container text-center py-3">
             <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -1298,11 +1354,18 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-about">
-                        <div class="footer-logo">
-                            <img src="bcs.jpg" alt="Baffy's Computer Solutions">
-                        </div>
+                        <img src="bcs.jpg" alt="Baffy's Computer Solutions">
                         <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
                             Professional, reliable, and tailored to your needs.</p>
+                        <div class="social-links mt-4">
+                            <a href="https://wa.me/message/2QFRU4XGJUGHI1" class="me-3" target="_blank"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="https://github.com/bafokengBaffy" class="me-3" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -1322,12 +1385,12 @@
                     <div class="footer-links">
                         <h3>Services</h3>
                         <ul>
-                            <li>Web Development</li>
-                            <li>App Development</li>
-                            <li>Network Solutions</li>
-                            <li>Cloud Services</li>
-                            <li>IT Consulting</li>
-                            <li>Database Management</li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">App Development</a></li>
+                            <li><a href="#">Network Solutions</a></li>
+                            <li><a href="#">Cloud Services</a></li>
+                            <li><a href="#">IT Consulting</a></li>
+                            <li><a href="#">Database Management</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1336,7 +1399,7 @@
                         <h3>Newsletter</h3>
                         <p>Subscribe to get updates on my latest projects and services.</p>
                         <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Your Email">
+                            <input type="email" class="newsletter-input" placeholder="Your Email" required>
                             <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
@@ -1350,6 +1413,7 @@
         </div>
     </footer>
 
+
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
@@ -1359,24 +1423,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    
+
     <!-- Custom Scripts -->
     <script src="scripts.js"></script>
-    
+
     <!-- Live Chat Script -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Toggle chat widget
-            $('.chat-toggle').click(function() {
+            $('.chat-toggle').click(function () {
                 $('.live-chat-widget').toggleClass('active');
             });
-            
-            $('.close-chat').click(function() {
+
+            $('.close-chat').click(function () {
                 $('.live-chat-widget').removeClass('active');
             });
-            
+
             // Simple chatbot functionality
-            $('.send-btn').click(function() {
+            $('.send-btn').click(function () {
                 const userMessage = $('.chat-input input').val().trim();
                 if (userMessage) {
                     // Add user message
@@ -1385,15 +1449,15 @@
                             <p>${userMessage}</p>
                         </div>
                     `);
-                    
+
                     // Clear input
                     $('.chat-input input').val('');
-                    
+
                     // Scroll to bottom
                     $('.chat-body').scrollTop($('.chat-body')[0].scrollHeight);
-                    
+
                     // Simulate bot response after delay
-                    setTimeout(function() {
+                    setTimeout(function () {
                         const responses = [
                             "I can help you with that. Would you like to schedule a consultation?",
                             "That's a great question! Our team specializes in that area.",
@@ -1401,49 +1465,49 @@
                             "I'll connect you with one of our experts. Can you share more details?",
                             "Thanks for your message! How can we assist you today?"
                         ];
-                        
+
                         const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                        
+
                         $('.chat-messages').append(`
                             <div class="chat-message bot">
                                 <p>${randomResponse}</p>
                             </div>
                         `);
-                        
+
                         // Scroll to bottom
                         $('.chat-body').scrollTop($('.chat-body')[0].scrollHeight);
                     }, 1000);
                 }
             });
-            
+
             // Send message on Enter key
-            $('.chat-input input').keypress(function(e) {
+            $('.chat-input input').keypress(function (e) {
                 if (e.which === 13) {
                     $('.send-btn').click();
                 }
             });
-            
+
             // Back to top button
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > 200) {
                     $('.back-to-top').addClass('active');
                 } else {
                     $('.back-to-top').removeClass('active');
                 }
             });
-            
-            $('.back-to-top').click(function(e) {
+
+            $('.back-to-top').click(function (e) {
                 e.preventDefault();
-                $('html, body').animate({scrollTop: 0}, '300');
+                $('html, body').animate({ scrollTop: 0 }, '300');
             });
-            
+
             // Preloader
-            $(window).on('load', function() {
-                $('#preloader').fadeOut('slow', function() {
+            $(window).on('load', function () {
+                $('#preloader').fadeOut('slow', function () {
                     $(this).remove();
                 });
             });
-            
+
             // Initialize animations
             new WOW().init();
         });

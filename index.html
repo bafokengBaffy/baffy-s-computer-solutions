@@ -160,6 +160,17 @@
             overflow-x: hidden;
         }
 
+        /* Section spacing adjustments */
+        section {
+            padding: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 30px 0;
+            }
+        }
+
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -527,6 +538,339 @@
             }
         }
 
+        /* Header Styles */
+        .header {
+            background-color: black;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #4e9af1;
+        }
+
+        .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--highlight) !important;
+        }
+
+        /* About Section */
+        .about-img img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--highlight));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        /* Blog Section */
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-img {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-date {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--highlight);
+        }
+
+        /* Portfolio Section */
+        .portfolio-preview-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .portfolio-preview-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-preview-item h3 {
+            margin: 15px 0 5px;
+            padding: 0 15px;
+        }
+
+        .portfolio-preview-item p {
+            padding: 0 15px 15px;
+            color: #666;
+        }
+
+        .portfolio-preview-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Services Section */
+        .service-preview-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+
+        .service-preview-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .service-preview-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .service-preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pricing Section */
+        .pricing-preview-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .pricing-preview-card.popular {
+            border: 2px solid var(--highlight);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--text-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-preview-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .pricing-preview-card h4 {
+            color: var(--highlight);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .pricing-preview-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .pricing-preview-card ul li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .pricing-preview-card ul li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .pricing-preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* FAQ Section */
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(37, 99, 235, 0.25);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 60px 0 0;
+        }
+
+        .footer-about img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 2px solid var(--highlight);
+        }
+
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--highlight);
+        }
+
+        .footer-newsletter p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter-btn {
+            background: var(--highlight);
+            color: var(--text-dark);
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: #e69009;
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .copyright p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero-title {
@@ -550,6 +894,43 @@
                 font-size: 0.9rem;
                 padding: 0.4rem 1rem;
             }
+
+            /* Reduce spacing further on mobile */
+            section {
+                padding: 25px 0;
+            }
+
+            .cta-section {
+                padding: 40px 0;
+            }
+
+            .footer {
+                padding: 40px 0 0;
+            }
+
+            .footer-bottom {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            /* Even tighter spacing for very small devices */
+            section {
+                padding: 20px 0;
+            }
+
+            .hero-section {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                gap: 1.5rem;
+            }
+
+            .hero-text {
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -564,13 +945,18 @@
     <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
+                <!-- Logo (Rounded) -->
                 <a class="navbar-brand" href="index.html">
                     <img src="bcs.jpg" alt="Baffy's Computer Solutions">
                 </a>
+
+                <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
@@ -614,7 +1000,7 @@
                 </h1>
 
                 <div class="hero-subtitle-wrapper">
-                    <p class="hero-subtitle">Transforming ideas into digital reality</p>
+                    <p style="color:#f59e0b" class="hero-subtitle">Transforming ideas into digital reality</p>
                     <div class="animated-dots">
                         <span class="dot"></span>
                         <span class="dot"></span>
@@ -634,27 +1020,20 @@
             </div>
 
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary pulse">
-                    <span>Get Started</span>
+                <a href="contact.html" class="btn btn-primary pulse">
+                    <span>contact us</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </a>
-                <a href="#portfolio" class="btn btn-secondary">
+                <a href="portfolio.html" class="btn btn-secondary">
                     <span>Our Work</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 3H21V9M21 3L12 12M9 21H3V15M3 21L12 12" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </a>
-            </div>
-
-            <div class="scroll-indicator">
-                <span class="scroll-text">Scroll Down</span>
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
             </div>
         </div>
 
@@ -678,29 +1057,18 @@
             </div>
         </div>
     </section>
-    <!-- Google AdSense Banner (Top) -->
-    <section class="ad-section">
-        <div class="container text-center py-3">
-            <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </section>
 
     <!-- About Section Preview -->
     <section id="about-preview" class="about section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title text-center mb-4">
                 <h2>About Me</h2>
                 <p>Get to know the professional behind the solutions</p>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="about-img wow animate__animated animate__fadeInLeft">
-                        <img src="baffy.jpg" alt="Bafokeng Khoali" class="img-fluid">
+                        <img src="baffy.jpg" alt="Bafokeng Khoali" class="img-fluid rounded">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -721,7 +1089,7 @@
     <!-- Tech Blog Section -->
     <section id="tech-blog" class="blog section bg-light">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title text-center mb-4">
                 <h2>Tech Blog</h2>
                 <p>Latest insights and trends in technology</p>
             </div>
@@ -781,9 +1149,9 @@
             </div>
 
             <!-- Newsletter Signup -->
-            <div class="newsletter-box mt-5">
+            <div class="newsletter-box mt-5 bg-white p-4 rounded">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
                         <h3>Stay Updated with Tech Trends</h3>
                         <p>Subscribe to our newsletter for the latest tech insights and updates.</p>
                     </div>
@@ -800,27 +1168,15 @@
         </div>
     </section>
 
-    <!-- Google AdSense Banner (Middle) -->
-    <section class="ad-section">
-        <div class="container text-center py-3">
-            <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </section>
-
     <!-- Portfolio Section Preview -->
     <section id="portfolio-preview" class="portfolio section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title text-center mb-4">
                 <h2>My Portfolio</h2>
                 <p>Explore my recent projects and see the quality of my work</p>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="portfolio-preview-item">
                         <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="E-commerce Platform" class="img-fluid">
@@ -828,7 +1184,7 @@
                         <p>Web Development</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="portfolio-preview-item">
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1934&q=80"
                             alt="Mobile Banking App" class="img-fluid">
@@ -836,7 +1192,7 @@
                         <p>App Development</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="portfolio-preview-item">
                         <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="Corporate Network" class="img-fluid">
@@ -852,28 +1208,28 @@
     </section>
 
     <!-- Services Section Preview -->
-    <section id="services-preview" class="services section">
+    <section id="services-preview" class="services section bg-light">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title text-center mb-4">
                 <h2>My Services</h2>
                 <p>Comprehensive IT solutions tailored to meet your business needs</p>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="service-preview-card">
                         <i class="fas fa-laptop-code"></i>
                         <h3>Web Development</h3>
                         <p>Custom website development with responsive design and SEO optimization.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="service-preview-card">
                         <i class="fas fa-mobile-alt"></i>
                         <h3>App Development</h3>
                         <p>Native and cross-platform mobile applications for iOS and Android.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="service-preview-card">
                         <i class="fas fa-network-wired"></i>
                         <h3>Network Solutions</h3>
@@ -888,27 +1244,15 @@
     </section>
 
 
-    <!-- Google AdSense Banner (Bottom) -->
-    <section class="ad-section">
-        <div class="container text-center py-3">
-            <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </section>
-
     <!-- Pricing Section Preview -->
     <section id="pricing-preview" class="pricing section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title text-center mb-4">
                 <h2>Our Pricing</h2>
                 <p>Transparent pricing for all IT services in Lesotho Maloti (LSL)</p>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="pricing-preview-card">
                         <h3>Basic Website</h3>
                         <h4>LSL 3,500 - 10,500</h4>
@@ -919,7 +1263,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="pricing-preview-card popular">
                         <div class="popular-badge">Most Popular</div>
                         <h3>Business Website</h3>
@@ -931,7 +1275,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="pricing-preview-card">
                         <h3>E-commerce</h3>
                         <h4>LSL 30,000 - 100,000</h4>
@@ -952,7 +1296,7 @@
     <!-- FAQ Section -->
     <section id="faq" class="faq section bg-light">
         <div class="container">
-            <div style="text-align:center;" class="section-title">
+            <div class="section-title text-center mb-4">
                 <h2>Frequently Asked Questions</h2>
                 <p>Common questions about our services</p>
             </div>
@@ -1048,74 +1392,80 @@
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
-            <div style="text-align:center;" class="cta-content">
-                <h2 style="text-align:center;">Ready to Start Your Project?</h2>
-                <p style="text-align:center;">Contact me today to discuss your IT needs and get a free consultation.</p>
-                <a style="text-align:center;" href="contact.html" class="btn btn-primary">Get In Touch</a>
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact me today to discuss your IT needs and get a free consultation.</p>
+                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
             </div>
         </div>
     </section>
 
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="footer-about">
-                        <div class="footer-logo">
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-about">
                             <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                            <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
+                                Professional, reliable, and tailored to your needs.</p>
+                            <div class="social-links mt-4">
+                                <a href="https://wa.me/message/2QFRU4XGJUGHI1" class="me-3" target="_blank"><i
+                                        class="fab fa-whatsapp"></i></a>
+                                <a href="https://github.com/bafokengBaffy" class="me-3" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
+
+                            </div>
                         </div>
-                        <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
-                            Professional, reliable, and tailored to your needs.</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-links">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">Network Solutions</a></li>
+                                <li><a href="#">Cloud Services</a></li>
+                                <li><a href="#">IT Consulting</a></li>
+                                <li><a href="#">Database Management</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-newsletter">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to get updates on my latest projects and services.</p>
+                            <form class="newsletter-form">
+                                <input type="email" class="newsletter-input" placeholder="Your Email" required>
+                                <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-links">
-                        <h3>Services</h3>
-                        <ul>
-                            <li>Web Development</li>
-                            <li>App Development</li>
-                            <li>Network Solutions</li>
-                            <li>Cloud Services</li>
-                            <li>IT Consulting</li>
-                            <li>Database Management</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="footer-newsletter">
-                        <h3>Newsletter</h3>
-                        <p>Subscribe to get updates on my latest projects and services.</p>
-                        <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Your Email">
-                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
-                        </form>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
+        </footer>
+    
+   
     <!-- ALL JS FILES -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -1280,7 +1630,6 @@
             }
         });
     </script>
-
 </body>
 
 </html>

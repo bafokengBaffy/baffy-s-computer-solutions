@@ -1,19 +1,29 @@
-<!--services.html-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Basic -->
+    <!-- Basic Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="HandheldFriendly" content="true">
 
     <!-- Site Metas -->
-    <title>Services | Baffy's Computer Solutions</title>
+    <title>Baffy's Computer Solutions | Modern IT Services</title>
     <meta name="keywords"
         content="IT services, web development, network solutions, IT consulting, software development">
     <meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
     <meta name="author" content="Bafokeng Khoali">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
+            enable_page_level_ads: true
+        });
+    </script>
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -29,8 +39,1291 @@
         rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --secondary: #ffffff;
+            --highlight: #f59e0b;
+            --text-light: #ffffff;
+            --text-dark: #1e293b;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --section-padding: 80px 0;
+            --mobile-section-padding: 50px 0;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--highlight));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--highlight);
+            color: var(--text-dark);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #e69009;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+        }
+
+        .btn-primary svg {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover svg {
+            transform: translateX(3px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary svg {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-secondary:hover svg {
+            transform: rotate(45deg);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Header/Navbar */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 15px 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .navbar-nav {
+            gap: 15px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--highlight);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            overflow: hidden;
+            isolation: isolate;
+            padding-top: 70px;
+            /* Account for fixed header */
+        }
+
+        /* Background Image */
+        .background-image {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+            animation: zoomInOut 20s infinite alternate;
+        }
+
+        .background-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.85) 0%, rgba(6, 78, 59, 0.85) 100%);
+            z-index: -1;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            max-width: 1200px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.05em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-line {
+            display: block;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .title-line.highlight {
+            color: var(--highlight);
+            text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+
+        .hero-subtitle-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            font-weight: 400;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+
+        .animated-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--highlight);
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Services Ticker */
+        .services-ticker {
+            margin-top: 2rem;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 50px;
+        }
+
+        .ticker-track {
+            display: flex;
+            gap: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: scrollTicker 20s linear infinite;
+            padding: 0 1.5rem;
+        }
+
+        .service-tag {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 500;
+            white-space: nowrap;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .service-tag:hover {
+            background: var(--highlight);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeInUp 1s ease-out 0.9s forwards;
+            opacity: 0;
+        }
+
+        .scroll-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.1em;
+        }
+
+        .mouse {
+            width: 30px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .wheel {
+            width: 4px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollWheel 2s infinite;
+        }
+
+        /* Floating Tech Elements */
+        .floating-elements {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.15);
+            animation: float 15s infinite ease-in-out;
+            animation-delay: var(--delay);
+            left: var(--x-pos);
+            top: var(--y-pos);
+            display: none;
+            /* Hide on mobile */
+        }
+
+        /* About Section */
+        .about {
+            padding: var(--section-padding);
+        }
+
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content {
+            padding: 20px;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .about-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .about-content p {
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        /* Blog Section */
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-date {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: var(--highlight);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .blog-content p {
+            color: #666;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more i {
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        .newsletter-box {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .newsletter-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .newsletter-box p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form .input-group {
+            display: flex;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-form .form-control {
+            flex-grow: 1;
+            border: none;
+            padding: 12px 20px;
+            outline: none;
+        }
+
+        .newsletter-form .btn {
+            border-radius: 0 50px 50px 0;
+            padding: 12px 25px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-preview-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-preview-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-preview-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-preview-item h3 {
+            font-size: 1.2rem;
+            margin: 15px 0 5px;
+            padding: 0 15px;
+            color: var(--text-dark);
+        }
+
+        .portfolio-preview-item p {
+            color: var(--highlight);
+            font-weight: 500;
+            padding: 0 15px 15px;
+        }
+
+        /* Services Section */
+        .service-preview-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+
+        .service-preview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-preview-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .service-preview-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .service-preview-card p {
+            color: #666;
+        }
+
+        /* Pricing Section */
+        .pricing-preview-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .pricing-preview-card.popular {
+            border: 2px solid var(--highlight);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--highlight);
+            color: var(--text-dark);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .pricing-preview-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .pricing-preview-card h4 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .pricing-preview-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .pricing-preview-card ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .pricing-preview-card ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+        }
+
+        /* FAQ Section */
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 10px !important;
+            overflow: hidden;
+            border: 1px solid #eee !important;
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            color: var(--text-dark);
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: var(--primary);
+        }
+
+        .accordion-body {
+            color: #555;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 60px 0 0;
+        }
+
+        .footer-about {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--highlight);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #94a3b8;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--highlight);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-newsletter h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--highlight);
+        }
+
+        .footer-newsletter p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-input {
+            flex-grow: 1;
+            background: #334155;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 20px;
+            color: white;
+            outline: none;
+        }
+
+        .newsletter-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .newsletter-btn {
+            background: var(--highlight);
+            color: var(--text-dark);
+            border: none;
+            border-radius: 50px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: #e69009;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            background-color: #0f172a;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Ad Section */
+        .ad-section {
+            background: #f1f5f9;
+            padding: 20px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            1%,
+            3%,
+            5%,
+            7%,
+            9% {
+                transform: rotate(-1deg);
+            }
+
+            2%,
+            4%,
+            6%,
+            8% {
+                transform: rotate(1deg);
+            }
+        }
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-15px);
+            }
+
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+        @keyframes scrollTicker {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(245, 158, 11, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+            }
+        }
+
+        @keyframes scrollWheel {
+            0% {
+                transform: translate(-50%, 0);
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, 15px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(20px, 20px) rotate(5deg);
+            }
+
+            50% {
+                transform: translate(0, 40px) rotate(0deg);
+            }
+
+            75% {
+                transform: translate(-20px, 20px) rotate(-5deg);
+            }
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--highlight);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 991.98px) {
+            :root {
+                --section-padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .hero-title {
+                font-size: clamp(1.8rem, 8vw, 3rem);
+            }
+
+            .hero-subtitle {
+                font-size: clamp(0.9rem, 3vw, 1.2rem);
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 0.9rem;
+            }
+
+            .services-ticker {
+                height: 40px;
+            }
+
+            .service-tag {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .about-content {
+                padding: 20px 0;
+            }
+
+            .footer-links {
+                margin-bottom: 30px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-btn {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .floating-icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            :root {
+                --section-padding: 50px 0;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .hero-section {
+                min-height: 600px;
+            }
+
+            .hero-title {
+                font-size: clamp(1.8rem, 10vw, 2.5rem);
+            }
+
+            .hero-subtitle-wrapper {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .services-ticker {
+                height: 35px;
+            }
+
+            .service-tag {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+            }
+
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .blog-img img {
+                height: 180px;
+            }
+
+            .portfolio-preview-item img {
+                height: 180px;
+            }
+
+            .cta-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .footer {
+                padding: 50px 0 0;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            :root {
+                --section-padding: 40px 0;
+            }
+
+            .navbar-brand img {
+                height: 35px;
+            }
+
+            .hero-section {
+                min-height: 500px;
+            }
+
+            .hero-title {
+                font-size: clamp(1.6rem, 10vw, 2.2rem);
+            }
+
+            .hero-subtitle {
+                font-size: clamp(0.8rem, 3vw, 1rem);
+            }
+
+            .services-ticker {
+                height: 30px;
+            }
+
+            .service-tag {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.6rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+
+            .about-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .blog-img img {
+                height: 150px;
+            }
+
+            .portfolio-preview-item img {
+                height: 150px;
+            }
+
+            .pricing-preview-card {
+                padding: 20px;
+            }
+
+            .pricing-preview-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .pricing-preview-card h4 {
+                font-size: 1.5rem;
+            }
+
+            .cta-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -48,12 +1341,12 @@
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
@@ -79,269 +1372,476 @@
         </div>
     </header>
 
+    <!-- Modern Hero Section with Image Background -->
+    <section id="home" class="hero-section">
+        <!-- Background Image with Gradient Overlay -->
+        <div class="background-image"></div>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>My Services</h1>
-                    <p>Comprehensive IT solutions tailored to meet your business needs</p>
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">BAFFY'S</span>
+                    <span class="title-line highlight">COMPUTER SOLUTIONS</span>
+                </h1>
+
+                <div class="hero-subtitle-wrapper">
+                    <p class="hero-subtitle">Transforming ideas into digital reality</p>
+                    <div class="animated-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
+
+                <div class="services-ticker">
+                    <div class="ticker-track">
+                        <span class="service-tag">Web Development</span>
+                        <span class="service-tag">Mobile Apps</span>
+                        <span class="service-tag">Database Design</span>
+                        <span class="service-tag">AI Solutions</span>
+                        <span class="service-tag">Cloud Services</span>
+                        <span class="service-tag">IT Consulting</span>
+                        <span class="service-tag">Network Solutions</span>
+                        <span class="service-tag">Cybersecurity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary pulse">
+                    <span>contact us</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="portfolio.html" class="btn btn-secondary">
+                    <span>Our Work</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 3H21V9M21 3L12 12M9 21H3V15M3 21L12 12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Tech Elements -->
+        <div class="floating-elements">
+            <div class="floating-icon" style="--delay: 0s; --x-pos: 10%; --y-pos: 20%;">
+                <svg viewBox="0 0 24 24" width="40" height="40">
+                    <path fill="currentColor" d="M3,3H21V21H3V3M5,5V19H19V5H5Z" />
+                </svg>
+            </div>
+            <div class="floating-icon" style="--delay: 1s; --x-pos: 80%; --y-pos: 30%;">
+                <svg viewBox="0 0 24 24" width="40" height="40">
+                    <path fill="currentColor"
+                        d="M12,3A9,9 0 0,1 21,12A9,9 0 0,1 12,21A9,9 0 0,1 3,12A9,9 0 0,1 12,3Z" />
+                </svg>
+            </div>
+            <div class="floating-icon" style="--delay: 2s; --x-pos: 20%; --y-pos: 70%;">
+                <svg viewBox="0 0 24 24" width="40" height="40">
+                    <path fill="currentColor" d="M12,2L1,12H4V20H10V14H14V20H20V12H23L12,2Z" />
+                </svg>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card wow animate__animated animate__fadeInUp">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Custom website development with responsive design, e-commerce solutions, content management
-                        systems, and SEO optimization to enhance your online presence.</p>
-                    <ul class="service-features">
-                        <li>Custom website design</li>
-                        <li>E-commerce solutions</li>
-                        <li>CMS integration</li>
-                        <li>SEO optimization</li>
-                    </ul>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>App Development</h3>
-                    <p>Native and cross-platform mobile applications for iOS and Android that deliver seamless user
-                        experiences and drive engagement.</p>
-                    <ul class="service-features">
-                        <li>iOS & Android apps</li>
-                        <li>Cross-platform solutions</li>
-                        <li>UI/UX design</li>
-                        <li>API integration</li>
-                    </ul>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Network Solutions</h3>
-                    <p>Secure network infrastructure design, implementation, and management including firewalls, VPNs,
-                        and wireless solutions for businesses of all sizes.</p>
-                    <ul class="service-features">
-                        <li>Network design & implementation</li>
-                        <li>Security solutions</li>
-                        <li>Wireless networking</li>
-                        <li>VPN setup</li>
-                    </ul>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud Services</h3>
-                    <p>Cloud migration, management, and optimization services for AWS, Azure, and Google Cloud to
-                        enhance scalability and reduce IT costs.</p>
-                    <ul class="service-features">
-                        <li>Cloud migration</li>
-                        <li>Server management</li>
-                        <li>Backup solutions</li>
-                        <li>Cost optimization</li>
-                    </ul>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Database Management</h3>
-                    <p>Database design, implementation, optimization, and maintenance to ensure data integrity,
-                        security, and performance.</p>
-                    <ul class="service-features">
-                        <li>Database design</li>
-                        <li>Performance tuning</li>
-                        <li>Backup & recovery</li>
-                        <li>Security implementation</li>
-                    </ul>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>IT Consulting</h3>
-                    <p>Strategic IT consulting services to help businesses leverage technology for growth, efficiency,
-                        and competitive advantage.</p>
-                    <ul class="service-features">
-                        <li>Technology strategy</li>
-                        <li>Digital transformation</li>
-                        <li>System architecture</li>
-                        <li>Vendor selection</li>
-                    </ul>
-                </div>
-
-                <!-- Service 7 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions including vulnerability assessments, penetration testing, threat
-                        monitoring, and compliance management.</p>
-                    <ul class="service-features">
-                        <li>Security audits</li>
-                        <li>Penetration testing</li>
-                        <li>Threat monitoring</li>
-                        <li>Compliance management</li>
-                    </ul>
-                </div>
-
-                <!-- Service 8 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI & ML Solutions</h3>
-                    <p>Artificial Intelligence and Machine Learning solutions to automate processes, gain insights from
-                        data, and enhance decision-making.</p>
-                    <ul class="service-features">
-                        <li>Predictive analytics</li>
-                        <li>Chatbots & virtual assistants</li>
-                        <li>Image recognition</li>
-                        <li>Process automation</li>
-                    </ul>
-                </div>
-
-                <!-- Service 9 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>DevOps Services</h3>
-                    <p>Continuous integration, deployment automation, containerization, and infrastructure as code to
-                        streamline development workflows.</p>
-                    <ul class="service-features">
-                        <li>CI/CD pipelines</li>
-                        <li>Container orchestration</li>
-                        <li>Infrastructure as code</li>
-                        <li>Monitoring & logging</li>
-                    </ul>
-                </div>
-
-                <!-- Service 10 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.9s">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data Analytics</h3>
-                    <p>Business intelligence solutions, data visualization, and predictive analytics to transform raw
-                        data into actionable insights.</p>
-                    <ul class="service-features">
-                        <li>Data visualization</li>
-                        <li>Business intelligence</li>
-                        <li>Predictive modeling</li>
-                        <li>Dashboard development</li>
-                    </ul>
-                </div>
-
-                <!-- Service 11 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1s">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-Commerce Solutions</h3>
-                    <p>End-to-end e-commerce platforms with payment gateways, inventory management, and customer
-                        relationship features.</p>
-                    <ul class="service-features">
-                        <li>Online store setup</li>
-                        <li>Payment integration</li>
-                        <li>Inventory management</li>
-                        <li>CRM integration</li>
-                    </ul>
-                </div>
-
-                <!-- Service 12 -->
-                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1.1s">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Software Maintenance</h3>
-                    <p>Ongoing support, updates, and enhancements to keep your software systems running smoothly and
-                        securely.</p>
-                    <ul class="service-features">
-                        <li>Bug fixes & patches</li>
-                        <li>Feature enhancements</li>
-                        <li>Security updates</li>
-                        <li>Performance optimization</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Google AdSense Banner (Top) -->
+    <section class="ad-section">
+        <div class="container text-center py-3">
+            <!-- AdSense Display Ad -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process section">
+    <!-- About Section Preview -->
+    <section id="about-preview" class="about section">
         <div class="container">
             <div class="section-title">
-                <h2>My Process</h2>
-                <p>How I deliver high-quality solutions for your business</p>
+                <h2>About Me</h2>
+                <p>Get to know the professional behind the solutions</p>
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3>Discovery</h3>
-                        <p>Understanding your business needs, goals, and challenges through detailed consultation.</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img wow animate__animated animate__fadeInLeft">
+                        <img src="baffy.jpg" alt="Bafokeng Khoali" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3>Planning</h3>
-                        <p>Creating a detailed project plan with milestones, deliverables, and timelines.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3>Development</h3>
-                        <p>Building the solution with regular updates and opportunities for feedback.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h3>Delivery</h3>
-                        <p>Final testing, deployment, and training to ensure successful implementation.</p>
+                <div class="col-lg-6">
+                    <div class="about-content wow animate__animated animate__fadeInRight">
+                        <h2>Bafokeng Khoali</h2>
+                        <h3 class="text-gradient">Aspiring Developer | Tech Enthusiast</h3>
+                        <p>From a young age, I found myself fixing computers for family and friends—long before I even
+                            realized I was stepping into the shoes of an IT technician. That early curiosity grew into a
+                            deep love for technology, and today I hold a Diploma in ICT and a Bachelor of Science in
+                            Information Technology.</p>
+                        <a href="about.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Tech Blog Section -->
+    <section id="tech-blog" class="blog section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tech Blog</h2>
+                <p>Latest insights and trends in technology</p>
+            </div>
+
+            <div class="row">
+                <!-- Blog Post 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80"
+                                alt="Web Development Trends" class="img-fluid">
+                            <div class="blog-date">June 15, 2023</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Top Web Development Trends in 2023</h3>
+                            <p>Explore the latest trends shaping the future of web development this year.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80"
+                                alt="AI in Business" class="img-fluid">
+                            <div class="blog-date">June 8, 2023</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>How AI is Transforming Small Businesses</h3>
+                            <p>Discover practical AI applications that can benefit your business today.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                                alt="Cybersecurity" class="img-fluid">
+                            <div class="blog-date">June 1, 2023</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Essential Cybersecurity Practices for 2023</h3>
+                            <p>Protect your business with these must-have security measures.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn btn-primary">View All Articles</a>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-box mt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h3>Stay Updated with Tech Trends</h3>
+                        <p>Subscribe to our newsletter for the latest tech insights and updates.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your Email Address" required>
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google AdSense Banner (Middle) -->
+    <section class="ad-section">
+        <div class="container text-center py-3">
+            <!-- AdSense Display Ad -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- Portfolio Section Preview -->
+    <section id="portfolio-preview" class="portfolio section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p>Explore my recent projects and see the quality of my work</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="portfolio-preview-item">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                            alt="E-commerce Platform" class="img-fluid">
+                        <h3>E-commerce Platform</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-preview-item">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1934&q=80"
+                            alt="Mobile Banking App" class="img-fluid">
+                        <h3>Mobile Banking App</h3>
+                        <p>App Development</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-preview-item">
+                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                            alt="Corporate Network" class="img-fluid">
+                        <h3>Corporate Network</h3>
+                        <p>Network Solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="portfolio.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section Preview -->
+    <section id="services-preview" class="services section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Services</h2>
+                <p>Comprehensive IT solutions tailored to meet your business needs</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-preview-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Custom website development with responsive design and SEO optimization.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-preview-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>App Development</h3>
+                        <p>Native and cross-platform mobile applications for iOS and Android.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-preview-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Network Solutions</h3>
+                        <p>Secure network infrastructure design, implementation, and management.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="services.html" class="btn btn-primary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google AdSense Banner (Bottom) -->
+    <section class="ad-section">
+        <div class="container text-center py-3">
+            <!-- AdSense Display Ad -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- Pricing Section Preview -->
+    <section id="pricing-preview" class="pricing section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Pricing</h2>
+                <p>Transparent pricing for all IT services in Lesotho Maloti (LSL)</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pricing-preview-card">
+                        <h3>Basic Website</h3>
+                        <h4>LSL 3,500 - 10,500</h4>
+                        <ul>
+                            <li>5 pages</li>
+                            <li>Mobile responsive</li>
+                            <li>Basic SEO setup</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-preview-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Business Website</h3>
+                        <h4>LSL 10,000 - 30,000</h4>
+                        <ul>
+                            <li>Up to 15 pages</li>
+                            <li>CMS integration</li>
+                            <li>Advanced SEO</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-preview-card">
+                        <h3>E-commerce</h3>
+                        <h4>LSL 30,000 - 100,000</h4>
+                        <ul>
+                            <li>Product catalog</li>
+                            <li>Payment gateways</li>
+                            <li>Inventory system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="pricing.html" class="btn btn-primary">View Full Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our services</p>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What services do you offer?
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a comprehensive range of IT services including web development, mobile app
+                            development, network solutions, IT consulting, database management, and cybersecurity
+                            services. Our team can handle projects of any size and complexity.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How long does a typical web development project take?
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The timeline depends on the project scope. A basic website typically takes 2-4 weeks, while
+                            more complex e-commerce solutions can take 8-12 weeks. We provide detailed project timelines
+                            during our initial consultation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Do you provide ongoing support after project completion?
+                        </button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer various maintenance and support packages tailored to your needs. This can
+                            include regular updates, security patches, performance optimization, and technical support.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What technologies do you specialize in?
+                        </button>
+                    </h3>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our team is proficient in a wide range of technologies including HTML5, CSS3, JavaScript,
+                            React, Angular, Node.js, Python, PHP, MySQL, MongoDB, AWS, Azure, and more. We stay updated
+                            with the latest industry trends.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            How do you ensure the security of our data?
+                        </button>
+                    </h3>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We implement industry-standard security measures including encryption, secure coding
+                            practices, regular security audits, and compliance with data protection regulations.
+                            Security is our top priority in every project.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact me today to discuss your IT needs and get a free consultation.</p>
+                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-about">
-                        <div class="footer-logo">
-                            <img src="bcs.jpg" alt="Baffy's Computer Solutions">
-                        </div>
+                        <img src="bcs.jpg" alt="Baffy's Computer Solutions">
                         <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
                             Professional, reliable, and tailored to your needs.</p>
+                        <div class="social-links mt-4">
+                            <a href="https://wa.me/message/2QFRU4XGJUGHI1" class="me-3" target="_blank"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="https://github.com/bafokengBaffy" class="me-3" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -361,12 +1861,12 @@
                     <div class="footer-links">
                         <h3>Services</h3>
                         <ul>
-                            <li>Web Development</li>
-                            <li>App Development</li>
-                            <li>Network Solutions</li>
-                            <li>Cloud Services</li>
-                            <li>IT Consulting</li>
-                            <li>Database Management</li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">App Development</a></li>
+                            <li><a href="#">Network Solutions</a></li>
+                            <li><a href="#">Cloud Services</a></li>
+                            <li><a href="#">IT Consulting</a></li>
+                            <li><a href="#">Database Management</a></li>
                         </ul>
                     </div>
                 </div>
@@ -375,7 +1875,7 @@
                         <h3>Newsletter</h3>
                         <p>Subscribe to get updates on my latest projects and services.</p>
                         <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Your Email">
+                            <input type="email" class="newsletter-input" placeholder="Your Email" required>
                             <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
@@ -390,13 +1890,167 @@
     </footer>
 
 
+
     <!-- ALL JS FILES -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="scripts.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preloader
+            window.addEventListener('load', function () {
+                document.getElementById('preloader').style.display = 'none';
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Mobile navbar toggle
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navbarToggler.addEventListener('click', function () {
+                navbarCollapse.classList.toggle('show');
+            });
+
+            // Close mobile menu when clicking on a nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function () {
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                });
+            });
+
+            // Chat functionality
+            const chatToggle = document.getElementById('chatToggle');
+            const liveChatWidget = document.getElementById('liveChatWidget');
+            const closeChat = document.getElementById('closeChat');
+
+            if (chatToggle && liveChatWidget && closeChat) {
+                chatToggle.addEventListener('click', function () {
+                    liveChatWidget.style.transform = 'translateY(0)';
+                    liveChatWidget.style.opacity = '1';
+                });
+
+                closeChat.addEventListener('click', function () {
+                    liveChatWidget.style.transform = 'translateY(100%)';
+                    liveChatWidget.style.opacity = '0';
+                });
+
+                // Chat functionality
+                const chatMessages = document.querySelector('.chat-messages');
+                const chatInput = document.getElementById('chatInput');
+                const sendChatBtn = document.getElementById('sendChatBtn');
+
+                function addMessage(message, isBot = false) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `chat-message ${isBot ? 'bot' : 'user'}`;
+                    messageDiv.style = isBot ?
+                        'background: #f1f5ff; color: #333; align-self: flex-start; padding: 10px 15px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%;' :
+                        'background: #6e8efb; color: white; align-self: flex-end; padding: 10px 15px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%;';
+
+                    const messageP = document.createElement('p');
+                    messageP.style = 'margin: 0; font-size: 0.9rem; line-height: 1.4;';
+                    messageP.textContent = message;
+
+                    messageDiv.appendChild(messageP);
+                    chatMessages.appendChild(messageDiv);
+                    chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
+                }
+
+                function getAIResponse(userMessage) {
+                    // This would be replaced with actual API calls in production
+                    const responses = {
+                        'hello': 'Hi there! How can I assist you today?',
+                        'hi': 'Hello! What can I help you with?',
+                        'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
+                        'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
+                        'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
+                        'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
+                        'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
+                    };
+
+                    const lowerMsg = userMessage.toLowerCase();
+                    if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+                        return responses['pricing'];
+                    } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
+                        return responses['services'];
+                    } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
+                        return responses['contact'];
+                    } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
+                        return responses['hello'];
+                    } else if (lowerMsg.includes('help')) {
+                        return responses['help'];
+                    } else {
+                        return responses['default'];
+                    }
+                }
+
+                function handleSendMessage() {
+                    const message = chatInput.value.trim();
+                    if (message) {
+                        addMessage(message, false);
+                        chatInput.value = '';
+
+                        // Simulate API call delay
+                        setTimeout(() => {
+                            const response = getAIResponse(message);
+                            addMessage(response, true);
+                        }, 1000);
+                    }
+                }
+
+                sendChatBtn.addEventListener('click', handleSendMessage);
+                chatInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        handleSendMessage();
+                    }
+                });
+            }
+
+            // Newsletter form submission
+            const newsletterForms = document.querySelectorAll('.newsletter-form');
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    if (emailInput && emailInput.value) {
+                        alert('Thank you for subscribing to our newsletter!');
+                        emailInput.value = '';
+                    }
+                });
+            });
+
+            // Initialize WOW.js for animations
+            new WOW().init();
+        });
+    </script>
 </body>
 
 </html>
