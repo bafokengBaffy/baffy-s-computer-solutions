@@ -43,23 +43,515 @@
     <!-- Simple Animation Keyframes -->
     <style>
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         @keyframes shake {
-            0%, 100% { transform: rotate(0deg); }
-            1%, 3%, 5%, 7%, 9% { transform: rotate(-1deg); }
-            2%, 4%, 6%, 8% { transform: rotate(1deg); }
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            1%,
+            3%,
+            5%,
+            7%,
+            9% {
+                transform: rotate(-1deg);
+            }
+
+            2%,
+            4%,
+            6%,
+            8% {
+                transform: rotate(1deg);
+            }
         }
-    </style>	
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-15px);
+            }
+
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+        @keyframes scrollTicker {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --secondary: #ffffff;
+            --highlight: #f59e0b;
+            --text-light: #ffffff;
+            --text-dark: #1e293b;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        /* Background Image */
+        .background-image {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+            animation: zoomInOut 20s infinite alternate;
+        }
+
+        .background-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.85) 0%, rgba(6, 78, 59, 0.85) 100%);
+            z-index: -1;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            max-width: 1200px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.05em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-line {
+            display: block;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .title-line.highlight {
+            color: var(--highlight);
+            text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+
+        .hero-subtitle-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            font-weight: 400;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+
+        .animated-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--highlight);
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Services Ticker */
+        .services-ticker {
+            margin-top: 2rem;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 50px;
+        }
+
+        .ticker-track {
+            display: flex;
+            gap: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: scrollTicker 20s linear infinite;
+            padding: 0 1.5rem;
+        }
+
+        .service-tag {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 500;
+            white-space: nowrap;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .service-tag:hover {
+            background: var(--highlight);
+            transform: translateY(-3px);
+        }
+
+        /* Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--highlight);
+            color: var(--text-dark);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #e69009;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+        }
+
+        .btn-primary svg {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover svg {
+            transform: translateX(3px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary svg {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-secondary:hover svg {
+            transform: rotate(45deg);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeInUp 1s ease-out 0.9s forwards;
+            opacity: 0;
+        }
+
+        .scroll-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.1em;
+        }
+
+        .mouse {
+            width: 30px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .wheel {
+            width: 4px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollWheel 2s infinite;
+        }
+
+        /* Floating Tech Elements */
+        .floating-elements {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.15);
+            animation: float 15s infinite ease-in-out;
+            animation-delay: var(--delay);
+            left: var(--x-pos);
+            top: var(--y-pos);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes scrollTicker {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(245, 158, 11, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+            }
+        }
+
+        @keyframes scrollWheel {
+            0% {
+                transform: translate(-50%, 0);
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, 15px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(20px, 20px) rotate(5deg);
+            }
+
+            50% {
+                transform: translate(0, 40px) rotate(0deg);
+            }
+
+            75% {
+                transform: translate(-20px, 20px) rotate(-5deg);
+            }
+        }
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: clamp(2rem, 10vw, 3.5rem);
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .services-ticker {
+                height: 40px;
+            }
+
+            .service-tag {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -68,7 +560,7 @@
         <div class="loader"></div>
     </div>
 
-   <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
@@ -108,119 +600,90 @@
         </div>
     </header>
 
-<!-- Hero Section with Centered Video Background -->
-<section id="home" class="hero" style="
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-">
-    <!-- Video Background -->
-    <div class="video-background" style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    ">
-        <video autoplay muted loop id="heroVideo" style="
-            min-width: 100%;
-            min-height: 100%;
-            object-fit: cover;
-        ">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-programmer-working-on-a-desktop-computer-3732-large.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-        <div class="video-overlay" style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        "></div>
-    </div>
+    <!-- Modern Hero Section with Image Background -->
+    <section id="home" class="hero-section">
+        <!-- Background Image with Gradient Overlay -->
+        <div class="background-image"></div>
 
-    <!-- Centered Content Container -->
-    <div class="container" style="
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 20px;
-    ">
-        <div class="hero-content" style="
-            color: white;
-            margin: 0 auto;
-            max-width: 800px;
-        ">
-            <h1 class="animate__animated animate__fadeInDown" style="
-                font-size: 3.5rem;
-                margin-bottom: 1rem;
-                text-shadow: 2px 2px 4px white;
-            ">BAFFY'S COMPUTER SOLUTIONS</h1>
-            
-            <p class="animate__animated animate__fadeInUp" style="
-                color: white;
-                font-size: 1.5rem;
-                margin-bottom: 2rem;
-                text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-            ">Web and mobile Development | Database Administration | Machine Learning</p>
-            
-            <div class="typing-text animate__animated animate__fadeIn" style="
-                font-size: 1.2rem;
-                margin-bottom: 2.5rem;
-                min-height: 30px;
-            ">
-                <span>Providing innovative solutions for <b class="is-visible" style="
-                    color: #4e9af1;
-                    font-weight: 600;
-                ">Web & mobile Development</b></span>
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">BAFFY'S</span>
+                    <span class="title-line highlight">COMPUTER SOLUTIONS</span>
+                </h1>
+
+                <div class="hero-subtitle-wrapper">
+                    <p class="hero-subtitle">Transforming ideas into digital reality</p>
+                    <div class="animated-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <div class="services-ticker">
+                    <div class="ticker-track">
+                        <span class="service-tag">Web Development</span>
+                        <span class="service-tag">Mobile Apps</span>
+                        <span class="service-tag">Database Design</span>
+                        <span class="service-tag">AI Solutions</span>
+                        <span class="service-tag">Cloud Services</span>
+                    </div>
+                </div>
             </div>
-            
-            <div class="hero-buttons" style="
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                flex-wrap: wrap;
-            ">
-                <a href="contact.html" class="btn btn-primary animate-shake" style="
-                    background-color: #4e9af1;
-                    color: white;
-                    padding: 12px 30px;
-                    border-radius: 50px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    transition: all 0.3s ease;
-                    border: 2px solid #4e9af1;
-                ">Get In Touch</a>
-                
-                <a href="portfolio.html" class="btn btn-secondary animate-shake" style="
-                    background-color: transparent;
-                    color: white;
-                    padding: 12px 30px;
-                    border-radius: 50px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    transition: all 0.3s ease;
-                    border: 2px solid white;
-                ">View Portfolio</a>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary pulse">
+                    <span>Get Started</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#portfolio" class="btn btn-secondary">
+                    <span>Our Work</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 3H21V9M21 3L12 12M9 21H3V15M3 21L12 12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll Down</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+
+        <!-- Floating Tech Elements -->
+        <div class="floating-elements">
+            <div class="floating-icon" style="--delay: 0s; --x-pos: 10%; --y-pos: 20%;">
+                <svg viewBox="0 0 24 24" width="40" height="40">
+                    <path fill="currentColor" d="M3,3H21V21H3V3M5,5V19H19V5H5Z" />
+                </svg>
+            </div>
+            <div class="floating-icon" style="--delay: 1s; --x-pos: 80%; --y-pos: 30%;">
+                <svg viewBox="0 0 24 24" width="40" height="40">
+                    <path fill="currentColor"
+                        d="M12,3A9,9 0 0,1 21,12A9,9 0 0,1 12,21A9,9 0 0,1 3,12A9,9 0 0,1 12,3Z" />
+                </svg>
+            </div>
+            <div class="floating-icon" style="--delay: 2s; --x-pos: 20%; --y-pos: 70%;">
+                <svg viewBox="0 0 24 24" width="40" height="40">
+                    <path fill="currentColor" d="M12,2L1,12H4V20H10V14H14V20H20V12H23L12,2Z" />
+                </svg>
+            </div>
+        </div>
+    </section>
     <!-- Google AdSense Banner (Top) -->
     <section class="ad-section">
         <div class="container text-center py-3">
             <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -262,13 +725,14 @@
                 <h2>Tech Blog</h2>
                 <p>Latest insights and trends in technology</p>
             </div>
-            
+
             <div class="row">
                 <!-- Blog Post 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80" alt="Web Development Trends" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80"
+                                alt="Web Development Trends" class="img-fluid">
                             <div class="blog-date">June 15, 2023</div>
                         </div>
                         <div class="blog-content">
@@ -278,12 +742,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Blog Post 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80" alt="AI in Business" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80"
+                                alt="AI in Business" class="img-fluid">
                             <div class="blog-date">June 8, 2023</div>
                         </div>
                         <div class="blog-content">
@@ -293,12 +758,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Blog Post 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Cybersecurity" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                                alt="Cybersecurity" class="img-fluid">
                             <div class="blog-date">June 1, 2023</div>
                         </div>
                         <div class="blog-content">
@@ -309,11 +775,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-4">
                 <a href="blog.html" class="btn btn-primary">View All Articles</a>
             </div>
-            
+
             <!-- Newsletter Signup -->
             <div class="newsletter-box mt-5">
                 <div class="row align-items-center">
@@ -338,12 +804,8 @@
     <section class="ad-section">
         <div class="container text-center py-3">
             <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -360,7 +822,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="portfolio-preview-item">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" 
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="E-commerce Platform" class="img-fluid">
                         <h3>E-commerce Platform</h3>
                         <p>Web Development</p>
@@ -368,7 +830,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="portfolio-preview-item">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1934&q=80" 
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1934&q=80"
                             alt="Mobile Banking App" class="img-fluid">
                         <h3>Mobile Banking App</h3>
                         <p>App Development</p>
@@ -376,7 +838,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="portfolio-preview-item">
-                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" 
+                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="Corporate Network" class="img-fluid">
                         <h3>Corporate Network</h3>
                         <p>Network Solutions</p>
@@ -430,12 +892,8 @@
     <section class="ad-section">
         <div class="container text-center py-3">
             <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -498,69 +956,88 @@
                 <h2>Frequently Asked Questions</h2>
                 <p>Common questions about our services</p>
             </div>
-            
+
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             What services do you offer?
                         </button>
                     </h3>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            We offer a comprehensive range of IT services including web development, mobile app development, network solutions, IT consulting, database management, and cybersecurity services. Our team can handle projects of any size and complexity.
+                            We offer a comprehensive range of IT services including web development, mobile app
+                            development, network solutions, IT consulting, database management, and cybersecurity
+                            services. Our team can handle projects of any size and complexity.
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             How long does a typical web development project take?
                         </button>
                     </h3>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            The timeline depends on the project scope. A basic website typically takes 2-4 weeks, while more complex e-commerce solutions can take 8-12 weeks. We provide detailed project timelines during our initial consultation.
+                            The timeline depends on the project scope. A basic website typically takes 2-4 weeks, while
+                            more complex e-commerce solutions can take 8-12 weeks. We provide detailed project timelines
+                            during our initial consultation.
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Do you provide ongoing support after project completion?
                         </button>
                     </h3>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Yes, we offer various maintenance and support packages tailored to your needs. This can include regular updates, security patches, performance optimization, and technical support.
+                            Yes, we offer various maintenance and support packages tailored to your needs. This can
+                            include regular updates, security patches, performance optimization, and technical support.
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             What technologies do you specialize in?
                         </button>
                     </h3>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Our team is proficient in a wide range of technologies including HTML5, CSS3, JavaScript, React, Angular, Node.js, Python, PHP, MySQL, MongoDB, AWS, Azure, and more. We stay updated with the latest industry trends.
+                            Our team is proficient in a wide range of technologies including HTML5, CSS3, JavaScript,
+                            React, Angular, Node.js, Python, PHP, MySQL, MongoDB, AWS, Azure, and more. We stay updated
+                            with the latest industry trends.
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             How do you ensure the security of our data?
                         </button>
                     </h3>
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            We implement industry-standard security measures including encryption, secure coding practices, regular security audits, and compliance with data protection regulations. Security is our top priority in every project.
+                            We implement industry-standard security measures including encryption, secure coding
+                            practices, regular security audits, and compliance with data protection regulations.
+                            Security is our top priority in every project.
                         </div>
                     </div>
                 </div>
@@ -568,16 +1045,16 @@
         </div>
     </section>
 
-    	<!-- Call to Action -->
-		<section class="cta-section">
-			<div class="container">
-				<div style="text-align:center;" class="cta-content">
-					<h2 style="text-align:center;">Ready to Start Your Project?</h2>
-					<p style="text-align:center;">Contact me today to discuss your IT needs and get a free consultation.</p>
-					<a style="text-align:center;" href="contact.html" class="btn btn-primary">Get In Touch</a>
-				</div>
-			</div>
-		</section>
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div style="text-align:center;" class="cta-content">
+                <h2 style="text-align:center;">Ready to Start Your Project?</h2>
+                <p style="text-align:center;">Contact me today to discuss your IT needs and get a free consultation.</p>
+                <a style="text-align:center;" href="contact.html" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Footer -->
@@ -638,172 +1115,172 @@
         </div>
     </footer>
 
- 
+
     <!-- ALL JS FILES -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    
+
     <!-- Custom Scripts -->
     <script src="scripts.js"></script>
-    
+
     <!-- Live Chat Script -->
-   <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Toggle chat widget
-    const chatToggle = document.getElementById('chatToggle');
-    const liveChatWidget = document.getElementById('liveChatWidget');
-    const closeChat = document.getElementById('closeChat');
-    
-    chatToggle.addEventListener('click', function() {
-        liveChatWidget.style.transform = 'translateY(0)';
-        liveChatWidget.style.opacity = '1';
-    });
-    
-    closeChat.addEventListener('click', function() {
-        liveChatWidget.style.transform = 'translateY(100%)';
-        liveChatWidget.style.opacity = '0';
-    });
-    
-    // Chat functionality
-    const chatMessages = document.querySelector('.chat-messages');
-    const chatInput = document.getElementById('chatInput');
-    const sendChatBtn = document.getElementById('sendChatBtn');
-    
-    function addMessage(message, isBot = false) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `chat-message ${isBot ? 'bot' : 'user'}`;
-        messageDiv.style = isBot ? 
-            'background: #f1f5ff; color: #333; align-self: flex-start; padding: 10px 15px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%;' : 
-            'background: #6e8efb; color: white; align-self: flex-end; padding: 10px 15px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%;';
-        
-        const messageP = document.createElement('p');
-        messageP.style = 'margin: 0; font-size: 0.9rem; line-height: 1.4;';
-        messageP.textContent = message;
-        
-        messageDiv.appendChild(messageP);
-        chatMessages.appendChild(messageDiv);
-        chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
-    }
-    
-    function getAIResponse(userMessage) {
-        // This would be replaced with actual API calls in production
-        const responses = {
-            'hello': 'Hi there! How can I assist you today?',
-            'hi': 'Hello! What can I help you with?',
-            'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
-            'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
-            'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
-            'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
-            'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
-        };
-        
-        const lowerMsg = userMessage.toLowerCase();
-        if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
-            return responses['pricing'];
-        } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
-            return responses['services'];
-        } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
-            return responses['contact'];
-        } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
-            return responses['hello'];
-        } else if (lowerMsg.includes('help')) {
-            return responses['help'];
-        } else {
-            return responses['default'];
-        }
-    }
-    
-    function handleSendMessage() {
-        const message = chatInput.value.trim();
-        if (message) {
-            addMessage(message, false);
-            chatInput.value = '';
-            
-            // Simulate API call delay
-            setTimeout(() => {
-                const response = getAIResponse(message);
-                addMessage(response, true);
-            }, 1000);
-        }
-    }
-    
-    sendChatBtn.addEventListener('click', handleSendMessage);
-    chatInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            handleSendMessage();
-        }
-    });
-    
-    // AI Assistant Panel functionality
-    const aiConversation = document.querySelector('.ai-conversation');
-    const aiInput = document.querySelector('.ai-input');
-    const aiSendBtn = document.querySelector('.ai-send-btn');
-    const quickQuestions = document.querySelectorAll('.quick-question');
-    
-    function addAIMessage(message, isBot = false) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `ai-message ${isBot ? 'ai-response' : 'ai-question'}`;
-        messageDiv.style = isBot ? 
-            'background: #edf2f7; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%;' : 
-            'background: #4a6cf7; color: white; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%; margin-left: auto;';
-        
-        const messageP = document.createElement('p');
-        messageP.style = 'margin: 0; color: ' + (isBot ? '#2d3748' : 'white') + ';';
-        messageP.textContent = message;
-        
-        messageDiv.appendChild(messageP);
-        aiConversation.appendChild(messageDiv);
-        aiConversation.scrollTop = aiConversation.scrollHeight;
-    }
-    
-    function handleAISendMessage() {
-        const message = aiInput.value.trim();
-        if (message) {
-            addAIMessage(message, false);
-            aiInput.value = '';
-            
-            // Simulate more advanced API response
-            setTimeout(() => {
-                const response = getAIResponse(message);
-                addAIMessage(response, true);
-            }, 800);
-        }
-    }
-    
-    aiSendBtn.addEventListener('click', handleAISendMessage);
-    aiInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            handleAISendMessage();
-        }
-    });
-    
-    quickQuestions.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const question = this.textContent;
-            addAIMessage(question, false);
-            
-            setTimeout(() => {
-                const response = getAIResponse(question);
-                addAIMessage(response, true);
-            }, 800);
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle chat widget
+            const chatToggle = document.getElementById('chatToggle');
+            const liveChatWidget = document.getElementById('liveChatWidget');
+            const closeChat = document.getElementById('closeChat');
+
+            chatToggle.addEventListener('click', function () {
+                liveChatWidget.style.transform = 'translateY(0)';
+                liveChatWidget.style.opacity = '1';
+            });
+
+            closeChat.addEventListener('click', function () {
+                liveChatWidget.style.transform = 'translateY(100%)';
+                liveChatWidget.style.opacity = '0';
+            });
+
+            // Chat functionality
+            const chatMessages = document.querySelector('.chat-messages');
+            const chatInput = document.getElementById('chatInput');
+            const sendChatBtn = document.getElementById('sendChatBtn');
+
+            function addMessage(message, isBot = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chat-message ${isBot ? 'bot' : 'user'}`;
+                messageDiv.style = isBot ?
+                    'background: #f1f5ff; color: #333; align-self: flex-start; padding: 10px 15px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%;' :
+                    'background: #6e8efb; color: white; align-self: flex-end; padding: 10px 15px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%;';
+
+                const messageP = document.createElement('p');
+                messageP.style = 'margin: 0; font-size: 0.9rem; line-height: 1.4;';
+                messageP.textContent = message;
+
+                messageDiv.appendChild(messageP);
+                chatMessages.appendChild(messageDiv);
+                chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
+            }
+
+            function getAIResponse(userMessage) {
+                // This would be replaced with actual API calls in production
+                const responses = {
+                    'hello': 'Hi there! How can I assist you today?',
+                    'hi': 'Hello! What can I help you with?',
+                    'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
+                    'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
+                    'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
+                    'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
+                    'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
+                };
+
+                const lowerMsg = userMessage.toLowerCase();
+                if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+                    return responses['pricing'];
+                } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
+                    return responses['services'];
+                } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
+                    return responses['contact'];
+                } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
+                    return responses['hello'];
+                } else if (lowerMsg.includes('help')) {
+                    return responses['help'];
+                } else {
+                    return responses['default'];
+                }
+            }
+
+            function handleSendMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    addMessage(message, false);
+                    chatInput.value = '';
+
+                    // Simulate API call delay
+                    setTimeout(() => {
+                        const response = getAIResponse(message);
+                        addMessage(response, true);
+                    }, 1000);
+                }
+            }
+
+            sendChatBtn.addEventListener('click', handleSendMessage);
+            chatInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    handleSendMessage();
+                }
+            });
+
+            // AI Assistant Panel functionality
+            const aiConversation = document.querySelector('.ai-conversation');
+            const aiInput = document.querySelector('.ai-input');
+            const aiSendBtn = document.querySelector('.ai-send-btn');
+            const quickQuestions = document.querySelectorAll('.quick-question');
+
+            function addAIMessage(message, isBot = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `ai-message ${isBot ? 'ai-response' : 'ai-question'}`;
+                messageDiv.style = isBot ?
+                    'background: #edf2f7; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%;' :
+                    'background: #4a6cf7; color: white; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%; margin-left: auto;';
+
+                const messageP = document.createElement('p');
+                messageP.style = 'margin: 0; color: ' + (isBot ? '#2d3748' : 'white') + ';';
+                messageP.textContent = message;
+
+                messageDiv.appendChild(messageP);
+                aiConversation.appendChild(messageDiv);
+                aiConversation.scrollTop = aiConversation.scrollHeight;
+            }
+
+            function handleAISendMessage() {
+                const message = aiInput.value.trim();
+                if (message) {
+                    addAIMessage(message, false);
+                    aiInput.value = '';
+
+                    // Simulate more advanced API response
+                    setTimeout(() => {
+                        const response = getAIResponse(message);
+                        addAIMessage(response, true);
+                    }, 800);
+                }
+            }
+
+            aiSendBtn.addEventListener('click', handleAISendMessage);
+            aiInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    handleAISendMessage();
+                }
+            });
+
+            quickQuestions.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const question = this.textContent;
+                    addAIMessage(question, false);
+
+                    setTimeout(() => {
+                        const response = getAIResponse(question);
+                        addAIMessage(response, true);
+                    }, 800);
+                });
+            });
+
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    this.reset();
+                });
+            }
         });
-    });
-    
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    }
-});
-</script>
-    
+    </script>
+
 </body>
 
 </html>
