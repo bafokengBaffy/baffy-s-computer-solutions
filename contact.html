@@ -29,7 +29,977 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #4a6cf7;
+            --primary-light: #6e8efb;
+            --dark-color: #2d3748;
+            --gray-color: #4a5568;
+            --light-gray: #e2e8f0;
+            --lighter-gray: #f7fafc;
+            --white: #ffffff;
+            --whatsapp: #25D366;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(74, 108, 247, 0.3);
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            border: 5px solid var(--light-gray);
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: var(--dark-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-light);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--white);
+            padding: 10px 15px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-light);
+        }
+
+        .navbar-nav .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            width: 0;
+            height: 2px;
+            background: var(--primary-light);
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover:after {
+            width: calc(100% - 30px);
+        }
+
+        .navbar-toggler {
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%);
+            padding: 80px 0;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(74, 108, 247, 0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(74, 108, 247, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .card-icon i {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin: 0;
+        }
+
+        /* AI Chat */
+        #aiChat {
+            height: 250px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--lighter-gray);
+            border-radius: 12px;
+            border: 1px solid var(--light-gray);
+        }
+
+        .ai-message {
+            background: #edf2f7;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            max-width: 85%;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .user-message {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            max-width: 85%;
+            margin-left: auto;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .ai-input-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .ai-input {
+            flex: 1;
+            padding: 14px 18px;
+            border: 1px solid var(--light-gray);
+            border-radius: 12px 0 0 12px;
+            outline: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .ai-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+        }
+
+        .ai-send-btn {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 12px 12px 0;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .ai-send-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .quick-questions {
+            margin-top: 25px;
+        }
+
+        .quick-questions p {
+            font-size: 0.95rem;
+            color: var(--gray-color);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .quick-btn {
+            background: var(--light-gray);
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quick-btn:hover {
+            background: #d6e0f5;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gray-color);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--light-gray);
+            border-radius: 12px;
+            outline: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(74, 108, 247, 0.3);
+        }
+
+        /* Direct Contact */
+        .direct-contact {
+            border-top: 1px solid var(--light-gray);
+            padding-top: 25px;
+        }
+
+        .direct-contact h4 {
+            color: var(--dark-color);
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: #edf2f7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .contact-icon i {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .contact-info p {
+            margin: 0 0 3px 0;
+            color: var(--gray-color);
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Live Chat Widget */
+        #chatToggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(106, 142, 251, 0.6);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        #chatToggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(106, 142, 251, 0.8);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(74, 108, 247, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0);
+            }
+        }
+
+        #liveChat {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 380px;
+            max-width: calc(100% - 60px);
+            background: var(--white);
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            visibility: hidden;
+        }
+
+        .chat-open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 18px 18px 0 0;
+            position: relative;
+        }
+
+        .chat-header h4 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .chat-header p {
+            margin: 5px 0 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        #closeChat {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #closeChat:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .chat-body {
+            padding: 20px;
+            height: 350px;
+            overflow-y: auto;
+        }
+
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .bot-message {
+            background: #f1f5ff;
+            color: #333;
+            align-self: flex-start;
+            padding: 12px 16px;
+            border-radius: 18px;
+            border-bottom-left-radius: 5px;
+            max-width: 80%;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .user-chat-message {
+            background: var(--primary-light);
+            color: var(--white);
+            align-self: flex-end;
+            padding: 12px 16px;
+            border-radius: 18px;
+            border-bottom-right-radius: 5px;
+            max-width: 80%;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .chat-footer {
+            display: flex;
+            padding: 15px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        #chatInput {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        #chatInput:focus {
+            border-color: var(--primary-color);
+        }
+
+        #sendChatBtn {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #sendChatBtn:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-actions {
+            padding: 15px 20px 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .chat-actions p {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .action-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .whatsapp-btn {
+            background: var(--whatsapp);
+        }
+
+        .whatsapp-btn:hover {
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .call-btn {
+            background: var(--primary-color);
+        }
+
+        .call-btn:hover {
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+        }
+
+        .action-btn i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+
+        .footer-about img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-light);
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-links h3 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-light);
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter h3 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-newsletter h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-light);
+        }
+
+        .footer-newsletter p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .newsletter-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: var(--primary-light);
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .copyright {
+            text-align: center;
+        }
+
+        .copyright p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 991px) {
+            .page-header {
+                padding: 100px 0 60px;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .contact-card {
+                min-width: 100%;
+            }
+
+            #liveChat {
+                width: 90%;
+                right: 5%;
+                bottom: 80px;
+            }
+
+            #chatToggle {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-brand img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .page-header {
+                padding: 80px 0 40px;
+                margin-top: 60px;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .card-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .footer {
+                padding: 40px 0 0;
+            }
+
+            .footer-about,
+            .footer-links,
+            .footer-newsletter {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .page-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .contact-card {
+                padding: 20px;
+            }
+
+            .card-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .card-icon i {
+                font-size: 1.2rem;
+            }
+
+            #aiChat {
+                height: 200px;
+            }
+
+            .chat-body {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -39,29 +1009,23 @@
     </div>
 
     <!-- Header -->
-    <header class="header" style="background-color:black; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <!-- Logo (Rounded) -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    border: 2px solid #4e9af1;
-                ">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
                 </a>
 
                 <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                 </button>
 
                 <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto" style="font-weight: 500; font-size: 1rem;">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -81,7 +1045,7 @@
                             <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link active" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -101,166 +1065,107 @@
         </div>
     </section>
 
-    <!-- Animated Contact Section with AI Assistant -->
-    <section id="contact"
-        style="background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%); padding: 100px 0; font-family: 'Poppins', sans-serif; overflow: hidden;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <!-- Section Header with Animation -->
-            <div style="text-align: center; margin-bottom: 60px; animation: fadeInUp 0.8s ease;">
-                <h2
-                    style="font-size: 2.8rem; color: #2d3748; margin-bottom: 15px; font-weight: 800; background: linear-gradient(90deg, #4a6cf7, #6e8efb); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
-                    Let's Build Something Amazing</h2>
-                <p style="color: #4a5568; font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">Get
-                    instant answers from our AI or connect directly with our team</p>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Build Something Amazing</h2>
+                <p>Get instant answers from our AI or connect directly with our team</p>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-                <!-- AI Assistant Card with Floating Animation -->
-                <div style="flex: 1; min-width: 300px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(74, 108, 247, 0.1); transform: translateY(0); transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeInLeft 0.8s ease;"
-                    onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(74, 108, 247, 0.15)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(74, 108, 247, 0.1)'">
-                    <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                        <div
-                            style="width: 50px; height: 50px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <i class="fas fa-robot" style="color: white; font-size: 1.5rem;"></i>
+            <div class="contact-container">
+                <!-- AI Assistant Card -->
+                <div class="contact-card animate__animated animate__fadeInLeft">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0;">AI Assistant</h3>
+                        <h3>AI Assistant</h3>
                     </div>
 
                     <!-- AI Conversation -->
-                    <div id="aiChat"
-                        style="height: 250px; overflow-y: auto; margin-bottom: 20px; padding: 15px; background: #f7fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-                        <div
-                            style="background: #edf2f7; padding: 12px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 85%; animation: fadeIn 0.5s ease;">
-                            <p style="margin: 0; color: #2d3748; line-height: 1.5;">Hello! I'm Baffy's assistant. Ask
-                                me about services, pricing, or availability.</p>
+                    <div id="aiChat">
+                        <div class="ai-message">
+                            <p style="margin: 0;">Hello! I'm Baffy's assistant. Ask me about services, pricing, or
+                                availability.</p>
                         </div>
                     </div>
 
                     <!-- Input Area -->
-                    <div style="display: flex; margin-bottom: 20px;">
-                        <input type="text" id="aiInput" placeholder="Ask me anything..."
-                            style="flex: 1; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px 0 0 12px; outline: none; font-size: 1rem; transition: border 0.3s ease;"
-                            onfocus="this.style.borderColor='#4a6cf7'">
-                        <button id="aiSendBtn"
-                            style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; padding: 0 25px; border-radius: 0 12px 12px 0; cursor: pointer; font-size: 1rem; transition: transform 0.2s ease;"
-                            onmouseover="this.style.transform='scale(1.05)'"
-                            onmouseout="this.style.transform='scale(1)'">
+                    <div class="ai-input-group">
+                        <input type="text" id="aiInput" class="ai-input" placeholder="Ask me anything...">
+                        <button id="aiSendBtn" class="ai-send-btn">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
 
                     <!-- Quick Questions -->
-                    <div style="margin-top: 25px;">
-                        <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 12px; font-weight: 500;">Quick
-                            questions:</p>
+                    <div class="quick-questions">
+                        <p>Quick questions:</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                            <button onclick="askAI('What services do you offer?')"
-                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
-                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
-                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Services</button>
-                            <button onclick="askAI('What are your pricing options?')"
-                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
-                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
-                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Pricing</button>
-                            <button onclick="askAI('How long do projects take?')"
-                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
-                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
-                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Timeline</button>
+                            <button onclick="askAI('What services do you offer?')" class="quick-btn">Services</button>
+                            <button onclick="askAI('What are your pricing options?')" class="quick-btn">Pricing</button>
+                            <button onclick="askAI('How long do projects take?')" class="quick-btn">Timeline</button>
                             <button onclick="askAI('What technologies do you use?')"
-                                style="background: #e2e8f0; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease;"
-                                onmouseover="this.style.background='#d6e0f5'; this.style.transform='translateY(-2px)'"
-                                onmouseout="this.style.background='#e2e8f0'; this.style.transform='translateY(0)'">Technologies</button>
+                                class="quick-btn">Technologies</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form Card with Floating Animation -->
-                <div style="flex: 1; min-width: 300px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(74, 108, 247, 0.1); transform: translateY(0); transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeInRight 0.8s ease;"
-                    onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(74, 108, 247, 0.15)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(74, 108, 247, 0.1)'">
-                    <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                        <div
-                            style="width: 50px; height: 50px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <i class="fas fa-envelope" style="color: white; font-size: 1.5rem;"></i>
+                <!-- Contact Form Card -->
+                <div class="contact-card animate__animated animate__fadeInRight">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0;">Contact Form</h3>
+                        <h3>Contact Form</h3>
                     </div>
 
-                    <form id="contactForm" action="https://formsubmit.co/baffkay20@gmail.com" method="POST"
-                        style="margin-bottom: 20px;">
+                    <form id="contactForm" action="https://formsubmit.co/baffkay20@gmail.com" method="POST">
                         <!-- FormSubmit Configuration -->
                         <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
                         <input type="hidden" name="_subject" value="New Contact Form Submission">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="text" name="_honey" style="display:none">
 
-                        <div style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Your
-                                Name</label>
-                            <input type="text" name="name"
-                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;"
-                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
-                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required>
+                        <div class="form-group">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" name="name" class="form-control" required>
                         </div>
-                        <div style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Email
-                                Address</label>
-                            <input type="email" name="email"
-                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;"
-                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
-                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'" required>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="email" class="form-control" required>
                         </div>
-                        <div style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Phone
-                                Number</label>
-                            <input type="text" name="phone"
-                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; transition: all 0.3s ease;"
-                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
-                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="text" name="phone" class="form-control">
                         </div>
-                        <div style="margin-bottom: 25px;">
-                            <label style="display: block; margin-bottom: 8px; color: #4a5568; font-weight: 500;">Your
-                                Message</label>
-                            <textarea rows="4" name="message"
-                                style="width: 100%; padding: 14px 18px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"
-                                onfocus="this.style.borderColor='#4a6cf7'; this.style.boxShadow='0 0 0 3px rgba(74, 108, 247, 0.1)'"
-                                onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'"
-                                required></textarea>
+                        <div class="form-group">
+                            <label class="form-label">Your Message</label>
+                            <textarea rows="4" name="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit"
-                            style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; padding: 16px; border-radius: 12px; cursor: pointer; font-size: 1rem; font-weight: 600; width: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px rgba(74, 108, 247, 0.3)'"
-                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Send
-                            Message</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
 
                     <!-- Alternative Contact -->
-                    <div style="border-top: 1px solid #e2e8f0; padding-top: 25px;">
-                        <h4 style="color: #2d3748; margin-bottom: 18px; font-size: 1.2rem;">Direct Contact</h4>
-                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                            <div style="width: 45px; height: 45px; background: #edf2f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; transition: transform 0.3s ease;"
-                                onmouseover="this.style.transform='rotate(10deg) scale(1.1)'"
-                                onmouseout="this.style.transform='rotate(0) scale(1)'">
-                                <i class="fas fa-phone-alt" style="color: #4a6cf7; font-size: 1.1rem;"></i>
+                    <div class="direct-contact">
+                        <h4>Direct Contact</h4>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
                             </div>
-                            <div>
-                                <p style="margin: 0 0 3px 0; color: #4a5568; font-weight: 500;">Call us 24/7</p>
-                                <a href="tel:+26663210786"
-                                    style="color: #4a6cf7; text-decoration: none; font-weight: 600; font-size: 1.1rem;">+266
-                                    6321 0786</a>
+                            <div class="contact-info">
+                                <p>Call us 24/7</p>
+                                <a href="tel:+26663210786">+266 6321 0786</a>
                             </div>
                         </div>
-                        <div style="display: flex; align-items: center;">
-                            <div style="width: 45px; height: 45px; background: #edf2f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; transition: transform 0.3s ease;"
-                                onmouseover="this.style.transform='rotate(10deg) scale(1.1)'"
-                                onmouseout="this.style.transform='rotate(0) scale(1)'">
-                                <i class="fas fa-envelope" style="color: #4a6cf7; font-size: 1.1rem;"></i>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
                             </div>
-                            <div>
-                                <p style="margin: 0 0 3px 0; color: #4a5568; font-weight: 500;">Email us at</p>
-                                <a href="mailto:baffkay20@gmail.com"
-                                    style="color: #4a6cf7; text-decoration: none; font-weight: 600; font-size: 1.1rem;">baffkay20@gmail.com</a>
+                            <div class="contact-info">
+                                <p>Email us at</p>
+                                <a href="mailto:baffkay20@gmail.com">baffkay20@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -270,66 +1175,45 @@
     </section>
 
     <!-- Floating Chat Toggle Button -->
-    <div id="chatToggle"
-        style="position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px; background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 8px 25px rgba(106, 142, 251, 0.6); z-index: 999; transition: all 0.3s ease; animation: pulse 2s infinite;"
-        onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 10px 30px rgba(106, 142, 251, 0.8)'"
-        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 25px rgba(106, 142, 251, 0.6)'">
+    <div id="chatToggle">
         <i class="fas fa-comment-dots"></i>
     </div>
 
     <!-- Live Chat Widget -->
-    <div id="liveChat"
-        style="position: fixed; bottom: 120px; right: 30px; width: 380px; max-width: 90%; background: white; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); visibility: hidden;">
-        <div
-            style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; padding: 20px; border-radius: 18px 18px 0 0; position: relative;">
-            <h4 style="margin: 0; font-size: 1.3rem;">AI Support Assistant</h4>
-            <p style="margin: 5px 0 0; font-size: 0.95rem; opacity: 0.9;">We're online and ready to help</p>
-            <button id="closeChat"
-                style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.2); border: none; width: 30px; height: 30px; border-radius: 50%; color: white; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;"
-                onmouseover="this.style.background='rgba(255,255,255,0.3)'"
-                onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+    <div id="liveChat">
+        <div class="chat-header">
+            <h4>AI Support Assistant</h4>
+            <p>We're online and ready to help</p>
+            <button id="closeChat">
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        <div style="padding: 20px; height: 350px; overflow-y: auto;">
-            <div id="chatMessages" style="display: flex; flex-direction: column; gap: 12px;">
-                <div
-                    style="background: #f1f5ff; color: #333; align-self: flex-start; padding: 12px 16px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%; animation: fadeIn 0.5s ease;">
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">Hello! I'm Baffy's AI assistant. How can
-                        I help you today?</p>
+        <div class="chat-body">
+            <div id="chatMessages">
+                <div class="bot-message">
+                    <p style="margin: 0;">Hello! I'm Baffy's AI assistant. How can I help you today?</p>
                 </div>
             </div>
         </div>
-        <div style="display: flex; padding: 15px 20px; border-top: 1px solid #eee;">
-            <input type="text" id="chatInput" placeholder="Type your message..."
-                style="flex: 1; padding: 12px 16px; border: 1px solid #ddd; border-radius: 30px; outline: none; font-size: 0.95rem; transition: all 0.3s ease;"
-                onfocus="this.style.borderColor='#4a6cf7'">
-            <button id="sendChatBtn"
-                style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; margin-left: 10px; cursor: pointer; transition: all 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendChatBtn">
                 <i class="fas fa-paper-plane"></i>
             </button>
         </div>
-        <div style="padding: 15px 20px 20px; border-top: 1px solid #eee; text-align: center;">
-            <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">Prefer human help?</p>
-            <div style="display: flex; gap: 12px; justify-content: center;">
-                <a href="https://wa.me/message/2QFRU4XGJUGHI1" target="_blank"
-                    style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 30px; font-size: 0.95rem; font-weight: 500; background: #25D366; color: white; text-decoration: none; transition: all 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(37, 211, 102, 0.3)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> WhatsApp
+        <div class="chat-actions">
+            <p>Prefer human help?</p>
+            <div class="action-buttons">
+                <a href="https://wa.me/message/2QFRU4XGJUGHI1" target="_blank" class="action-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-                <a href="tel:+26663210786"
-                    style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 30px; font-size: 0.95rem; font-weight: 500; background: #4a6cf7; color: white; text-decoration: none; transition: all 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(74, 108, 247, 0.3)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <i class="fas fa-phone" style="margin-right: 8px; font-size: 1.1rem;"></i> Call Now
+                <a href="tel:+26663210786" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Now
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -346,7 +1230,6 @@
                                     class="fab fa-github"></i></a>
                             <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
                                     class="fab fa-facebook-f"></i></a>
-
                         </div>
                     </div>
                 </div>
@@ -395,41 +1278,48 @@
         </div>
     </footer>
 
-
-
-
     <!-- ALL JS FILES -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="scripts.js"></script>
 
     <!-- Live Chat Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Remove preloader when page loads
+            setTimeout(function () {
+                document.getElementById('preloader').style.opacity = '0';
+                document.getElementById('preloader').style.visibility = 'hidden';
+            }, 500);
+
             // Toggle chat widget
             const chatToggle = document.getElementById('chatToggle');
             const liveChat = document.getElementById('liveChat');
             const closeChat = document.getElementById('closeChat');
 
             chatToggle.addEventListener('click', function () {
-                if (liveChat.style.visibility === 'visible') {
-                    liveChat.style.transform = 'translateY(20px)';
-                    liveChat.style.opacity = '0';
-                    liveChat.style.visibility = 'hidden';
+                liveChat.classList.toggle('chat-open');
+                // Stop pulsing animation when chat is opened
+                if (liveChat.classList.contains('chat-open')) {
+                    chatToggle.style.animation = 'none';
                 } else {
-                    liveChat.style.transform = 'translateY(0)';
-                    liveChat.style.opacity = '1';
-                    liveChat.style.visibility = 'visible';
+                    chatToggle.style.animation = 'pulse 2s infinite';
                 }
             });
 
             closeChat.addEventListener('click', function () {
-                liveChat.style.transform = 'translateY(20px)';
-                liveChat.style.opacity = '0';
-                liveChat.style.visibility = 'hidden';
+                liveChat.classList.remove('chat-open');
+                chatToggle.style.animation = 'pulse 2s infinite';
+            });
+
+            // Close chat when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!liveChat.contains(e.target) && e.target !== chatToggle) {
+                    liveChat.classList.remove('chat-open');
+                    chatToggle.style.animation = 'pulse 2s infinite';
+                }
             });
 
             // Chat functionality
@@ -439,9 +1329,7 @@
 
             function addChatMessage(message, isBot = false) {
                 const messageDiv = document.createElement('div');
-                messageDiv.style = isBot ?
-                    'background: #f1f5ff; color: #333; align-self: flex-start; padding: 12px 16px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%; animation: fadeIn 0.5s ease;' :
-                    'background: #6e8efb; color: white; align-self: flex-end; padding: 12px 16px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%; animation: fadeIn 0.5s ease;';
+                messageDiv.className = isBot ? 'bot-message' : 'user-chat-message';
 
                 const messageP = document.createElement('p');
                 messageP.style = 'margin: 0; font-size: 0.95rem; line-height: 1.5;';
@@ -456,24 +1344,40 @@
                 const responses = {
                     'hello': 'Hi there! How can I assist you today?',
                     'hi': 'Hello! What can I help you with?',
-                    'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
-                    'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
-                    'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
-                    'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
-                    'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
+                    'pricing': 'Our pricing varies based on project requirements. You can check our pricing page for standard rates or request a custom quote.',
+                    'services': 'We offer web development, mobile apps, IT consulting, network solutions, and more. Which service are you interested in?',
+                    'contact': 'You can reach us at +266 6321 0786 or email baffkay20@gmail.com. We typically respond within 24 hours.',
+                    'help': 'I can help with: pricing, services, contact info, project timelines, or technology stack. What do you need?',
+                    'website': 'Our web development services include responsive design, e-commerce solutions, CMS integration, and custom web applications.',
+                    'app': 'We develop both iOS and Android apps using modern frameworks like React Native and Flutter for cross-platform solutions.',
+                    'network': 'Our network solutions include setup, security, maintenance, and troubleshooting for businesses of all sizes.',
+                    'time': 'Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex applications may take 3-6 months.',
+                    'tech': 'We use modern technologies including HTML5, CSS3, JavaScript (React, Vue, Node), Python, PHP, and various databases.',
+                    'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly at +266 6321 0786.'
                 };
 
                 const lowerMsg = userMessage.toLowerCase();
+
                 if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
                     return responses['pricing'];
                 } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
                     return responses['services'];
-                } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
+                } else if (lowerMsg.includes('contact') || lowerMsg.includes('call') || lowerMsg.includes('email')) {
                     return responses['contact'];
                 } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
                     return responses['hello'];
                 } else if (lowerMsg.includes('help')) {
                     return responses['help'];
+                } else if (lowerMsg.includes('website') || lowerMsg.includes('web')) {
+                    return responses['website'];
+                } else if (lowerMsg.includes('app') || lowerMsg.includes('application')) {
+                    return responses['app'];
+                } else if (lowerMsg.includes('network') || lowerMsg.includes('it')) {
+                    return responses['network'];
+                } else if (lowerMsg.includes('time') || lowerMsg.includes('long') || lowerMsg.includes('duration')) {
+                    return responses['time'];
+                } else if (lowerMsg.includes('tech') || lowerMsg.includes('framework') || lowerMsg.includes('language')) {
+                    return responses['tech'];
                 } else {
                     return responses['default'];
                 }
@@ -485,10 +1389,20 @@
                     addChatMessage(message, false);
                     chatInput.value = '';
 
+                    // Show typing indicator
+                    const typingIndicator = document.createElement('div');
+                    typingIndicator.className = 'bot-message';
+                    typingIndicator.innerHTML = '<p style="margin:0;"><i class="fas fa-ellipsis-h"></i> Typing...</p>';
+                    chatMessages.appendChild(typingIndicator);
+                    chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
+
                     setTimeout(() => {
+                        // Remove typing indicator
+                        chatMessages.removeChild(typingIndicator);
+
                         const response = getAIResponse(message);
                         addChatMessage(response, true);
-                    }, 1000);
+                    }, 1500);
                 }
             }
 
@@ -506,12 +1420,10 @@
 
             function addAIMessage(message, isBot = false) {
                 const messageDiv = document.createElement('div');
-                messageDiv.style = isBot ?
-                    'background: #edf2f7; padding: 12px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 85%; animation: fadeIn 0.5s ease;' :
-                    'background: #4a6cf7; color: white; padding: 12px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 85%; margin-left: auto; animation: fadeIn 0.5s ease;';
+                messageDiv.className = isBot ? 'ai-message' : 'user-message';
 
                 const messageP = document.createElement('p');
-                messageP.style = 'margin: 0; line-height: 1.5;';
+                messageP.style = 'margin: 0;';
                 messageP.textContent = message;
 
                 messageDiv.appendChild(messageP);
@@ -552,6 +1464,29 @@
                     // You can add additional client-side validation here if needed
                 });
             }
+
+            // Mobile detection and chat button adjustment
+            function adjustChatForMobile() {
+                if (window.innerWidth <= 767) {
+                    document.getElementById('chatToggle').style.bottom = '20px';
+                    document.getElementById('chatToggle').style.right = '20px';
+                    document.getElementById('liveChat').style.bottom = '80px';
+                    document.getElementById('liveChat').style.right = '5%';
+                    document.getElementById('liveChat').style.width = '90%';
+                } else {
+                    document.getElementById('chatToggle').style.bottom = '30px';
+                    document.getElementById('chatToggle').style.right = '30px';
+                    document.getElementById('liveChat').style.bottom = '100px';
+                    document.getElementById('liveChat').style.right = '30px';
+                    document.getElementById('liveChat').style.width = '380px';
+                }
+            }
+
+            // Initial adjustment
+            adjustChatForMobile();
+
+            // Adjust on resize
+            window.addEventListener('resize', adjustChatForMobile);
         });
     </script>
 </body>
