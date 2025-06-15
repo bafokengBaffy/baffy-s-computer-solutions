@@ -86,7 +86,9 @@
     <!-- Modern Hero Section with Image Background -->
     <section id="home" class="hero-section">
         <!-- Background Image with Gradient Overlay -->
-        <div class="background-image"></div>
+        <div class="background-image"
+            style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80');">
+        </div>
 
         <!-- Hero Content -->
         <div class="hero-content">
@@ -159,22 +161,40 @@
     <section id="about-preview" class="about section">
         <div class="container">
             <div class="section-title text-center mb-4">
-                <h2>About Me</h2>
-                <p>Get to know the professional behind the solutions</p>
+                <h2>About Our Company</h2>
+                <p>Delivering innovative IT solutions since 2018</p>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="about-img wow animate__animated animate__fadeInLeft">
-                        <img src="baffy.jpg" alt="Bafokeng Khoali" class="img-fluid rounded">
+                        <img src="bcs1.jpg"
+                            alt="Baffy's Computer Solutions Team" class="img-fluid rounded">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content wow animate__animated animate__fadeInRight">
-                        <h2>Bafokeng Khoali</h2>
-                        <h3 class="text-gradient">Aspiring Developer | Tech Enthusiast</h3>
-                        <p>From a young age, I found myself fixing computers for family and friends—long before I even
-                            realized I was stepping into the shoes of an IT technician. That early curiosity grew into a
-                            deep love for technology.</p>
+                        <h2>Baffy's Computer Solutions</h2>
+                        <h3 class="text-gradient">Your Trusted IT Partner in Lesotho</h3>
+                        <p>Founded in 2018, Baffy's Computer Solutions has grown from a small IT startup to a leading
+                            technology service provider in Lesotho. We specialize in delivering comprehensive IT
+                            solutions tailored to businesses of all sizes.</p>
+                        <p>Our mission is to empower businesses through innovative technology solutions that drive
+                            growth, efficiency, and competitive advantage. We combine technical expertise with a deep
+                            understanding of our clients' needs to deliver exceptional results.</p>
+                        <div class="company-stats mt-4">
+                            <div class="stat-item">
+                                <h4>50+</h4>
+                                <p>Clients Served</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>100+</h4>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>24/7</h4>
+                                <p>Support Available</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,8 +284,8 @@
     <section id="portfolio-preview" class="portfolio section">
         <div class="container">
             <div class="section-title text-center mb-4">
-                <h2>My Portfolio</h2>
-                <p>Explore my recent projects and see the quality of my work</p>
+                <h2>Our Portfolio</h2>
+                <p>Explore our recent projects and see the quality of our work</p>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -303,7 +323,7 @@
     <section id="services-preview" class="services section bg-light">
         <div class="container">
             <div class="section-title text-center mb-4">
-                <h2>My Services</h2>
+                <h2>Our Services</h2>
                 <p>Comprehensive IT solutions tailored to meet your business needs</p>
             </div>
             <div class="row">
@@ -385,11 +405,6 @@
         </div>
     </section>
 
-    
-
-    
-
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -438,7 +453,7 @@
                 <div class="col-lg-3">
                     <div class="footer-newsletter">
                         <h3>Newsletter</h3>
-                        <p>Subscribe to get updates on my latest projects and services.</p>
+                        <p>Subscribe to get updates on our latest projects and services.</p>
                         <form class="newsletter-form" action="https://formsubmit.co/baffkay20@gmail.com" method="POST">
                             <input type="email" name="email" class="newsletter-input" placeholder="Your Email" required>
                             <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
@@ -474,160 +489,7 @@
     <!-- Custom Scripts -->
     <script src="scripts.js"></script>
 
-    <!-- Live Chat Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Toggle chat widget
-            const chatToggle = document.getElementById('chatToggle');
-            const liveChatWidget = document.getElementById('liveChatWidget');
-            const closeChat = document.getElementById('closeChat');
 
-            chatToggle.addEventListener('click', function () {
-                liveChatWidget.style.transform = 'translateY(0)';
-                liveChatWidget.style.opacity = '1';
-            });
-
-            closeChat.addEventListener('click', function () {
-                liveChatWidget.style.transform = 'translateY(100%)';
-                liveChatWidget.style.opacity = '0';
-            });
-
-            // Chat functionality
-            const chatMessages = document.querySelector('.chat-messages');
-            const chatInput = document.getElementById('chatInput');
-            const sendChatBtn = document.getElementById('sendChatBtn');
-
-            function addMessage(message, isBot = false) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `chat-message ${isBot ? 'bot' : 'user'}`;
-                messageDiv.style = isBot ?
-                    'background: #f1f5ff; color: #333; align-self: flex-start; padding: 10px 15px; border-radius: 18px; border-bottom-left-radius: 5px; max-width: 80%;' :
-                    'background: #6e8efb; color: white; align-self: flex-end; padding: 10px 15px; border-radius: 18px; border-bottom-right-radius: 5px; max-width: 80%;';
-
-                const messageP = document.createElement('p');
-                messageP.style = 'margin: 0; font-size: 0.9rem; line-height: 1.4;';
-                messageP.textContent = message;
-
-                messageDiv.appendChild(messageP);
-                chatMessages.appendChild(messageDiv);
-                chatMessages.parentElement.scrollTop = chatMessages.parentElement.scrollHeight;
-            }
-
-            function getAIResponse(userMessage) {
-                // This would be replaced with actual API calls in production
-                const responses = {
-                    'hello': 'Hi there! How can I assist you today?',
-                    'hi': 'Hello! What can I help you with?',
-                    'pricing': 'Our pricing varies based on project requirements. Would you like a custom quote?',
-                    'services': 'We offer web development, mobile apps, IT consulting, and more. Which service are you interested in?',
-                    'contact': 'You can reach us at +266 6321 0786 or baffkay20@gmail.com',
-                    'help': 'I can help with: pricing, services, contact info, or project inquiries. What do you need?',
-                    'default': 'Thanks for your message! For detailed inquiries, please use our contact form or call us directly.'
-                };
-
-                const lowerMsg = userMessage.toLowerCase();
-                if (lowerMsg.includes('price') || lowerMsg.includes('cost')) {
-                    return responses['pricing'];
-                } else if (lowerMsg.includes('service') || lowerMsg.includes('offer')) {
-                    return responses['services'];
-                } else if (lowerMsg.includes('contact') || lowerMsg.includes('call')) {
-                    return responses['contact'];
-                } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
-                    return responses['hello'];
-                } else if (lowerMsg.includes('help')) {
-                    return responses['help'];
-                } else {
-                    return responses['default'];
-                }
-            }
-
-            function handleSendMessage() {
-                const message = chatInput.value.trim();
-                if (message) {
-                    addMessage(message, false);
-                    chatInput.value = '';
-
-                    // Simulate API call delay
-                    setTimeout(() => {
-                        const response = getAIResponse(message);
-                        addMessage(response, true);
-                    }, 1000);
-                }
-            }
-
-            sendChatBtn.addEventListener('click', handleSendMessage);
-            chatInput.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    handleSendMessage();
-                }
-            });
-
-            // AI Assistant Panel functionality
-            const aiConversation = document.querySelector('.ai-conversation');
-            const aiInput = document.querySelector('.ai-input');
-            const aiSendBtn = document.querySelector('.ai-send-btn');
-            const quickQuestions = document.querySelectorAll('.quick-question');
-
-            function addAIMessage(message, isBot = false) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `ai-message ${isBot ? 'ai-response' : 'ai-question'}`;
-                messageDiv.style = isBot ?
-                    'background: #edf2f7; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%;' :
-                    'background: #4a6cf7; color: white; padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%; margin-left: auto;';
-
-                const messageP = document.createElement('p');
-                messageP.style = 'margin: 0; color: ' + (isBot ? '#2d3748' : 'white') + ';';
-                messageP.textContent = message;
-
-                messageDiv.appendChild(messageP);
-                aiConversation.appendChild(messageDiv);
-                aiConversation.scrollTop = aiConversation.scrollHeight;
-            }
-
-            function handleAISendMessage() {
-                const message = aiInput.value.trim();
-                if (message) {
-                    addAIMessage(message, false);
-                    aiInput.value = '';
-
-                    // Simulate more advanced API response
-                    setTimeout(() => {
-                        const response = getAIResponse(message);
-                        addAIMessage(response, true);
-                    }, 800);
-                }
-            }
-
-            aiSendBtn.addEventListener('click', handleAISendMessage);
-            aiInput.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    handleAISendMessage();
-                }
-            });
-
-            quickQuestions.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const question = this.textContent;
-                    addAIMessage(question, false);
-
-                    setTimeout(() => {
-                        const response = getAIResponse(question);
-                        addAIMessage(response, true);
-                    }, 800);
-                });
-            });
-
-            // Contact form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    alert('Thank you for your message! We will get back to you soon.');
-                    this.reset();
-                });
-            }
-        });
-    </script>
     <!-- Mobile Menu Toggle Script -->
     <script>
         document.getElementById('mobileToggle').addEventListener('click', function () {
