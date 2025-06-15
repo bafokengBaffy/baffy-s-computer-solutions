@@ -32,6 +32,52 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        /* Learn More Button Styles */
+        .learn-more-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 16px;
+            background-color: #4a6bff;
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .learn-more-btn:hover {
+            background-color: #3a56d4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .learn-more-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .learn-more-btn .external-link-icon {
+            font-size: 12px;
+            margin-left: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        .learn-more-btn:hover .external-link-icon {
+            transform: translateX(2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .learn-more-btn {
+                padding: 5px 12px;
+                font-size: 13px;
+            }
+        }
+
         .trend-item {
             position: relative;
         }
