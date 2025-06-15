@@ -1,5 +1,3 @@
-<!--portfolio.html-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +10,7 @@
     <!-- Site Metas -->
     <title>Portfolio | Baffy's Computer Solutions</title>
     <meta name="keywords"
-        content="IT services, web development, network solutions, IT consulting, software development">
+        content="IT services, web development, network solutions, IT consulting, software development, computer repair, troubleshooting">
     <meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
     <meta name="author" content="Bafokeng Khoali">
 
@@ -30,40 +28,196 @@
         rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Lightbox for image gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional custom styles */
+        .portfolio-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-overlay {
+            background: rgba(0, 123, 255, 0.9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .repair-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .repair-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .repair-icon {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .filter-buttons {
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: #f8f9fa;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .portfolio-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .portfolio-btn {
+            width: 40px;
+            height: 40px;
+            background: white;
+            color: #007bff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-btn:hover {
+            background: #0056b3;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #007bff 0%, #00bfff 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .repair-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .portfolio-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-img img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover .portfolio-img img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-info {
+            padding: 20px;
+            background: white;
+        }
+
+        .portfolio-info h3 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .portfolio-info .category {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #007bff;
+        }
+
+        .section-title p {
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body id="page-top">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
 
     <!-- Header -->
-    <header class="header" style="background-color: black; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <!-- Logo (Rounded) -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    border: 2px solid #4e9af1;
-                ">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="height: 50px; border-radius: 50%;">
                 </a>
 
                 <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: white;"></i></span>
                 </button>
 
                 <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto" style="font-weight: 500; font-size: 1rem;">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -71,7 +225,7 @@
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            <a class="nav-link active" href="portfolio.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="services.html">Services</a>
@@ -91,21 +245,31 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>My Portfolio</h1>
-                    <p>Explore my recent projects and see the quality of my work</p>
-                </div>
+   <!-- Page Header -->
+<section class="page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">My Portfolio</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Explore my recent projects and see the quality of my work</p>
+                <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+                    <ol class="breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
+                        <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <section id="portfolio" class="section">
         <div class="container">
+            <div class="section-title">
+                <h2>Development Projects</h2>
+                <p>Showcase of my web, app, and network development work</p>
+            </div>
+
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web_dev">Web Development</button>
@@ -113,9 +277,9 @@
                 <button class="filter-btn" data-filter="network">Network Solutions</button>
             </div>
 
-            <div class="portfolio-grid">
+            <div class="row portfolio-grid">
                 <!-- Portfolio Item 1 -->
-                <div class="portfolio-item" data-category="web_dev">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web_dev">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="E-commerce Platform">
@@ -124,10 +288,12 @@
                                 <h3>E-commerce Platform</h3>
                                 <p>Custom e-commerce solution with payment integration</p>
                                 <div class="portfolio-buttons">
-                                    <a href="#" class="portfolio-btn" title="View Details">
+                                    <a href="https://github.com/bafokengBaffy/ecommerce-platform" class="portfolio-btn"
+                                        title="View Details" target="_blank">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                    <a href="https://baffy-ecommerce-demo.netlify.app/" class="portfolio-btn"
+                                        title="Visit Website" target="_blank">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
@@ -141,7 +307,7 @@
                 </div>
 
                 <!-- Portfolio Item 2 -->
-                <div class="portfolio-item" data-category="app_dev">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="app_dev">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1934&q=80"
                             alt="Mobile Banking App">
@@ -150,11 +316,13 @@
                                 <h3>Mobile Banking App</h3>
                                 <p>Secure banking application with biometric authentication</p>
                                 <div class="portfolio-buttons">
-                                    <a href="#" class="portfolio-btn" title="View Details">
+                                    <a href="https://github.com/bafokengBaffy/banking-app" class="portfolio-btn"
+                                        title="View Details" target="_blank">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="#" class="portfolio-btn" title="Visit Website">
-                                        <i class="fas fa-link"></i>
+                                    <a href="https://play.google.com/store/apps/details?id=com.baffy.bankingapp"
+                                        class="portfolio-btn" title="Download App" target="_blank">
+                                        <i class="fas fa-download"></i>
                                     </a>
                                 </div>
                             </div>
@@ -167,7 +335,7 @@
                 </div>
 
                 <!-- Portfolio Item 3 -->
-                <div class="portfolio-item" data-category="network">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="network">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="Corporate Network">
@@ -176,11 +344,13 @@
                                 <h3>Corporate Network</h3>
                                 <p>Secure enterprise network infrastructure</p>
                                 <div class="portfolio-buttons">
-                                    <a href="#" class="portfolio-btn" title="View Details">
+                                    <a href="https://github.com/bafokengBaffy/network-solutions" class="portfolio-btn"
+                                        title="View Details" target="_blank">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="#" class="portfolio-btn" title="Visit Website">
-                                        <i class="fas fa-link"></i>
+                                    <a href="https://www.cisco.com/c/en/us/solutions/enterprise-networks.html"
+                                        class="portfolio-btn" title="Learn More" target="_blank">
+                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </div>
                             </div>
@@ -193,7 +363,7 @@
                 </div>
 
                 <!-- Portfolio Item 4 -->
-                <div class="portfolio-item" data-category="web_dev">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web_dev">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="Business Dashboard">
@@ -202,10 +372,12 @@
                                 <h3>Business Analytics Dashboard</h3>
                                 <p>Real-time data visualization for business intelligence</p>
                                 <div class="portfolio-buttons">
-                                    <a href="#" class="portfolio-btn" title="View Details">
+                                    <a href="https://github.com/bafokengBaffy/analytics-dashboard" class="portfolio-btn"
+                                        title="View Details" target="_blank">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="#" class="portfolio-btn" title="Visit Website">
+                                    <a href="https://baffy-analytics-demo.netlify.app/" class="portfolio-btn"
+                                        title="Visit Website" target="_blank">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
@@ -219,7 +391,7 @@
                 </div>
 
                 <!-- Portfolio Item 5 -->
-                <div class="portfolio-item" data-category="app_dev">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="app_dev">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Fitness App">
@@ -228,11 +400,13 @@
                                 <h3>Fitness Tracking App</h3>
                                 <p>Health and fitness monitoring with AI recommendations</p>
                                 <div class="portfolio-buttons">
-                                    <a href="#" class="portfolio-btn" title="View Details">
+                                    <a href="https://github.com/bafokengBaffy/fitness-tracker" class="portfolio-btn"
+                                        title="View Details" target="_blank">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="#" class="portfolio-btn" title="Visit Website">
-                                        <i class="fas fa-link"></i>
+                                    <a href="https://play.google.com/store/apps/details?id=com.baffy.fitnesstracker"
+                                        class="portfolio-btn" title="Download App" target="_blank">
+                                        <i class="fas fa-download"></i>
                                     </a>
                                 </div>
                             </div>
@@ -245,7 +419,7 @@
                 </div>
 
                 <!-- Portfolio Item 6 -->
-                <div class="portfolio-item" data-category="network">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="network">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
                             alt="Cloud Migration">
@@ -254,11 +428,13 @@
                                 <h3>Cloud Migration</h3>
                                 <p>Enterprise cloud infrastructure migration</p>
                                 <div class="portfolio-buttons">
-                                    <a href="#" class="portfolio-btn" title="View Details">
+                                    <a href="https://github.com/bafokengBaffy/cloud-migration" class="portfolio-btn"
+                                        title="View Details" target="_blank">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="#" class="portfolio-btn" title="Visit Website">
-                                        <i class="fas fa-link"></i>
+                                    <a href="https://aws.amazon.com/migration/" class="portfolio-btn" title="Learn More"
+                                        target="_blank">
+                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </div>
                             </div>
@@ -273,14 +449,164 @@
         </div>
     </section>
 
+    <!-- Repair & Troubleshooting Section -->
+    <section class="section repair-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Repair & Troubleshooting</h2>
+                <p>Examples of hardware repairs and software troubleshooting cases</p>
+            </div>
+
+            <div class="row">
+                <!-- Repair Item 1 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Laptop Screen Replacement</h3>
+                        <p>Replaced damaged LCD screens on various laptop models including Dell, HP, and Lenovo,
+                            restoring full functionality.</p>
+                        <a href="https://www.ifixit.com/Guide/Laptop+Screen+Replacement"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Guide</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 2 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <h3>Battery Replacement</h3>
+                        <p>Diagnosed and replaced failing batteries in laptops and smartphones, significantly improving
+                            device performance.</p>
+                        <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2013+Battery+Replacement"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Guide</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 3 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                        <h3>Hard Drive Recovery</h3>
+                        <p>Recovered critical data from failing hard drives and performed clean OS installations with
+                            data migration.</p>
+                        <a href="https://www.easeus.com/data-recovery/recover-data-from-dead-hard-drive.html"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">Recovery Tips</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 4 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                        <h3>Virus Removal</h3>
+                        <p>Removed complex malware infections while preserving important files and restoring system
+                            security.</p>
+                        <a href="https://www.malwarebytes.com/malware-removal-guide"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">Removal Guide</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 5 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Network Troubleshooting</h3>
+                        <p>Resolved connectivity issues, configured routers, and optimized network performance for home
+                            and business clients.</p>
+                        <a href="https://www.lifewire.com/network-troubleshooting-4149809"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">Troubleshooting Tips</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 6 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Hardware Diagnostics</h3>
+                        <p>Performed comprehensive hardware diagnostics to identify failing components and recommend
+                            cost-effective solutions.</p>
+                        <a href="https://www.pcmag.com/how-to/how-to-diagnose-and-fix-your-pc-hardware-problems"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">Diagnostic Tools</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 7 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>Peripheral Repairs</h3>
+                        <p>Repaired and replaced keyboards, touchpads, and other peripherals on various laptop models.
+                        </p>
+                        <a href="https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2013+Keyboard+Replacement"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">Repair Guide</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 8 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data Backup Solutions</h3>
+                        <p>Implemented automated backup solutions to protect against data loss for small business
+                            clients.</p>
+                        <a href="https://www.acronis.com/en-us/blog/posts/data-backup-strategy/"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">Backup Strategies</a>
+                    </div>
+                </div>
+
+                <!-- Repair Item 9 -->
+                <div class="col-md-4">
+                    <div class="repair-item">
+                        <div class="repair-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Printer Troubleshooting</h3>
+                        <p>Resolved printing issues, configured network printers, and performed maintenance on various
+                            printer models.</p>
+                        <a href="https://support.hp.com/us-en/document/c04755521"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">Troubleshooting Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Call to Action -->
+    <section class="section cta-section"
+        style="background: linear-gradient(135deg, #007bff 0%, #00bfff 100%); color: white; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 class="mb-4">Ready to Start Your Project?</h2>
+            <p class="mb-5">Whether you need a website, mobile app, or IT solutions, I can help bring your vision to
+                life.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-dark text-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-about">
-                        <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                        <img src="bcs.jpg" alt="Baffy's Computer Solutions"
+                            style="height: 50px; border-radius: 50%; margin-bottom: 20px;">
                         <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
                             Professional, reliable, and tailored to your needs.</p>
                         <div class="social-links mt-4">
@@ -290,33 +616,34 @@
                                     class="fab fa-github"></i></a>
                             <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
                                     class="fab fa-facebook-f"></i></a>
-
+                            <a href="https://www.linkedin.com/in/bafokeng-khoali" class="me-3" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <div class="footer-links">
                         <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white">Home</a></li>
+                            <li><a href="about.html" class="text-white">About</a></li>
+                            <li><a href="portfolio.html" class="text-white">Portfolio</a></li>
+                            <li><a href="services.html" class="text-white">Services</a></li>
+                            <li><a href="pricing.html" class="text-white">Pricing</a></li>
+                            <li><a href="contact.html" class="text-white">Contact</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-links">
                         <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">App Development</a></li>
-                            <li><a href="#">Network Solutions</a></li>
-                            <li><a href="#">Cloud Services</a></li>
-                            <li><a href="#">IT Consulting</a></li>
-                            <li><a href="#">Database Management</a></li>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Web Development</a></li>
+                            <li><a href="#" class="text-white">App Development</a></li>
+                            <li><a href="#" class="text-white">Network Solutions</a></li>
+                            <li><a href="#" class="text-white">Computer Repairs</a></li>
+                            <li><a href="#" class="text-white">IT Consulting</a></li>
+                            <li><a href="#" class="text-white">Database Management</a></li>
                         </ul>
                     </div>
                 </div>
@@ -325,30 +652,99 @@
                         <h3>Newsletter</h3>
                         <p>Subscribe to get updates on my latest projects and services.</p>
                         <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Your Email" required>
-                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                                <button class="btn btn-primary" type="submit"><i
+                                        class="fas fa-paper-plane"></i></button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
+            <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2023 Baffy's Computer Solutions. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="privacy.html" class="text-white me-3">Privacy Policy</a>
+                        <a href="terms.html" class="text-white">Terms of Service</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-
-
-    <!-- ALL JS FILES -->
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function () {
+            document.getElementById('preloader').style.display = 'none';
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Portfolio filtering
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initialize lightbox for portfolio images
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'showImageNumberLabel': false
+            });
+        });
+
+        // Initialize WOW.js for animations
+        new WOW().init();
+    </script>
 </body>
 
 </html>

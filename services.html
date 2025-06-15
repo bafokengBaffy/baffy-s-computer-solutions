@@ -1,4 +1,3 @@
-<!--services.html-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
     <!-- Site Metas -->
     <title>Services | Baffy's Computer Solutions</title>
     <meta name="keywords"
-        content="IT services, web development, network solutions, IT consulting, software development">
+        content="IT services, web development, network solutions, IT consulting, software development, computer repair, cybersecurity, cloud computing">
     <meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
     <meta name="author" content="Bafokeng Khoali">
 
@@ -29,40 +28,29 @@
         rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body id="page-top">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
 
     <!-- Header -->
-    <header class="header" style="background-color: black; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <!-- Logo (Rounded) -->
+                <!-- Logo -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    border: 2px solid #4e9af1;
-                ">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
                 </a>
 
                 <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                 </button>
 
                 <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto" style="font-weight: 500; font-size: 1rem;">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -73,7 +61,7 @@
                             <a class="nav-link" href="portfolio.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link active" href="services.html">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="pricing.html">Pricing</a>
@@ -89,251 +77,343 @@
             </nav>
         </div>
     </header>
-
-
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>My Services</h1>
-                    <p>Comprehensive IT solutions tailored to meet your business needs</p>
-                </div>
+<!-- Page Header -->
+<section class="page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80') no-repeat center center; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">Our Services</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Comprehensive IT solutions tailored to meet your business needs</p>
+                <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+                    <ol class="breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
+                        <li class="breadcrumb-item active" aria-current="page">Services</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section id="services" class="services section">
         <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p>Professional IT services to help your business grow and thrive in the digital world</p>
+            </div>
+
             <div class="services-grid">
-                <!-- Service 1 -->
+                <!-- Web Development -->
                 <div class="service-card wow animate__animated animate__fadeInUp">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Web Development</h3>
                     <p>Custom website development with responsive design, e-commerce solutions, content management
-                        systems, and SEO optimization to enhance your online presence.</p>
+                        systems, and SEO optimization.</p>
                     <ul class="service-features">
                         <li>Custom website design</li>
                         <li>E-commerce solutions</li>
                         <li>CMS integration</li>
                         <li>SEO optimization</li>
+                        <li>Web application development</li>
+                        <li>API integration</li>
                     </ul>
                 </div>
 
-                <!-- Service 2 -->
+                <!-- App Development -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>App Development</h3>
                     <p>Native and cross-platform mobile applications for iOS and Android that deliver seamless user
-                        experiences and drive engagement.</p>
+                        experiences.</p>
                     <ul class="service-features">
                         <li>iOS & Android apps</li>
                         <li>Cross-platform solutions</li>
                         <li>UI/UX design</li>
                         <li>API integration</li>
+                        <li>App store optimization</li>
+                        <li>Maintenance & updates</li>
                     </ul>
                 </div>
 
-                <!-- Service 3 -->
+                <!-- Network Solutions -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                     <div class="service-icon">
                         <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>Network Solutions</h3>
-                    <p>Secure network infrastructure design, implementation, and management including firewalls, VPNs,
-                        and wireless solutions for businesses of all sizes.</p>
+                    <p>Secure network infrastructure design, implementation, and management for businesses of all sizes.
+                    </p>
                     <ul class="service-features">
                         <li>Network design & implementation</li>
                         <li>Security solutions</li>
                         <li>Wireless networking</li>
                         <li>VPN setup</li>
+                        <li>Network monitoring</li>
+                        <li>Disaster recovery</li>
                     </ul>
                 </div>
 
-                <!-- Service 4 -->
+                <!-- Cloud Services -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                     <div class="service-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Cloud Services</h3>
-                    <p>Cloud migration, management, and optimization services for AWS, Azure, and Google Cloud to
-                        enhance scalability and reduce IT costs.</p>
+                    <p>Cloud migration, management, and optimization services for AWS, Azure, and Google Cloud.</p>
                     <ul class="service-features">
                         <li>Cloud migration</li>
                         <li>Server management</li>
                         <li>Backup solutions</li>
                         <li>Cost optimization</li>
+                        <li>Hybrid cloud solutions</li>
+                        <li>Cloud security</li>
                     </ul>
                 </div>
 
-                <!-- Service 5 -->
+                <!-- Database Management -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
                     <div class="service-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>Database Management</h3>
-                    <p>Database design, implementation, optimization, and maintenance to ensure data integrity,
-                        security, and performance.</p>
+                    <p>Database design, implementation, optimization, and maintenance for optimal performance.</p>
                     <ul class="service-features">
                         <li>Database design</li>
                         <li>Performance tuning</li>
                         <li>Backup & recovery</li>
                         <li>Security implementation</li>
+                        <li>Data migration</li>
+                        <li>Replication & clustering</li>
                     </ul>
                 </div>
 
-                <!-- Service 6 -->
+                <!-- IT Consulting -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
                     <div class="service-icon">
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>IT Consulting</h3>
-                    <p>Strategic IT consulting services to help businesses leverage technology for growth, efficiency,
-                        and competitive advantage.</p>
+                    <p>Strategic IT consulting services to help businesses leverage technology for growth and
+                        efficiency.</p>
                     <ul class="service-features">
                         <li>Technology strategy</li>
                         <li>Digital transformation</li>
                         <li>System architecture</li>
                         <li>Vendor selection</li>
+                        <li>IT infrastructure planning</li>
+                        <li>Technology roadmap</li>
                     </ul>
                 </div>
 
-                <!-- Service 7 -->
+                <!-- Cybersecurity -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions including vulnerability assessments, penetration testing, threat
-                        monitoring, and compliance management.</p>
+                    <p>Comprehensive security solutions to protect your business from digital threats.</p>
                     <ul class="service-features">
                         <li>Security audits</li>
                         <li>Penetration testing</li>
                         <li>Threat monitoring</li>
                         <li>Compliance management</li>
+                        <li>Firewall configuration</li>
+                        <li>Security training</li>
                     </ul>
                 </div>
 
-                <!-- Service 8 -->
+                <!-- AI & ML Solutions -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
                     <div class="service-icon">
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>AI & ML Solutions</h3>
-                    <p>Artificial Intelligence and Machine Learning solutions to automate processes, gain insights from
-                        data, and enhance decision-making.</p>
+                    <p>Artificial Intelligence and Machine Learning solutions to automate processes and gain insights.
+                    </p>
                     <ul class="service-features">
                         <li>Predictive analytics</li>
                         <li>Chatbots & virtual assistants</li>
                         <li>Image recognition</li>
                         <li>Process automation</li>
+                        <li>Natural language processing</li>
+                        <li>Recommendation systems</li>
                     </ul>
                 </div>
 
-                <!-- Service 9 -->
+                <!-- DevOps Services -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
                     <div class="service-icon">
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>DevOps Services</h3>
-                    <p>Continuous integration, deployment automation, containerization, and infrastructure as code to
-                        streamline development workflows.</p>
+                    <p>Continuous integration, deployment automation, and infrastructure as code solutions.</p>
                     <ul class="service-features">
                         <li>CI/CD pipelines</li>
                         <li>Container orchestration</li>
                         <li>Infrastructure as code</li>
                         <li>Monitoring & logging</li>
+                        <li>Microservices architecture</li>
+                        <li>Cloud automation</li>
                     </ul>
                 </div>
 
-                <!-- Service 10 -->
+                <!-- Data Analytics -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.9s">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Data Analytics</h3>
-                    <p>Business intelligence solutions, data visualization, and predictive analytics to transform raw
-                        data into actionable insights.</p>
+                    <p>Business intelligence solutions to transform raw data into actionable insights.</p>
                     <ul class="service-features">
                         <li>Data visualization</li>
                         <li>Business intelligence</li>
                         <li>Predictive modeling</li>
                         <li>Dashboard development</li>
+                        <li>Big data solutions</li>
+                        <li>Data warehousing</li>
                     </ul>
                 </div>
 
-                <!-- Service 11 -->
+                <!-- E-Commerce Solutions -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1s">
                     <div class="service-icon">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <h3>E-Commerce Solutions</h3>
-                    <p>End-to-end e-commerce platforms with payment gateways, inventory management, and customer
-                        relationship features.</p>
+                    <p>End-to-end e-commerce platforms with all the features you need to sell online.</p>
                     <ul class="service-features">
                         <li>Online store setup</li>
                         <li>Payment integration</li>
                         <li>Inventory management</li>
                         <li>CRM integration</li>
+                        <li>Multi-channel selling</li>
+                        <li>Marketing automation</li>
                     </ul>
                 </div>
 
-                <!-- Service 12 -->
+                <!-- Software Maintenance -->
                 <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1.1s">
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>Software Maintenance</h3>
-                    <p>Ongoing support, updates, and enhancements to keep your software systems running smoothly and
-                        securely.</p>
+                    <p>Ongoing support, updates, and enhancements to keep your software running smoothly.</p>
                     <ul class="service-features">
                         <li>Bug fixes & patches</li>
                         <li>Feature enhancements</li>
                         <li>Security updates</li>
                         <li>Performance optimization</li>
+                        <li>Version upgrades</li>
+                        <li>Technical support</li>
+                    </ul>
+                </div>
+
+                <!-- IT Support -->
+                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>IT Support</h3>
+                    <p>Comprehensive IT support services to keep your business running without interruptions.</p>
+                    <ul class="service-features">
+                        <li>Helpdesk support</li>
+                        <li>Remote assistance</li>
+                        <li>On-site support</li>
+                        <li>Hardware maintenance</li>
+                        <li>Software installation</li>
+                        <li>Network troubleshooting</li>
+                    </ul>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1.3s">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Boost your online presence with our comprehensive digital marketing services.</p>
+                    <ul class="service-features">
+                        <li>SEO services</li>
+                        <li>Social media marketing</li>
+                        <li>PPC advertising</li>
+                        <li>Content marketing</li>
+                        <li>Email marketing</li>
+                        <li>Analytics & reporting</li>
+                    </ul>
+                </div>
+
+                <!-- Computer Repair -->
+                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1.4s">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Computer Repair</h3>
+                    <p>Professional computer repair services for both hardware and software issues.</p>
+                    <ul class="service-features">
+                        <li>Hardware diagnostics</li>
+                        <li>Virus removal</li>
+                        <li>Data recovery</li>
+                        <li>Component upgrades</li>
+                        <li>Operating system installation</li>
+                        <li>Preventive maintenance</li>
+                    </ul>
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="1.5s">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Creative design solutions to enhance your brand identity and marketing materials.</p>
+                    <ul class="service-features">
+                        <li>Logo design</li>
+                        <li>Brand identity</li>
+                        <li>Print materials</li>
+                        <li>Digital graphics</li>
+                        <li>Social media assets</li>
+                        <li>UI/UX design</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Sections -->
+    <!-- Process Section -->
     <section class="process section">
         <div class="container">
             <div class="section-title">
-                <h2>My Process</h2>
-                <p>How I deliver high-quality solutions for your business</p>
+                <h2>Our Process</h2>
+                <p>How we deliver high-quality solutions for your business</p>
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <div class="process-step">
+                    <div class="process-step wow animate__animated animate__fadeInUp">
                         <div class="step-number">1</div>
                         <h3>Discovery</h3>
                         <p>Understanding your business needs, goals, and challenges through detailed consultation.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="process-step">
+                    <div class="process-step wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
                         <div class="step-number">2</div>
                         <h3>Planning</h3>
                         <p>Creating a detailed project plan with milestones, deliverables, and timelines.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="process-step">
+                    <div class="process-step wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                         <div class="step-number">3</div>
                         <h3>Development</h3>
                         <p>Building the solution with regular updates and opportunities for feedback.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="process-step">
+                    <div class="process-step wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                         <div class="step-number">4</div>
                         <h3>Delivery</h3>
                         <p>Final testing, deployment, and training to ensure successful implementation.</p>
@@ -349,11 +429,17 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-about">
-                        <div class="footer-logo">
-                            <img src="bcs.jpg" alt="Baffy's Computer Solutions">
-                        </div>
+                        <img src="bcs.jpg" alt="Baffy's Computer Solutions">
                         <p>Providing innovative IT solutions to help businesses grow and thrive in the digital age.
                             Professional, reliable, and tailored to your needs.</p>
+                        <div class="social-links mt-4">
+                            <a href="https://wa.me/message/2QFRU4XGJUGHI1" class="me-3" target="_blank"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="https://github.com/bafokengBaffy" class="me-3" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -373,12 +459,12 @@
                     <div class="footer-links">
                         <h3>Services</h3>
                         <ul>
-                            <li>Web Development</li>
-                            <li>App Development</li>
-                            <li>Network Solutions</li>
-                            <li>Cloud Services</li>
-                            <li>IT Consulting</li>
-                            <li>Database Management</li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">App Development</a></li>
+                            <li><a href="#">Network Solutions</a></li>
+                            <li><a href="#">Computer Repairs</a></li>
+                            <li><a href="#">IT Consulting</a></li>
+                            <li><a href="#">Database Management</a></li>
                         </ul>
                     </div>
                 </div>
@@ -386,9 +472,17 @@
                     <div class="footer-newsletter">
                         <h3>Newsletter</h3>
                         <p>Subscribe to get updates on my latest projects and services.</p>
-                        <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Your Email">
+                        <form class="newsletter-form" action="https://formsubmit.co/baffkay20@gmail.com" method="POST">
+                            <input type="email" name="email" class="newsletter-input" placeholder="Your Email" required>
                             <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+
+                            <!-- Optional Hidden Fields -->
+                            <input type="hidden" name="_autoresponse"
+                                value="Thanks for subscribing to Baffy's Computer Solutions!">
+                            <input type="hidden" name="_template" value="box">
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Optional: Redirect after submission -->
+                            <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
                         </form>
                     </div>
                 </div>
@@ -402,13 +496,71 @@
     </footer>
 
 
-    <!-- ALL JS FILES -->
+    <!-- Back to Top Button -->
+    <a href="#page-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="scripts.js"></script>
+
+    <script>
+        // Initialize WOW.js for animations
+        new WOW().init();
+
+        // Preloader
+        $(window).on('load', function () {
+            $('#preloader').fadeOut('slow', function () {
+                $(this).remove();
+            });
+        });
+
+        // Back to top button
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.back-to-top').fadeIn('slow');
+            } else {
+                $('.back-to-top').fadeOut('slow');
+            }
+        });
+
+        $('.back-to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+            return false;
+        });
+
+        // Header scroll effect
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.header').addClass('scrolled');
+            } else {
+                $('.header').removeClass('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        $('a[href*="#"]').on('click', function (e) {
+            if (this.hash !== "") {
+                e.preventDefault();
+
+                const hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - 70
+                }, 800, 'easeInOutExpo', function () {
+                    window.location.hash = hash;
+                });
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        $('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
 </body>
 
 </html>
