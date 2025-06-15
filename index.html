@@ -37,52 +37,51 @@
 
 <body id="page-top">
 
-   <!-- Header -->
-<header style="background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <nav style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
-            <!-- Logo -->
-            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;">
-                <span style="font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.5rem; color: #1e293b; display: flex; flex-direction: column; line-height: 1.2;">
-              
-                </span>
-            </a>
 
-            <!-- Mobile Toggle -->
-            <button id="mobileToggle" style="background: none; border: none; font-size: 1.5rem; color: #1e293b; display: none; cursor: pointer;">
-                ☰
-            </button>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
+                </a>
 
-            <!-- Navigation Links -->
-            <div id="navMenu" style="display: flex; align-items: center;">
-                <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
-                    <li><a href="index.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
-                        <span style="position: relative;">Home</span>
-                    </a></li>
-                    <li><a href="about.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
-                        <span style="position: relative;">About</span>
-                    </a></li>
-                    <li><a href="portfolio.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
-                        <span style="position: relative;">Portfolio</span>
-                    </a></li>
-                    <li><a href="services.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
-                        <span style="position: relative;">Services</span>
-                    </a></li>
-                    <li><a href="pricing.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
-                        <span style="position: relative;">Pricing</span>
-                    </a></li>
-                    <li><a href="blog.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
-                        <span style="position: relative;">Blog</span>
-                    </a></li>
-                    <li><a href="contact.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
-                        <span style="position: relative;">Contact</span>
-                    </a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link a" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- Modern Hero Section with Image Background -->
     <section id="home" class="hero-section">
@@ -177,7 +176,6 @@
                             realized I was stepping into the shoes of an IT technician. That early curiosity grew into a
                             deep love for technology, and today I hold a Diploma in ICT and a Bachelor of Science in
                             Information Technology.</p>
-                        <a href="about.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
@@ -204,7 +202,6 @@
                         <div class="blog-content">
                             <h3>Top Web Development Trends in 2023</h3>
                             <p>Explore the latest trends shaping the future of web development this year.</p>
-                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -220,7 +217,6 @@
                         <div class="blog-content">
                             <h3>How AI is Transforming Small Businesses</h3>
                             <p>Discover practical AI applications that can benefit your business today.</p>
-                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -236,7 +232,6 @@
                         <div class="blog-content">
                             <h3>Essential Cybersecurity Practices for 2023</h3>
                             <p>Protect your business with these must-have security measures.</p>
-                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -255,7 +250,7 @@
                     </div>
                     <div class="col-lg-6">
                         <form class="newsletter-form">
-                            <div class="input-group">
+                            <div style="width: 320px;" class="input-group">
                                 <input type="email" class="form-control" placeholder="Your Email Address" required>
                                 <button class="btn btn-primary" type="submit">Subscribe</button>
                             </div>
@@ -391,113 +386,9 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq section bg-light">
-        <div class="container">
-            <div class="section-title text-center mb-4">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common questions about our services</p>
-            </div>
+    
 
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What services do you offer?
-                        </button>
-                    </h3>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We offer a comprehensive range of IT services including web development, mobile app
-                            development, network solutions, IT consulting, database management, and cybersecurity
-                            services. Our team can handle projects of any size and complexity.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How long does a typical web development project take?
-                        </button>
-                    </h3>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            The timeline depends on the project scope. A basic website typically takes 2-4 weeks, while
-                            more complex e-commerce solutions can take 8-12 weeks. We provide detailed project timelines
-                            during our initial consultation.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Do you provide ongoing support after project completion?
-                        </button>
-                    </h3>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, we offer various maintenance and support packages tailored to your needs. This can
-                            include regular updates, security patches, performance optimization, and technical support.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            What technologies do you specialize in?
-                        </button>
-                    </h3>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Our team is proficient in a wide range of technologies including HTML5, CSS3, JavaScript,
-                            React, Angular, Node.js, Python, PHP, MySQL, MongoDB, AWS, Azure, and more. We stay updated
-                            with the latest industry trends.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            How do you ensure the security of our data?
-                        </button>
-                    </h3>
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We implement industry-standard security measures including encryption, secure coding
-                            practices, regular security audits, and compliance with data protection regulations.
-                            Security is our top priority in every project.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Contact me today to discuss your IT needs and get a free consultation.</p>
-                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
+    
 
 
     <!-- Footer -->
@@ -739,46 +630,46 @@
         });
     </script>
     <!-- Mobile Menu Toggle Script -->
-<script>
-    document.getElementById('mobileToggle').addEventListener('click', function() {
-        const menu = document.getElementById('navMenu');
-        if (menu.style.display === 'flex') {
-            menu.style.display = 'none';
-        } else {
-            menu.style.display = 'flex';
-        }
-    });
+    <script>
+        document.getElementById('mobileToggle').addEventListener('click', function () {
+            const menu = document.getElementById('navMenu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        });
 
-    // Responsive adjustment
-    function checkScreenSize() {
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        if (window.innerWidth <= 768) {
-            mobileToggle.style.display = 'block';
-            navMenu.style.display = 'none';
-            navMenu.style.position = 'absolute';
-            navMenu.style.top = '100%';
-            navMenu.style.left = '0';
-            navMenu.style.width = '100%';
-            navMenu.style.background = '#ffffff';
-            navMenu.style.flexDirection = 'column';
-            navMenu.style.padding = '20px';
-            navMenu.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-        } else {
-            mobileToggle.style.display = 'none';
-            navMenu.style.display = 'flex';
-            navMenu.style.position = 'static';
-            navMenu.style.background = 'transparent';
-            navMenu.style.flexDirection = 'row';
-            navMenu.style.padding = '0';
-            navMenu.style.boxShadow = 'none';
+        // Responsive adjustment
+        function checkScreenSize() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (window.innerWidth <= 768) {
+                mobileToggle.style.display = 'block';
+                navMenu.style.display = 'none';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '100%';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = '#ffffff';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.padding = '20px';
+                navMenu.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            } else {
+                mobileToggle.style.display = 'none';
+                navMenu.style.display = 'flex';
+                navMenu.style.position = 'static';
+                navMenu.style.background = 'transparent';
+                navMenu.style.flexDirection = 'row';
+                navMenu.style.padding = '0';
+                navMenu.style.boxShadow = 'none';
+            }
         }
-    }
 
-    // Run on load and resize
-    window.addEventListener('load', checkScreenSize);
-    window.addEventListener('resize', checkScreenSize);
-</script>
+        // Run on load and resize
+        window.addEventListener('load', checkScreenSize);
+        window.addEventListener('resize', checkScreenSize);
+    </script>
 
 </body>
 
