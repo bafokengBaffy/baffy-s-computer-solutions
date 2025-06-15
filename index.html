@@ -37,50 +37,53 @@
 
 <body id="page-top">
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <!-- Logo (Rounded) -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="bcs.jpg" alt="Baffy's Computer Solutions">
-                </a>
+   <!-- Header -->
+<header style="background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <nav style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
+            <!-- Logo -->
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="bcs.jpg" alt="Baffy's Computer Solutions" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;">
+                <span style="font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.5rem; color: #1e293b; display: flex; flex-direction: column; line-height: 1.2;">
+                    <span>BAFFY'S</span>
+                    <span style="color: #4a6cf7;">COMPUTER SOLUTIONS</span>
+                </span>
+            </a>
 
-                <!-- Toggler -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <!-- Mobile Toggle -->
+            <button id="mobileToggle" style="background: none; border: none; font-size: 1.5rem; color: #1e293b; display: none; cursor: pointer;">
+                ☰
+            </button>
 
-                <!-- Navigation Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+            <!-- Navigation Links -->
+            <div id="navMenu" style="display: flex; align-items: center;">
+                <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
+                    <li><a href="index.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
+                        <span style="position: relative;">Home</span>
+                    </a></li>
+                    <li><a href="about.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
+                        <span style="position: relative;">About</span>
+                    </a></li>
+                    <li><a href="portfolio.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
+                        <span style="position: relative;">Portfolio</span>
+                    </a></li>
+                    <li><a href="services.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
+                        <span style="position: relative;">Services</span>
+                    </a></li>
+                    <li><a href="pricing.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
+                        <span style="position: relative;">Pricing</span>
+                    </a></li>
+                    <li><a href="blog.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
+                        <span style="position: relative;">Blog</span>
+                    </a></li>
+                    <li><a href="contact.html" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #1e293b; text-decoration: none; padding: 5px 0; position: relative; transition: all 0.3s ease;">
+                        <span style="position: relative;">Contact</span>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
 
     <!-- Modern Hero Section with Image Background -->
     <section id="home" class="hero-section">
@@ -736,6 +739,48 @@
             }
         });
     </script>
+    <!-- Mobile Menu Toggle Script -->
+<script>
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+        const menu = document.getElementById('navMenu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    });
+
+    // Responsive adjustment
+    function checkScreenSize() {
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (window.innerWidth <= 768) {
+            mobileToggle.style.display = 'block';
+            navMenu.style.display = 'none';
+            navMenu.style.position = 'absolute';
+            navMenu.style.top = '100%';
+            navMenu.style.left = '0';
+            navMenu.style.width = '100%';
+            navMenu.style.background = '#ffffff';
+            navMenu.style.flexDirection = 'column';
+            navMenu.style.padding = '20px';
+            navMenu.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+        } else {
+            mobileToggle.style.display = 'none';
+            navMenu.style.display = 'flex';
+            navMenu.style.position = 'static';
+            navMenu.style.background = 'transparent';
+            navMenu.style.flexDirection = 'row';
+            navMenu.style.padding = '0';
+            navMenu.style.boxShadow = 'none';
+        }
+    }
+
+    // Run on load and resize
+    window.addEventListener('load', checkScreenSize);
+    window.addEventListener('resize', checkScreenSize);
+</script>
+
 </body>
 
 </html>
