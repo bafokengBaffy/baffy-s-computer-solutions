@@ -614,3 +614,119 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize chat functionality
     initChat();
 });
+
+        // Live Chat Toggle
+        const chatToggle = document.getElementById('chatToggle');
+        const liveChat = document.getElementById('liveChat');
+        const closeChat = document.getElementById('closeChat');
+
+        chatToggle.addEventListener('click', () => {
+            liveChat.classList.toggle('show-chat');
+        });
+
+        closeChat.addEventListener('click', () => {
+            liveChat.classList.remove('show-chat');
+        });
+
+        // Chat Functionality
+        const chatInput = document.getElementById('chatInput');
+        const sendChatBtn = document.getElementById('sendChatBtn');
+        const chatMessages = document.getElementById('chatMessages');
+
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message) {
+                // Add user message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'user-message';
+                userMsg.innerHTML = `<p style="margin: 0;">${message}</p>`;
+                chatMessages.appendChild(userMsg);
+
+                // Clear input
+                chatInput.value = '';
+
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Simulate bot response after delay
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'bot-message';
+                    botMsg.innerHTML = `<p style="margin: 0;">Thanks for your message! For immediate assistance, please use WhatsApp or Messenger above.</p>`;
+                    chatMessages.appendChild(botMsg);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        sendChatBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // AI Chat Functionality
+        const aiInput = document.getElementById('aiInput');
+        const aiSendBtn = document.getElementById('aiSendBtn');
+        const aiChat = document.getElementById('aiChat');
+
+        function askAI(question) {
+            if (question) {
+                // Add user message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'user-message';
+                userMsg.innerHTML = `<p style="margin: 0;">${question}</p>`;
+                aiChat.appendChild(userMsg);
+
+                // Scroll to bottom
+                aiChat.scrollTop = aiChat.scrollHeight;
+
+                // Simulate AI response after delay
+                setTimeout(() => {
+                    const aiMsg = document.createElement('div');
+                    aiMsg.className = 'ai-message';
+                    
+                    let response = "I'm sorry, I couldn't understand your question.";
+                    
+                    if (question.toLowerCase().includes('service')) {
+                        response = "We offer web development, mobile apps, network solutions, IT consulting, and more. Check our Services page for details!";
+                    } else if (question.toLowerCase().includes('pric')) {
+                        response = "Our pricing varies based on project requirements. We offer competitive rates - visit our Pricing page or contact us for a quote.";
+                    } else if (question.toLowerCase().includes('time') || question.toLowerCase().includes('long')) {
+                        response = "Project timelines depend on complexity. Simple websites take 2-4 weeks, complex systems 8-12 weeks. We'll provide a detailed timeline after discussing your needs.";
+                    } else if (question.toLowerCase().includes('technolog')) {
+                        response = "We work with modern technologies including HTML5, CSS3, JavaScript, React, Node.js, Python, PHP, MySQL, MongoDB, AWS, and more.";
+                    }
+                    
+                    aiMsg.innerHTML = `<p style="margin: 0;">${response}</p>`;
+                    aiChat.appendChild(aiMsg);
+                    aiChat.scrollTop = aiChat.scrollHeight;
+                }, 800);
+            }
+        }
+
+        aiSendBtn.addEventListener('click', () => {
+            const question = aiInput.value.trim();
+            if (question) {
+                askAI(question);
+                aiInput.value = '';
+            }
+        });
+
+        aiInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const question = aiInput.value.trim();
+                if (question) {
+                    askAI(question);
+                    aiInput.value = '';
+                }
+            }
+        });
+
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // You can add form validation here if needed
+            // e.preventDefault(); // Uncomment to prevent default submission for AJAX handling
+        });
+ 

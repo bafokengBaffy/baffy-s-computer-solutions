@@ -29,7 +29,7 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
-
+    <link rel="stylesheet" href="scripts.js">
 </head>
 
 <body id="page-top">
@@ -78,6 +78,8 @@
             </nav>
         </div>
     </header>
+<br> </div>
+<br> </div>
 
     <!-- Page Header -->
     <section class="page-header"
@@ -296,19 +298,21 @@
 
 
 
-    <!-- About Section --><!-- About Section -->
-<section class="section" style="padding: 80px 0; background-color: #f8f9fa;">
+ <!-- About Section -->
+<section class="section about-section" style="padding: 80px 0; background-color: #f8f9fa;">
     <div class="container" style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
         <div class="row" style="display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; align-items: center;">
             <div class="col-lg-6 mb-4 mb-lg-0" style="position: relative; width: 100%; padding-right: 15px; padding-left: 15px; flex: 0 0 50%; max-width: 50%;">
-                <div class="about-img" style="animation: fadeInLeft 1s;">
-                    <img src="WhatsApp Image 2025-06-16 at 00.20.31.jpeg" alt="Bafokeng Khoali" style="width: 100%; height: auto; border-radius: 8px;">
+                <div class="about-img" style="animation: fadeInLeft 1s; cursor: pointer;">
+                    <img src="WhatsApp Image 2025-06-16 at 00.20.31.jpeg" alt="Bafokeng Khoali" 
+                         class="zoomable-image"
+                         style="width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s ease;">
                 </div>
             </div>
             <div class="col-lg-6" style="position: relative; width: 100%; padding-right: 15px; padding-left: 15px; flex: 0 0 50%; max-width: 50%;">
                 <div class="about-content" style="animation: fadeInRight 1s;">
                     <h2 style="font-size: 2.5rem; margin-bottom: 15px; color: #343a40;">Bafokeng Khoali</h2>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Aspiring Developer | Tech Enthusiast</h3>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: #6c757d; background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Aspiring Developer | Tech Enthusiast</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: #6c757d; margin-bottom: 15px;">From a young age, I found myself fixing computers for family and friends—long before I even realized I was stepping into the shoes of an IT technician. That early curiosity grew into a deep love for technology.</p>
                     <p style="font-size: 1rem; line-height: 1.6; color: #6c757d; margin-bottom: 25px;">I'm passionate about development and databases, always exploring new tools and techniques to bring ideas to life. I thrive on learning—especially through freelancing, where real-world problems have sharpened my skills and expanded my creativity.</p>
 
@@ -354,6 +358,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div id="imageZoomModal" class="zoom-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center;">
+        <span class="close-zoom" style="position: absolute; top: 20px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img class="modal-content" id="zoomedImage" style="max-width: 90%; max-height: 90%; border-radius: 8px;">
     </div>
 </section>
 
@@ -721,6 +731,211 @@
                 $(this).css('width', $(this).data('width') + '%');
             });
         });
+    </script>
+
+    <script>
+        // Enhanced Image Zoom with Responsive Behavior
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if Font Awesome is loaded, if not, load it dynamically
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+        const faLink = document.createElement('link');
+        faLink.rel = 'stylesheet';
+        faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+        document.head.appendChild(faLink);
+    }
+
+    // Create modal elements
+    const modal = document.createElement('div');
+    modal.id = 'imageZoomModal';
+    modal.className = 'zoom-modal';
+    modal.style.cssText = `
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.95);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    `;
+
+    // Create close button with icon
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'zoom-close-btn';
+    closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+    closeBtn.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: rgba(255,255,255,0.2);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10000;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    `;
+
+    // Create image container
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'zoom-img-container';
+    imgContainer.style.cssText = `
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `;
+
+    // Create the zoomed image
+    const modalImg = document.createElement('img');
+    modalImg.className = 'zoomed-image';
+    modalImg.style.cssText = `
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 4px;
+        transform: scale(0.95);
+        opacity: 0;
+        transition: all 0.3s ease;
+        cursor: zoom-out;
+    `;
+
+    // Build modal structure
+    imgContainer.appendChild(modalImg);
+    modal.appendChild(imgContainer);
+    modal.appendChild(closeBtn);
+    document.body.appendChild(modal);
+
+    // Handle image zoom functionality
+    document.querySelectorAll('.zoomable-image').forEach(img => {
+        // Add visual cue that image is zoomable
+        img.style.cursor = 'zoom-in';
+        img.style.transition = 'transform 0.2s ease';
+        
+        img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            modalImg.src = this.src;
+            modalImg.alt = this.alt || 'Zoomed image';
+            modal.style.display = 'flex';
+            
+            // Trigger reflow and then animate
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                modalImg.style.transform = 'scale(1)';
+                modalImg.style.opacity = '1';
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal function
+    function closeModal() {
+        modal.style.opacity = '0';
+        modalImg.style.transform = 'scale(0.95)';
+        modalImg.style.opacity = '0';
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }, 300);
+    }
+
+    // Close modal events
+    closeBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal || e.target === imgContainer) {
+            closeModal();
+        }
+    });
+
+    // Handle keyboard events
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+
+    // Handle touch events for mobile
+    let touchStartX = 0;
+    let touchStartY = 0;
+    
+    modalImg.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    modalImg.addEventListener('touchmove', function(e) {
+        if (!modalImg.src) return;
+        
+        const touchX = e.touches[0].clientX;
+        const touchY = e.touches[0].clientY;
+        
+        // If swipe down more than 100px, close modal
+        if (touchY - touchStartY > 100) {
+            closeModal();
+        }
+    }, { passive: true });
+
+    // Handle double-tap zoom on mobile
+    let lastTap = 0;
+    modalImg.addEventListener('touchend', function(e) {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+        
+        if (tapLength < 300 && tapLength > 0) {
+            // Double-tap detected
+            if (modalImg.style.transform === 'scale(1)') {
+                modalImg.style.transform = 'scale(2)';
+            } else {
+                modalImg.style.transform = 'scale(1)';
+            }
+        }
+        
+        lastTap = currentTime;
+    }, { passive: true });
+
+    // Handle pinch zoom on mobile
+    let initialDistance = null;
+    
+    modalImg.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 2) {
+            initialDistance = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+        }
+    }, { passive: true });
+
+    modalImg.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 2 && initialDistance) {
+            const currentDistance = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+            
+            const scale = currentDistance / initialDistance;
+            modalImg.style.transform = `scale(${Math.max(1, Math.min(scale, 3))})`;
+        }
+    }, { passive: true });
+
+    modalImg.addEventListener('touchend', function() {
+        initialDistance = null;
+    }, { passive: true });
+});
     </script>
 </body>
 

@@ -10,7 +10,7 @@
     <!-- Site Metas -->
     <title>Tech Trends | Baffy's Computer Solutions</title>
     <meta name="keywords"
-        content="IT trends, tech trends 2023, web development, mobile apps, AI, cybersecurity, cloud computing">
+        content="IT trends, tech trends 2023, tech trends 2024, tech trends 2025, web development, mobile apps, AI, cybersecurity, cloud computing">
     <meta name="description" content="Latest technology trends and insights from Baffy's Computer Solutions">
     <meta name="author" content="Bafokeng Khoali">
 
@@ -103,6 +103,35 @@
             font-size: 12px;
             margin-left: 5px;
         }
+        
+        /* Year category styles */
+        .year-category {
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .year-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .year-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: #4a6bff;
+        }
+        
+        .year-2023 .year-title:after { background: #4a6bff; }
+        .year-2024 .year-title:after { background: #ff6b4a; }
+        .year-2025 .year-title:after { background: #6bff4a; }
     </style>
 </head>
 
@@ -153,6 +182,10 @@
         </div>
     </header>
 
+<br> </div>
+<br> </div>
+
+
 
     <!-- Page Header -->
     <section class="page-header"
@@ -160,10 +193,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">2023 Tech Trends Report
-                    </h1>
+                    <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">Tech Trends Report 2023-2025</h1>
                     <p class="animate__animated animate__fadeInUp animate__delay-1s">Discover the most significant
-                        technology trends shaping industries this year</p>
+                        technology trends shaping industries through 2025</p>
                     <nav aria-label="breadcrumb" class="d-flex justify-content-center">
                         <ol class="breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
                             <li class="breadcrumb-item active" aria-current="page">Tech Trends</li>
@@ -177,787 +209,542 @@
     <!-- Trends Content Section -->
     <section class="trends-content-section">
         <div class="container">
-            <!-- Web Development Trends -->
-            <div class="trend-category">
-                <h2 class="category-title">Web Development Trends</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-                                    alt="Progressive Web Apps">
+            
+            <!-- 2023 Trends -->
+            <div class="year-category year-2023">
+                <h2 class="year-title">2023 Tech Trends</h2>
+                
+                <!-- Web Development Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">Web Development Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                        alt="Progressive Web Apps">
+                                </div>
+                                <h4>Progressive Web Apps (PWAs)</h4>
+                                <p>PWAs continue to gain traction, offering app-like experiences directly in the browser
+                                    with offline functionality and push notifications.</p>
+                                <div class="trend-meta">
+                                    <span>June 2023</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://web.dev/progressive-web-apps/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Progressive Web Apps (PWAs)</h3>
-                            <p>PWAs continue to gain traction, offering app-like experiences directly in the browser
-                                with offline functionality and push notifications.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Web</span>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Serverless Architecture">
+                                </div>
+                                <h4>Serverless Architecture</h4>
+                                <p>More companies adopting serverless computing to reduce infrastructure costs and improve
+                                    scalability.</p>
+                                <div class="trend-meta">
+                                    <span>June 2023</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://aws.amazon.com/serverless/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <a href="https://web.dev/progressive-web-apps/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
+                                        alt="Jamstack Architecture">
+                                </div>
+                                <h4>Jamstack Architecture</h4>
+                                <p>JavaScript, APIs, and Markup stack becoming standard for high-performance, secure
+                                    websites.</p>
+                                <div class="trend-meta">
+                                    <span>May 2023</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://jamstack.org/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Serverless Architecture">
+                </div>
+
+                <!-- Mobile Development Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">Mobile Development Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Cross-Platform Frameworks">
+                                </div>
+                                <h4>Cross-Platform Frameworks Maturity</h4>
+                                <p>Flutter and React Native reaching new levels of performance and capability.</p>
+                                <div class="trend-meta">
+                                    <span>June 2023</span>
+                                    <span class="trend-tag">Mobile</span>
+                                </div>
+                                <a href="https://flutter.dev/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Serverless Architecture</h3>
-                            <p>More companies adopting serverless computing to reduce infrastructure costs and improve
-                                scalability.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Web</span>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="five.jpg" alt="5G-Optimized Apps">
+                                </div>
+                                <h4>5G-Optimized Apps</h4>
+                                <p>Developers creating apps that leverage 5G speeds for richer experiences.</p>
+                                <div class="trend-meta">
+                                    <span>June 2023</span>
+                                    <span class="trend-tag">Mobile</span>
+                                </div>
+                                <a href="https://developer.android.com/5g" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <a href="https://aws.amazon.com/serverless/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1367&q=80"
+                                        alt="Foldable Device Support">
+                                </div>
+                                <h4>Foldable Device Support</h4>
+                                <p>Apps adapting to new foldable smartphone form factors.</p>
+                                <div class="trend-meta">
+                                    <span>May 2023</span>
+                                    <span class="trend-tag">Mobile</span>
+                                </div>
+                                <a href="https://developer.android.com/guide/topics/large-screens" class="learn-more-btn"
+                                    target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
-                                    alt="Jamstack Architecture">
+                </div>
+
+                <!-- AI & Machine Learning Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">AI & Machine Learning Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="gen.webp" alt="Generative AI">
+                                </div>
+                                <h4>Generative AI Applications</h4>
+                                <p>ChatGPT, DALL-E and other generative models being integrated into business workflows.</p>
+                                <div class="trend-meta">
+                                    <span>June 2023</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://openai.com/research" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Jamstack Architecture</h3>
-                            <p>JavaScript, APIs, and Markup stack becoming standard for high-performance, secure
-                                websites.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Web</span>
-                            </div>
-                            <a href="https://jamstack.org/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-                                    alt="WebAssembly">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="cyber.jpg" alt="AI Cybersecurity">
+                                </div>
+                                <h4>AI-Powered Cybersecurity</h4>
+                                <p>Machine learning algorithms detecting and preventing sophisticated cyber threats.</p>
+                                <div class="trend-meta">
+                                    <span>June 2023</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://www.ibm.com/security/artificial-intelligence" class="learn-more-btn"
+                                    target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>WebAssembly (Wasm)</h3>
-                            <p>Enabling near-native performance for web applications by compiling code from multiple
-                                languages.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Web</span>
-                            </div>
-                            <a href="https://webassembly.org/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
-                                    alt="Motion UI Design">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Edge AI">
+                                </div>
+                                <h4>Edge AI</h4>
+                                <p>AI models running locally on devices rather than in the cloud for faster response times.
+                                </p>
+                                <div class="trend-meta">
+                                    <span>May 2023</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://blogs.nvidia.com/blog/2023/05/10/what-is-edge-ai/" class="learn-more-btn"
+                                    target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Motion UI Design</h3>
-                            <p>Increased use of animations and micro-interactions to enhance user engagement.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Web</span>
-                            </div>
-                            <a href="https://www.smashingmagazine.com/2023/01/motion-design-web-interfaces/"
-                                class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="block.jpg" alt="Web3 and Blockchain">
-                            </div>
-                            <h3>Web3 and Blockchain Integration</h3>
-                            <p>More websites integrating blockchain technologies for authentication and transactions.
-                            </p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Web</span>
-                            </div>
-                            <a href="https://ethereum.org/en/web3/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- 2024 Trends -->
+            <div class="year-category year-2024">
+                <h2 class="year-title">2024 Emerging Trends</h2>
+                
+                <!-- Web Development Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">Web Development Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+                                        alt="AI-Powered Development">
+                                </div>
+                                <h4>AI-Powered Development</h4>
+                                <p>AI-assisted coding tools becoming standard in developer workflows, with real-time suggestions and automated code generation.</p>
+                                <div class="trend-meta">
+                                    <span>January 2024</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://github.com/features/copilot" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                                        alt="Web3 Integration">
+                                </div>
+                                <h4>Web3 Integration</h4>
+                                <p>More websites incorporating blockchain wallets, smart contracts, and decentralized identity solutions.</p>
+                                <div class="trend-meta">
+                                    <span>March 2024</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://ethereum.org/en/web3/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                        alt="WebAssembly">
+                                </div>
+                                <h4>WebAssembly 2.0</h4>
+                                <p>Next-gen WebAssembly enabling near-native performance for complex web applications and games.</p>
+                                <div class="trend-meta">
+                                    <span>February 2024</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://webassembly.org/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Mobile Development Trends -->
-            <div class="trend-category">
-                <h2 class="category-title">Mobile Development Trends</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Cross-Platform Frameworks">
+                <!-- AI & Machine Learning Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">AI & Machine Learning Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                                        alt="Multimodal AI">
+                                </div>
+                                <h4>Multimodal AI Systems</h4>
+                                <p>AI models that can process and understand multiple data types (text, images, audio) simultaneously for more human-like comprehension.</p>
+                                <div class="trend-meta">
+                                    <span>April 2024</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://openai.com/research/gpt-4" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Cross-Platform Frameworks Maturity</h3>
-                            <p>Flutter and React Native reaching new levels of performance and capability.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Mobile</span>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="AI Agents">
+                                </div>
+                                <h4>Autonomous AI Agents</h4>
+                                <p>AI systems that can perform multi-step tasks independently, making decisions and taking actions without constant human oversight.</p>
+                                <div class="trend-meta">
+                                    <span>May 2024</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://www.deepmind.com/blog" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <a href="https://flutter.dev/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Small Language Models">
+                                </div>
+                                <h4>Small Language Models (SLMs)</h4>
+                                <p>Compact, efficient AI models that deliver good performance with lower computational requirements, enabling on-device AI.</p>
+                                <div class="trend-meta">
+                                    <span>June 2024</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://ai.googleblog.com/2023/12/gemini-natively-multimodal.html" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="five.jpg" alt="5G-Optimized Apps">
+                </div>
+
+                <!-- Cybersecurity Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">Cybersecurity Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="AI Security">
+                                </div>
+                                <h4>AI vs. AI Security Battles</h4>
+                                <p>Defensive AI systems being developed to detect and counter AI-powered cyber attacks in real-time.</p>
+                                <div class="trend-meta">
+                                    <span>March 2024</span>
+                                    <span class="trend-tag">Security</span>
+                                </div>
+                                <a href="https://www.cisa.gov/ai" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>5G-Optimized Apps</h3>
-                            <p>Developers creating apps that leverage 5G speeds for richer experiences.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Mobile</span>
-                            </div>
-                            <a href="https://developer.android.com/5g" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1367&q=80"
-                                    alt="Foldable Device Support">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Post-Quantum Crypto">
+                                </div>
+                                <h4>Post-Quantum Cryptography</h4>
+                                <p>Early adoption of quantum-resistant encryption algorithms as organizations prepare for future quantum computing threats.</p>
+                                <div class="trend-meta">
+                                    <span>February 2024</span>
+                                    <span class="trend-tag">Security</span>
+                                </div>
+                                <a href="https://csrc.nist.gov/projects/post-quantum-cryptography" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Foldable Device Support</h3>
-                            <p>Apps adapting to new foldable smartphone form factors.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Mobile</span>
-                            </div>
-                            <a href="https://developer.android.com/guide/topics/large-screens" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Augmented Reality">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Cloud Security">
+                                </div>
+                                <h4>Unified Cloud Security Platforms</h4>
+                                <p>Comprehensive solutions that provide consistent security across multi-cloud environments with centralized management.</p>
+                                <div class="trend-meta">
+                                    <span>January 2024</span>
+                                    <span class="trend-tag">Security</span>
+                                </div>
+                                <a href="https://cloud.google.com/security" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Augmented Reality (AR) Integration</h3>
-                            <p>More apps incorporating AR features for shopping, navigation, and education.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Mobile</span>
-                            </div>
-                            <a href="https://developers.google.com/ar" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-                                    alt="Super Apps">
-                            </div>
-                            <h3>Super Apps</h3>
-                            <p>Single apps combining multiple services (messaging, payments, shopping) gaining
-                                popularity.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Mobile</span>
-                            </div>
-                            <a href="https://www.mckinsey.com/industries/financial-services/our-insights/the-rise-of-super-apps-in-asia-and-beyond"
-                                class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Privacy-Focused Apps">
-                            </div>
-                            <h3>Privacy-Focused App Development</h3>
-                            <p>Increased emphasis on user data protection and transparency.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Mobile</span>
-                            </div>
-                            <a href="https://developer.apple.com/app-store/user-privacy-and-data-use/"
-                                class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- AI & Machine Learning Trends -->
-            <div class="trend-category">
-                <h2 class="category-title">AI & Machine Learning Trends</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="gen.webp" alt="Generative AI">
+            
+            <!-- 2025 Trends -->
+            <div class="year-category year-2025">
+                <h2 class="year-title">2025 Future Trends</h2>
+                
+                <!-- Web Development Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">Web Development Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Spatial Web">
+                                </div>
+                                <h4>Spatial Web Development</h4>
+                                <p>3D web experiences blending AR/VR with traditional browsing, creating immersive digital environments.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://www.w3.org/TR/webxr/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Generative AI Applications</h3>
-                            <p>ChatGPT, DALL-E and other generative models being integrated into business workflows.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">AI</span>
-                            </div>
-                            <a href="https://openai.com/research" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="cyber.jpg" alt="AI Cybersecurity">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+                                        alt="Self-Healing Websites">
+                                </div>
+                                <h4>Self-Healing Websites</h4>
+                                <p>AI-powered systems that automatically detect and fix broken links, layout issues, and content inconsistencies.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://ai.google/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>AI-Powered Cybersecurity</h3>
-                            <p>Machine learning algorithms detecting and preventing sophisticated cyber threats.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">AI</span>
-                            </div>
-                            <a href="https://www.ibm.com/security/artificial-intelligence" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Edge AI">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                                        alt="Voice-First Interfaces">
+                                </div>
+                                <h4>Voice-First Web Interfaces</h4>
+                                <p>Websites designed primarily for voice interaction, with natural language processing at their core.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">Web</span>
+                                </div>
+                                <a href="https://developer.amazon.com/en-US/alexa" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Edge AI</h3>
-                            <p>AI models running locally on devices rather than in the cloud for faster response times.
-                            </p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">AI</span>
-                            </div>
-                            <a href="https://blogs.nvidia.com/blog/2023/05/10/what-is-edge-ai/" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
-                                    alt="AI-Augmented Development">
-                            </div>
-                            <h3>AI-Augmented Development</h3>
-                            <p>Tools like GitHub Copilot assisting developers with code suggestions and automation.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">AI</span>
-                            </div>
-                            <a href="https://github.com/features/copilot" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-                                    alt="Responsible AI">
-                            </div>
-                            <h3>Responsible AI Frameworks</h3>
-                            <p>Increased focus on ethical AI development and bias mitigation.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">AI</span>
-                            </div>
-                            <a href="https://ai.google/responsibility/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="AI Customer Service">
-                            </div>
-                            <h3>AI in Customer Service</h3>
-                            <p>More sophisticated chatbots and virtual assistants handling complex queries.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">AI</span>
-                            </div>
-                            <a href="https://cloud.google.com/solutions/ai/ai-customer-service" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-
-            <!-- Cybersecurity Trends -->
-            <div class="trend-category">
-                <h2 class="category-title">Cybersecurity Trends</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Zero Trust Architecture">
+                <!-- AI & Machine Learning Trends -->
+                <div class="trend-category">
+                    <h3 class="category-title">AI & Machine Learning Trends</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="General AI">
+                                </div>
+                                <h4>General AI Systems</h4>
+                                <p>Early prototypes of AI that can transfer learning across multiple domains, moving beyond narrow AI applications.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://deepmind.google/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Zero Trust Architecture</h3>
-                            <p>"Never trust, always verify" approach becoming standard for enterprise security.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Security</span>
-                            </div>
-                            <a href="https://www.cisa.gov/zero-trust-maturity-model" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Passwordless Authentication">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Neuromorphic AI">
+                                </div>
+                                <h4>Neuromorphic AI Hardware</h4>
+                                <p>Specialized processors that mimic the human brain's neural structure for more efficient AI computation.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Passwordless Authentication</h3>
-                            <p>Biometrics and security keys replacing traditional passwords.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Security</span>
-                            </div>
-                            <a href="https://fidoalliance.org/passwordless/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Cloud Security">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="AI Regulation">
+                                </div>
+                                <h4>AI Governance Frameworks</h4>
+                                <p>Standardized regulations and ethical guidelines for AI development and deployment across industries.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">AI</span>
+                                </div>
+                                <a href="https://www.whitehouse.gov/ostp/ai-bill-of-rights/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Cloud Security Posture Management</h3>
-                            <p>Tools continuously monitoring cloud environments for misconfigurations.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Security</span>
-                            </div>
-                            <a href="https://www.gartner.com/en/information-technology/glossary/cloud-security-posture-management-cspm"
-                                class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1463&q=80"
-                                    alt="Ransomware Defense">
-                            </div>
-                            <h3>Ransomware Defense Strategies</h3>
-                            <p>Advanced protection against increasingly sophisticated ransomware attacks.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Security</span>
-                            </div>
-                            <a href="https://www.cisa.gov/stopransomware" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Supply Chain Security">
-                            </div>
-                            <h3>Supply Chain Security</h3>
-                            <p>Increased focus on securing software supply chains after high-profile breaches.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Security</span>
-                            </div>
-                            <a href="https://www.cisa.gov/supply-chain" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Quantum-Resistant Cryptography">
-                            </div>
-                            <h3>Quantum-Resistant Cryptography</h3>
-                            <p>Preparing encryption systems for the quantum computing era.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Security</span>
-                            </div>
-                            <a href="https://csrc.nist.gov/projects/post-quantum-cryptography" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Cloud Computing Trends -->
-            <div class="trend-category">
-                <h2 class="category-title">Cloud Computing Trends</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80"
-                                    alt="Multi-Cloud Strategies">
+                <!-- Emerging Technologies -->
+                <div class="trend-category">
+                    <h3 class="category-title">Emerging Technologies</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Quantum Computing">
+                                </div>
+                                <h4>Practical Quantum Computing</h4>
+                                <p>First commercial quantum computing applications solving real-world problems in optimization and material science.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">Emerging</span>
+                                </div>
+                                <a href="https://quantum-computing.ibm.com/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Multi-Cloud Strategies</h3>
-                            <p>Businesses distributing workloads across multiple cloud providers for resilience.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Cloud</span>
-                            </div>
-                            <a href="https://www.ibm.com/cloud/learn/multicloud" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Serverless Containers">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="meta.png" alt="Metaverse">
+                                </div>
+                                <h4>Metaverse Interoperability</h4>
+                                <p>Standards emerging to allow seamless movement of digital assets and identities across different metaverse platforms.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">Emerging</span>
+                                </div>
+                                <a href="https://about.meta.com/metaverse/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Serverless Containers</h3>
-                            <p>Combining container benefits with serverless simplicity.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Cloud</span>
-                            </div>
-                            <a href="https://aws.amazon.com/serverless/containers/" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Edge Computing">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trend-item">
+                                <div class="trend-img">
+                                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+                                        alt="Brain-Computer Interfaces">
+                                </div>
+                                <h4>Consumer Brain-Computer Interfaces</h4>
+                                <p>Early adoption of non-invasive BCIs for controlling devices and applications with thought alone.</p>
+                                <div class="trend-meta">
+                                    <span>Projected 2025</span>
+                                    <span class="trend-tag">Emerging</span>
+                                </div>
+                                <a href="https://neuralink.com/" class="learn-more-btn" target="_blank">
+                                    Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
                             </div>
-                            <h3>Edge Computing Expansion</h3>
-                            <p>Processing data closer to its source for lower latency applications.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Cloud</span>
-                            </div>
-                            <a href="https://www.accenture.com/us-en/insights/cloud/edge-computing-index"
-                                class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="FinOps Practices">
-                            </div>
-                            <h3>FinOps Practices</h3>
-                            <p>Financial operations discipline to optimize cloud spending.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Cloud</span>
-                            </div>
-                            <a href="https://www.finops.org/what-is-finops/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
-                                    alt="AI-Enhanced Cloud Services">
-                            </div>
-                            <h3>AI-Enhanced Cloud Services</h3>
-                            <p>Cloud providers integrating more AI capabilities into their offerings.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Cloud</span>
-                            </div>
-                            <a href="https://cloud.google.com/products/ai" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
-                                    alt="Sustainable Cloud Computing">
-                            </div>
-                            <h3>Sustainable Cloud Computing</h3>
-                            <p>Focus on reducing energy consumption and carbon footprint of data centers.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Cloud</span>
-                            </div>
-                            <a href="https://sustainability.google/progress/cloud/" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Database Trends -->
-            <div class="trend-category">
-                <h2 class="category-title">Database Trends</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Multi-Model Databases">
-                            </div>
-                            <h3>Multi-Model Databases</h3>
-                            <p>Databases supporting multiple data models (document, graph, key-value) in one engine.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Database</span>
-                            </div>
-                            <a href="https://www.mongodb.com/multi-model-databases" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-                                    alt="Time-Series Databases">
-                            </div>
-                            <h3>Time-Series Databases</h3>
-                            <p>Specialized databases for IoT and financial data gaining popularity.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Database</span>
-                            </div>
-                            <a href="https://www.influxdata.com/time-series-database/" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
-                                    alt="Distributed SQL Databases">
-                            </div>
-                            <h3>Distributed SQL Databases</h3>
-                            <p>Combining SQL benefits with horizontal scalability of NoSQL systems.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Database</span>
-                            </div>
-                            <a href="https://www.cockroachlabs.com/blog/what-is-distributed-sql/" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-                                    alt="Database as a Service">
-                            </div>
-                            <h3>Database as a Service (DBaaS)</h3>
-                            <p>More companies opting for managed database services in the cloud.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Database</span>
-                            </div>
-                            <a href="https://aws.amazon.com/products/databases/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="dabase.webp" alt="In-Memory Databases">
-                            </div>
-                            <h3>In-Memory Databases</h3>
-                            <p>Faster performance for real-time analytics and transactional systems.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Database</span>
-                            </div>
-                            <a href="https://redis.io/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
-                                    alt="Blockchain Databases">
-                            </div>
-                            <h3>Blockchain Databases</h3>
-                            <p>Immutable ledger technologies being integrated with traditional databases.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Database</span>
-                            </div>
-                            <a href="https://www.ibm.com/topics/blockchain-database" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Emerging Technologies -->
-            <div class="trend-category">
-                <h2 class="category-title">Emerging Technologies</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Quantum Computing">
-                            </div>
-                            <h3>Quantum Computing Progress</h3>
-                            <p>Practical applications beginning to emerge from quantum research.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Emerging</span>
-                            </div>
-                            <a href="https://quantum-computing.ibm.com/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="meta.png" alt="Metaverse Development">
-                            </div>
-                            <h3>Metaverse Development Tools</h3>
-                            <p>New frameworks and platforms for building metaverse experiences.</p>
-                            <div class="trend-meta">
-                                <span>June 2023</span>
-                                <span class="trend-tag">Emerging</span>
-                            </div>
-                            <a href="https://about.meta.com/metaverse/" class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
-                                    alt="Digital Twins">
-                            </div>
-                            <h3>Digital Twins</h3>
-                            <p>Virtual replicas of physical systems used for simulation and analysis.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Emerging</span>
-                            </div>
-                            <a href="https://www.ibm.com/topics/what-is-a-digital-twin" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-                                    alt="Neuromorphic Computing">
-                            </div>
-                            <h3>Neuromorphic Computing</h3>
-                            <p>Brain-inspired computing architectures showing promise for AI workloads.</p>
-                            <div class="trend-meta">
-                                <span>May 2023</span>
-                                <span class="trend-tag">Emerging</span>
-                            </div>
-                            <a href="https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html"
-                                class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Biometric Authentication">
-                            </div>
-                            <h3>Biometric Authentication</h3>
-                            <p>Advanced facial recognition and behavioral biometrics for security.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Emerging</span>
-                            </div>
-                            <a href="https://www.gartner.com/en/information-technology/glossary/biometric-authentication"
-                                class="learn-more-btn" target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="trend-item">
-                            <div class="trend-img">
-                                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Autonomous Systems">
-                            </div>
-                            <h3>Autonomous Systems</h3>
-                            <p>Self-managing IT infrastructure and robotic process automation.</p>
-                            <div class="trend-meta">
-                                <span>April 2023</span>
-                                <span class="trend-tag">Emerging</span>
-                            </div>
-                            <a href="https://www.ibm.com/cloud/learn/autonomous-systems" class="learn-more-btn"
-                                target="_blank">
-                                Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
