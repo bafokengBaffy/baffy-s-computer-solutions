@@ -1,138 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <!-- Basic -->
+    <!-- Basic Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
-    <!-- Site Metas -->
-    <title>Tech Trends | Baffy's Computer Solutions</title>
+    <!-- Primary Meta Tags -->
+    <title>Baffy's Computer Solutions | IT Services & Web Development in Lesotho</title>
+    <meta name="description"
+        content="Professional IT solutions in Lesotho by Bafokeng Khoali. Web development, network solutions, cybersecurity, and IT consulting services. Diploma in ICT and BSc in IT certified.">
     <meta name="keywords"
-        content="IT trends, tech trends 2023, tech trends 2024, tech trends 2025, web development, mobile apps, AI, cybersecurity, cloud computing">
-    <meta name="description" content="Latest technology trends and insights from Baffy's Computer Solutions">
+        content="IT services Lesotho, web development Maseru, computer repairs, network solutions, IT consulting, software development, cybersecurity Lesotho">
     <meta name="author" content="Bafokeng Khoali">
+    <meta name="robots" content="index, follow">
 
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.baffyscomputers.com" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.baffyscomputers.com">
+    <meta property="og:title" content="Baffy's Computer Solutions | IT Services & Web Development in Lesotho">
+    <meta property="og:description"
+        content="Professional IT solutions in Lesotho by Bafokeng Khoali. Web development, network solutions, and IT consulting services.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_LS">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@baffyscomputers">
+    <meta name="twitter:title" content="Baffy's Computer Solutions | IT Services & Web Development in Lesotho">
+    <meta name="twitter:description"
+        content="Professional IT solutions in Lesotho by Bafokeng Khoali. Web development, network solutions, and IT consulting services.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon"
+        href="https://icons.iconarchive.com/icons/designbolts/free-multimedia/256/Computer-icon.png"
+        type="image/x-icon">
+    <link rel="apple-touch-icon"
+        href="https://icons.iconarchive.com/icons/designbolts/free-multimedia/256/Computer-icon.png">
+
+    <!-- Preconnect to important third-party domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap">
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <style>
-        /* Learn More Button Styles */
-        .learn-more-btn {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 6px 16px;
-            background-color: #4a6bff;
-            color: white;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .learn-more-btn:hover {
-            background-color: #3a56d4;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .learn-more-btn:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .learn-more-btn .external-link-icon {
-            font-size: 12px;
-            margin-left: 5px;
-            transition: transform 0.2s ease;
-        }
-
-        .learn-more-btn:hover .external-link-icon {
-            transform: translateX(2px);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .learn-more-btn {
-                padding: 5px 12px;
-                font-size: 13px;
-            }
-        }
-
-        .trend-item {
-            position: relative;
-        }
-
-        .learn-more-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 5px 15px;
-            background-color: #4a6bff;
-            color: white;
-            border-radius: 4px;
-            font-size: 14px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .learn-more-btn:hover {
-            background-color: #3a56d4;
-            transform: translateY(-2px);
-        }
-
-        .external-link-icon {
-            font-size: 12px;
-            margin-left: 5px;
-        }
-        
-        /* Year category styles */
-        .year-category {
-            margin-bottom: 50px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #eee;
-        }
-        
-        .year-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #333;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .year-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100px;
-            height: 4px;
-            background: #4a6bff;
-        }
-        
-        .year-2023 .year-title:after { background: #4a6bff; }
-        .year-2024 .year-title:after { background: #ff6b4a; }
-        .year-2025 .year-title:after { background: #6bff4a; }
-    </style>
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Baffy's Computer Solutions",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "@id": "https://www.baffyscomputers.com",
+      "url": "https://www.baffyscomputers.com",
+      "telephone": "+266 58855222",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Tech Street",
+        "addressLocality": "Maseru",
+        "addressRegion": "Maseru",
+        "postalCode": "100",
+        "addressCountry": "LS"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-29.316667",
+        "longitude": "27.483333"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/baffyscomputers",
+        "https://www.linkedin.com/company/baffys-computers"
+      ]
+    }
+    </script>
 </head>
 
 <body id="page-top">
@@ -182,8 +163,8 @@
         </div>
     </header>
 
-<br> </div>
-<br> </div>
+    <br> </div>
+    <br> </div>
 
 
 
@@ -193,7 +174,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">Tech Trends Report 2023-2025</h1>
+                    <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">Tech Trends Report
+                        2023-2025</h1>
                     <p class="animate__animated animate__fadeInUp animate__delay-1s">Discover the most significant
                         technology trends shaping industries through 2025</p>
                     <nav aria-label="breadcrumb" class="d-flex justify-content-center">
@@ -209,11 +191,11 @@
     <!-- Trends Content Section -->
     <section class="trends-content-section">
         <div class="container">
-            
+
             <!-- 2023 Trends -->
             <div class="year-category year-2023">
                 <h2 class="year-title">2023 Tech Trends</h2>
-                
+
                 <!-- Web Development Trends -->
                 <div class="trend-category">
                     <h3 class="category-title">Web Development Trends</h3>
@@ -243,7 +225,8 @@
                                         alt="Serverless Architecture">
                                 </div>
                                 <h4>Serverless Architecture</h4>
-                                <p>More companies adopting serverless computing to reduce infrastructure costs and improve
+                                <p>More companies adopting serverless computing to reduce infrastructure costs and
+                                    improve
                                     scalability.</p>
                                 <div class="trend-meta">
                                     <span>June 2023</span>
@@ -324,8 +307,8 @@
                                     <span>May 2023</span>
                                     <span class="trend-tag">Mobile</span>
                                 </div>
-                                <a href="https://developer.android.com/guide/topics/large-screens" class="learn-more-btn"
-                                    target="_blank">
+                                <a href="https://developer.android.com/guide/topics/large-screens"
+                                    class="learn-more-btn" target="_blank">
                                     Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
                                 </a>
                             </div>
@@ -343,7 +326,8 @@
                                     <img src="gen.webp" alt="Generative AI">
                                 </div>
                                 <h4>Generative AI Applications</h4>
-                                <p>ChatGPT, DALL-E and other generative models being integrated into business workflows.</p>
+                                <p>ChatGPT, DALL-E and other generative models being integrated into business workflows.
+                                </p>
                                 <div class="trend-meta">
                                     <span>June 2023</span>
                                     <span class="trend-tag">AI</span>
@@ -377,14 +361,15 @@
                                         alt="Edge AI">
                                 </div>
                                 <h4>Edge AI</h4>
-                                <p>AI models running locally on devices rather than in the cloud for faster response times.
+                                <p>AI models running locally on devices rather than in the cloud for faster response
+                                    times.
                                 </p>
                                 <div class="trend-meta">
                                     <span>May 2023</span>
                                     <span class="trend-tag">AI</span>
                                 </div>
-                                <a href="https://blogs.nvidia.com/blog/2023/05/10/what-is-edge-ai/" class="learn-more-btn"
-                                    target="_blank">
+                                <a href="https://blogs.nvidia.com/blog/2023/05/10/what-is-edge-ai/"
+                                    class="learn-more-btn" target="_blank">
                                     Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
                                 </a>
                             </div>
@@ -392,11 +377,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- 2024 Trends -->
             <div class="year-category year-2024">
                 <h2 class="year-title">2024 Emerging Trends</h2>
-                
+
                 <!-- Web Development Trends -->
                 <div class="trend-category">
                     <h3 class="category-title">Web Development Trends</h3>
@@ -408,7 +393,8 @@
                                         alt="AI-Powered Development">
                                 </div>
                                 <h4>AI-Powered Development</h4>
-                                <p>AI-assisted coding tools becoming standard in developer workflows, with real-time suggestions and automated code generation.</p>
+                                <p>AI-assisted coding tools becoming standard in developer workflows, with real-time
+                                    suggestions and automated code generation.</p>
                                 <div class="trend-meta">
                                     <span>January 2024</span>
                                     <span class="trend-tag">Web</span>
@@ -425,7 +411,8 @@
                                         alt="Web3 Integration">
                                 </div>
                                 <h4>Web3 Integration</h4>
-                                <p>More websites incorporating blockchain wallets, smart contracts, and decentralized identity solutions.</p>
+                                <p>More websites incorporating blockchain wallets, smart contracts, and decentralized
+                                    identity solutions.</p>
                                 <div class="trend-meta">
                                     <span>March 2024</span>
                                     <span class="trend-tag">Web</span>
@@ -442,7 +429,8 @@
                                         alt="WebAssembly">
                                 </div>
                                 <h4>WebAssembly 2.0</h4>
-                                <p>Next-gen WebAssembly enabling near-native performance for complex web applications and games.</p>
+                                <p>Next-gen WebAssembly enabling near-native performance for complex web applications
+                                    and games.</p>
                                 <div class="trend-meta">
                                     <span>February 2024</span>
                                     <span class="trend-tag">Web</span>
@@ -466,7 +454,8 @@
                                         alt="Multimodal AI">
                                 </div>
                                 <h4>Multimodal AI Systems</h4>
-                                <p>AI models that can process and understand multiple data types (text, images, audio) simultaneously for more human-like comprehension.</p>
+                                <p>AI models that can process and understand multiple data types (text, images, audio)
+                                    simultaneously for more human-like comprehension.</p>
                                 <div class="trend-meta">
                                     <span>April 2024</span>
                                     <span class="trend-tag">AI</span>
@@ -483,7 +472,8 @@
                                         alt="AI Agents">
                                 </div>
                                 <h4>Autonomous AI Agents</h4>
-                                <p>AI systems that can perform multi-step tasks independently, making decisions and taking actions without constant human oversight.</p>
+                                <p>AI systems that can perform multi-step tasks independently, making decisions and
+                                    taking actions without constant human oversight.</p>
                                 <div class="trend-meta">
                                     <span>May 2024</span>
                                     <span class="trend-tag">AI</span>
@@ -500,12 +490,14 @@
                                         alt="Small Language Models">
                                 </div>
                                 <h4>Small Language Models (SLMs)</h4>
-                                <p>Compact, efficient AI models that deliver good performance with lower computational requirements, enabling on-device AI.</p>
+                                <p>Compact, efficient AI models that deliver good performance with lower computational
+                                    requirements, enabling on-device AI.</p>
                                 <div class="trend-meta">
                                     <span>June 2024</span>
                                     <span class="trend-tag">AI</span>
                                 </div>
-                                <a href="https://ai.googleblog.com/2023/12/gemini-natively-multimodal.html" class="learn-more-btn" target="_blank">
+                                <a href="https://ai.googleblog.com/2023/12/gemini-natively-multimodal.html"
+                                    class="learn-more-btn" target="_blank">
                                     Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
                                 </a>
                             </div>
@@ -524,7 +516,8 @@
                                         alt="AI Security">
                                 </div>
                                 <h4>AI vs. AI Security Battles</h4>
-                                <p>Defensive AI systems being developed to detect and counter AI-powered cyber attacks in real-time.</p>
+                                <p>Defensive AI systems being developed to detect and counter AI-powered cyber attacks
+                                    in real-time.</p>
                                 <div class="trend-meta">
                                     <span>March 2024</span>
                                     <span class="trend-tag">Security</span>
@@ -541,12 +534,14 @@
                                         alt="Post-Quantum Crypto">
                                 </div>
                                 <h4>Post-Quantum Cryptography</h4>
-                                <p>Early adoption of quantum-resistant encryption algorithms as organizations prepare for future quantum computing threats.</p>
+                                <p>Early adoption of quantum-resistant encryption algorithms as organizations prepare
+                                    for future quantum computing threats.</p>
                                 <div class="trend-meta">
                                     <span>February 2024</span>
                                     <span class="trend-tag">Security</span>
                                 </div>
-                                <a href="https://csrc.nist.gov/projects/post-quantum-cryptography" class="learn-more-btn" target="_blank">
+                                <a href="https://csrc.nist.gov/projects/post-quantum-cryptography"
+                                    class="learn-more-btn" target="_blank">
                                     Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
                                 </a>
                             </div>
@@ -558,7 +553,8 @@
                                         alt="Cloud Security">
                                 </div>
                                 <h4>Unified Cloud Security Platforms</h4>
-                                <p>Comprehensive solutions that provide consistent security across multi-cloud environments with centralized management.</p>
+                                <p>Comprehensive solutions that provide consistent security across multi-cloud
+                                    environments with centralized management.</p>
                                 <div class="trend-meta">
                                     <span>January 2024</span>
                                     <span class="trend-tag">Security</span>
@@ -571,11 +567,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- 2025 Trends -->
             <div class="year-category year-2025">
                 <h2 class="year-title">2025 Future Trends</h2>
-                
+
                 <!-- Web Development Trends -->
                 <div class="trend-category">
                     <h3 class="category-title">Web Development Trends</h3>
@@ -587,7 +583,8 @@
                                         alt="Spatial Web">
                                 </div>
                                 <h4>Spatial Web Development</h4>
-                                <p>3D web experiences blending AR/VR with traditional browsing, creating immersive digital environments.</p>
+                                <p>3D web experiences blending AR/VR with traditional browsing, creating immersive
+                                    digital environments.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">Web</span>
@@ -604,7 +601,8 @@
                                         alt="Self-Healing Websites">
                                 </div>
                                 <h4>Self-Healing Websites</h4>
-                                <p>AI-powered systems that automatically detect and fix broken links, layout issues, and content inconsistencies.</p>
+                                <p>AI-powered systems that automatically detect and fix broken links, layout issues, and
+                                    content inconsistencies.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">Web</span>
@@ -621,12 +619,14 @@
                                         alt="Voice-First Interfaces">
                                 </div>
                                 <h4>Voice-First Web Interfaces</h4>
-                                <p>Websites designed primarily for voice interaction, with natural language processing at their core.</p>
+                                <p>Websites designed primarily for voice interaction, with natural language processing
+                                    at their core.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">Web</span>
                                 </div>
-                                <a href="https://developer.amazon.com/en-US/alexa" class="learn-more-btn" target="_blank">
+                                <a href="https://developer.amazon.com/en-US/alexa" class="learn-more-btn"
+                                    target="_blank">
                                     Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
                                 </a>
                             </div>
@@ -645,7 +645,8 @@
                                         alt="General AI">
                                 </div>
                                 <h4>General AI Systems</h4>
-                                <p>Early prototypes of AI that can transfer learning across multiple domains, moving beyond narrow AI applications.</p>
+                                <p>Early prototypes of AI that can transfer learning across multiple domains, moving
+                                    beyond narrow AI applications.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">AI</span>
@@ -662,12 +663,14 @@
                                         alt="Neuromorphic AI">
                                 </div>
                                 <h4>Neuromorphic AI Hardware</h4>
-                                <p>Specialized processors that mimic the human brain's neural structure for more efficient AI computation.</p>
+                                <p>Specialized processors that mimic the human brain's neural structure for more
+                                    efficient AI computation.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">AI</span>
                                 </div>
-                                <a href="https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html" class="learn-more-btn" target="_blank">
+                                <a href="https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html"
+                                    class="learn-more-btn" target="_blank">
                                     Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
                                 </a>
                             </div>
@@ -679,12 +682,14 @@
                                         alt="AI Regulation">
                                 </div>
                                 <h4>AI Governance Frameworks</h4>
-                                <p>Standardized regulations and ethical guidelines for AI development and deployment across industries.</p>
+                                <p>Standardized regulations and ethical guidelines for AI development and deployment
+                                    across industries.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">AI</span>
                                 </div>
-                                <a href="https://www.whitehouse.gov/ostp/ai-bill-of-rights/" class="learn-more-btn" target="_blank">
+                                <a href="https://www.whitehouse.gov/ostp/ai-bill-of-rights/" class="learn-more-btn"
+                                    target="_blank">
                                     Learn More <i class="fas fa-external-link-alt external-link-icon"></i>
                                 </a>
                             </div>
@@ -703,7 +708,8 @@
                                         alt="Quantum Computing">
                                 </div>
                                 <h4>Practical Quantum Computing</h4>
-                                <p>First commercial quantum computing applications solving real-world problems in optimization and material science.</p>
+                                <p>First commercial quantum computing applications solving real-world problems in
+                                    optimization and material science.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">Emerging</span>
@@ -719,7 +725,8 @@
                                     <img src="meta.png" alt="Metaverse">
                                 </div>
                                 <h4>Metaverse Interoperability</h4>
-                                <p>Standards emerging to allow seamless movement of digital assets and identities across different metaverse platforms.</p>
+                                <p>Standards emerging to allow seamless movement of digital assets and identities across
+                                    different metaverse platforms.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">Emerging</span>
@@ -736,7 +743,8 @@
                                         alt="Brain-Computer Interfaces">
                                 </div>
                                 <h4>Consumer Brain-Computer Interfaces</h4>
-                                <p>Early adoption of non-invasive BCIs for controlling devices and applications with thought alone.</p>
+                                <p>Early adoption of non-invasive BCIs for controlling devices and applications with
+                                    thought alone.</p>
                                 <div class="trend-meta">
                                     <span>Projected 2025</span>
                                     <span class="trend-tag">Emerging</span>

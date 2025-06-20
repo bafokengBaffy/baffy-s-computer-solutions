@@ -1,201 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <!-- Basic -->
+    <!-- Basic Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
-    <!-- Site Metas -->
-    <title>Portfolio | Baffy's Computer Solutions</title>
+    <!-- Primary Meta Tags -->
+    <title>Baffy's Computer Solutions | IT Services & Web Development in Lesotho</title>
+    <meta name="description"
+        content="Professional IT solutions in Lesotho by Bafokeng Khoali. Web development, network solutions, cybersecurity, and IT consulting services. Diploma in ICT and BSc in IT certified.">
     <meta name="keywords"
-        content="IT services, web development, network solutions, IT consulting, software development, computer repair, troubleshooting">
-    <meta name="description" content="Professional IT solutions by Bafokeng Khoali - Diploma in ICT and BSc in IT">
+        content="IT services Lesotho, web development Maseru, computer repairs, network solutions, IT consulting, software development, cybersecurity Lesotho">
     <meta name="author" content="Bafokeng Khoali">
+    <meta name="robots" content="index, follow">
 
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.baffyscomputers.com" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.baffyscomputers.com">
+    <meta property="og:title" content="Baffy's Computer Solutions | IT Services & Web Development in Lesotho">
+    <meta property="og:description"
+        content="Professional IT solutions in Lesotho by Bafokeng Khoali. Web development, network solutions, and IT consulting services.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_LS">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@baffyscomputers">
+    <meta name="twitter:title" content="Baffy's Computer Solutions | IT Services & Web Development in Lesotho">
+    <meta name="twitter:description"
+        content="Professional IT solutions in Lesotho by Bafokeng Khoali. Web development, network solutions, and IT consulting services.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon"
+        href="https://icons.iconarchive.com/icons/designbolts/free-multimedia/256/Computer-icon.png"
+        type="image/x-icon">
+    <link rel="apple-touch-icon"
+        href="https://icons.iconarchive.com/icons/designbolts/free-multimedia/256/Computer-icon.png">
+
+    <!-- Preconnect to important third-party domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;600;700;800;900&display=swap">
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Lightbox for image gallery -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Additional custom styles */
-        .portfolio-item {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
 
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .portfolio-overlay {
-            background: rgba(0, 123, 255, 0.9);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .repair-item {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .repair-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .repair-icon {
-            font-size: 2.5rem;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-
-        .filter-buttons {
-            margin-bottom: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .filter-btn {
-            background: #f8f9fa;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #007bff;
-            color: white;
-        }
-
-        .portfolio-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .portfolio-btn {
-            width: 40px;
-            height: 40px;
-            background: white;
-            color: #007bff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .portfolio-btn:hover {
-            background: #0056b3;
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, #007bff 0%, #00bfff 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .repair-section {
-            background: #f8f9fa;
-            padding: 80px 0;
-        }
-
-        .portfolio-img {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .portfolio-img img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .portfolio-item:hover .portfolio-img img {
-            transform: scale(1.1);
-        }
-
-        .portfolio-info {
-            padding: 20px;
-            background: white;
-        }
-
-        .portfolio-info h3 {
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-
-        .portfolio-info .category {
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-weight: 700;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #007bff;
-        }
-
-        .section-title p {
-            color: #6c757d;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-    </style>
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Baffy's Computer Solutions",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "@id": "https://www.baffyscomputers.com",
+      "url": "https://www.baffyscomputers.com",
+      "telephone": "+266 58855222",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Tech Street",
+        "addressLocality": "Maseru",
+        "addressRegion": "Maseru",
+        "postalCode": "100",
+        "addressCountry": "LS"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-29.316667",
+        "longitude": "27.483333"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/baffyscomputers",
+        "https://www.linkedin.com/company/baffys-computers"
+      ]
+    }
+    </script>
 </head>
 
 <body id="page-top">
@@ -244,24 +162,26 @@
             </nav>
         </div>
     </header>
-<br> </div>
-<br> </div>
-   <!-- Page Header -->
-<section class="page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center; background-size: cover;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">My Portfolio</h1>
-                <p class="animate__animated animate__fadeInUp animate__delay-1s">Explore my recent projects and see the quality of my work</p>
-                <nav aria-label="breadcrumb" class="d-flex justify-content-center">
-                    <ol class="breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
-                        <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
-                    </ol>
-                </nav>
+    <br> </div>
+    <br> </div>
+    <!-- Page Header -->
+    <section class="page-header"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center; background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="animate__animated animate__fadeInDown" style="color: #f7fafc;">My Portfolio</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">Explore my recent projects and see
+                        the quality of my work</p>
+                    <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+                        <ol class="breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
+                            <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="section">
@@ -528,7 +448,7 @@
         </div>
     </section>
 
-    
+
     <!-- Call to Action -->
     <section class="section cta-section"
         style="background: linear-gradient(135deg, #007bff 0%, #00bfff 100%); color: white; padding: 80px 0; text-align: center;">
@@ -557,7 +477,7 @@
                                     class="fab fa-github"></i></a>
                             <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="me-3" target="_blank"><i
                                     class="fab fa-facebook-f"></i></a>
-                  
+
                         </div>
                     </div>
                 </div>
